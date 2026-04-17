@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 bg-white antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .article-link {
+    @apply transition-colors duration-200 hover:text-primary;
+  }
+  
+  .category-tag {
+    @apply inline-block px-2 py-0.5 text-xs font-semibold uppercase tracking-wide;
+  }
+  
+  .breaking-bar {
+    @apply bg-primary text-white py-1 px-4 text-sm font-semibold;
+  }
+}
