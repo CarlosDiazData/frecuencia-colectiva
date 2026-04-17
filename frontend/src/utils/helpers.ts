@@ -1,6 +1,6 @@
 export function formatDate(dateString: string): string {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', {
+  return date.toLocaleDateString('es-MX', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -9,7 +9,7 @@ export function formatDate(dateString: string): string {
 
 export function formatDateShort(dateString: string): string {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', {
+  return date.toLocaleDateString('es-MX', {
     month: 'short',
     day: 'numeric',
   });
@@ -17,20 +17,20 @@ export function formatDateShort(dateString: string): string {
 
 export function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
-    technology: 'bg-blue-600 text-white',
-    sports: 'bg-green-600 text-white',
-    world: 'bg-purple-600 text-white',
-    culture: 'bg-amber-600 text-white',
+    economy: 'bg-blue-700 text-white',
+    sports: 'bg-green-700 text-white',
+    politics: 'bg-red-700 text-white',
+    culture: 'bg-amber-700 text-white',
   };
-  return colors[category.toLowerCase()] || 'bg-gray-600 text-white';
+  return colors[category.toLowerCase()] || 'bg-gray-700 text-white';
 }
 
 export function getCategoryLabel(category: string): string {
   const labels: Record<string, string> = {
-    technology: 'Tech',
-    sports: 'Sports',
-    world: 'World',
-    culture: 'Culture',
+    economy: 'Economía',
+    sports: 'Deportes',
+    politics: 'Política',
+    culture: 'Cultura',
   };
   return labels[category.toLowerCase()] || category;
 }

@@ -12,7 +12,7 @@ describe('ArticleCard', () => {
     body: 'Full article body content.',
     author: 'John Doe',
     date: '2024-03-15T10:00:00Z',
-    category: 'technology',
+    category: 'economy',
     imageUrl: 'https://example.com/image.jpg',
     readTimeMinutes: 5,
   };
@@ -54,6 +54,6 @@ describe('ArticleCard', () => {
       </MemoryRouter>
     );
     
-    expect(screen.getByText('Tech')).toBeInTheDocument();
+    expect(screen.getByText('Economía')).toBeInTheDocument();
   });
 });

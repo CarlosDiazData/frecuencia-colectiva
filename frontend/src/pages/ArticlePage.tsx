@@ -11,10 +11,10 @@ export function ArticlePage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
-            Article Not Found
+            Artículo no encontrado
           </h2>
-          <Link to="/" className="text-primary font-semibold hover:underline">
-            Return to Home
+          <Link to="/" className="text-primary font-bold hover:underline">
+            Volver al inicio
           </Link>
         </div>
       </div>

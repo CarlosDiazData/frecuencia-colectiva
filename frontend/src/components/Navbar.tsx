@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { useSearch } from '@/context/SearchContext';
 
 const categories = [
-  { name: 'World', path: '/section/world' },
-  { name: 'Technology', path: '/section/technology' },
-  { name: 'Sports', path: '/section/sports' },
-  { name: 'Culture', path: '/section/culture' },
+  { name: 'Política', path: '/section/politics' },
+  { name: 'Economía', path: '/section/economy' },
+  { name: 'Cultura', path: '/section/culture' },
+  { name: 'Deportes', path: '/section/sports' },
 ];
 
 export function Navbar() {
@@ -15,18 +15,19 @@ export function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="breaking-bar">
-        <div className="max-w-7xl mx-auto px-4">
-          <span className="font-bold">LIVE</span> Latest updates from around the world
+    <header className="sticky top-0 z-50 bg-white border-b-2 border-black">
+      <div className="bg-primary text-white py-1 px-4 text-sm font-semibold">
+        <div className="max-w-7xl mx-auto flex items-center gap-2">
+          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+          <span>EN VIVO</span>
         </div>
       </div>
       
       <nav className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-primary font-serif text-2xl font-black tracking-tight">
-              THE DAILY CHRONICLE
+            <span className="text-primary font-serif text-3xl font-black tracking-tight">
+              FRECUENCIA COLECTIVA
             </span>
           </Link>
 
@@ -35,10 +36,10 @@ export function Navbar() {
               <Link
                 key={cat.path}
                 to={cat.path}
-                className={`text-sm font-semibold uppercase tracking-wide transition-colors ${
+                className={`text-sm font-bold uppercase tracking-wider transition-colors ${
                   location.pathname === cat.path 
                     ? 'text-primary border-b-2 border-primary pb-1' 
-                    : 'text-gray-700 hover:text-primary'
+                    : 'text-gray-900 hover:text-primary'
                 }`}
               >
                 {cat.name}
@@ -49,7 +50,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <button
               onClick={toggleSearch}
-              className="p-2 text-gray-600 hover:text-primary transition-colors"
+              className="p-2 text-gray-900 hover:text-primary transition-colors"
               aria-label="Search"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +60,7 @@ export function Navbar() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-gray-600 hover:text-primary"
+              className="md:hidden p-2 text-gray-900 hover:text-primary"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,10 +79,10 @@ export function Navbar() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search articles..."
+                placeholder="Buscar artículos..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-2 pl-10 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 autoFocus
               />
               <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,15 +93,15 @@ export function Navbar() {
         )}
 
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-100 pt-4">
+          <div className="md:hidden pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col gap-3">
               {categories.map(cat => (
                 <Link
                   key={cat.path}
                   to={cat.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-sm font-semibold uppercase tracking-wide py-2 ${
-                    location.pathname === cat.path ? 'text-primary' : 'text-gray-700'
+                  className={`text-sm font-bold uppercase tracking-wider py-2 ${
+                    location.pathname === cat.path ? 'text-primary' : 'text-gray-900'
                   }`}
                 >
                   {cat.name}

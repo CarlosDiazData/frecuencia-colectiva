@@ -10,7 +10,7 @@ export interface Article {
   readTimeMinutes: number;
 }
 
-export type ArticleCategory = 'technology' | 'sports' | 'world' | 'culture';
+export type ArticleCategory = 'economy' | 'sports' | 'politics' | 'culture';
 
 export interface ArticlesResponse {
   articles: Article[];

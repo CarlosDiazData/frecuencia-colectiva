@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#BB1919',
+        primary: '#c50907',
         'primary-dark': '#991515',
       },
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
+        sans: ['Merriweather Sans', 'system-ui', 'sans-serif'],
       },
     },
   },

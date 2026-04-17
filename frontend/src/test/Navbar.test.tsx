@@ -14,7 +14,7 @@ describe('Navbar', () => {
       </MemoryRouter>
     );
     
-    expect(screen.getByText('THE DAILY CHRONICLE')).toBeInTheDocument();
+    expect(screen.getByText('FRECUENCIA COLECTIVA')).toBeInTheDocument();
   });
 
   it('renders navigation links', () => {
@@ -26,10 +26,10 @@ describe('Navbar', () => {
       </MemoryRouter>
     );
     
-    expect(screen.getByText('World')).toBeInTheDocument();
-    expect(screen.getByText('Technology')).toBeInTheDocument();
-    expect(screen.getByText('Sports')).toBeInTheDocument();
-    expect(screen.getByText('Culture')).toBeInTheDocument();
+    expect(screen.getByText('Política')).toBeInTheDocument();
+    expect(screen.getByText('Economía')).toBeInTheDocument();
+    expect(screen.getByText('Deportes')).toBeInTheDocument();
+    expect(screen.getByText('Cultura')).toBeInTheDocument();
   });
 
   it('has a search button', () => {
