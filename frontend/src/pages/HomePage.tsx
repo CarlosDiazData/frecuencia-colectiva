@@ -54,7 +54,7 @@ export function HomePage() {
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6 pb-2 border-b-2 border-black">
             <h2 className="font-serif text-2xl font-bold text-gray-900">Últimas Noticias</h2>
-            <Link to="/section/politics" className="text-primary font-bold hover:underline text-sm">
+            <Link to="/section/arte-visual" className="text-primary font-bold hover:underline text-sm">
               Ver todas →
             </Link>
           </div>
@@ -110,33 +110,33 @@ export function HomePage() {
         )}
 
         <section className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="border-t-4 border-primary pt-6">
-            <h3 className="font-serif text-xl font-bold mb-4">Economía</h3>
+          <div className="border-t-4 border-[#1D6B6B] pt-6">
+            <h3 className="font-serif text-xl font-bold mb-4">Patrimonio</h3>
             <div className="space-y-3">
               {articles
-                .filter(a => a.category === 'economy')
+                .filter(a => a.category === 'patrimonio')
                 .slice(0, 3)
                 .map(article => (
                   <ArticleCard key={article.articleId} article={article} variant="compact" />
                 ))}
             </div>
-            <Link to="/section/economy" className="text-primary font-bold text-sm hover:underline mt-4 inline-block">
-              Más noticias de Economía →
+            <Link to="/section/patrimonio" className="text-primary font-bold text-sm hover:underline mt-4 inline-block">
+              Más noticias de Patrimonio →
             </Link>
           </div>
-          
-          <div className="border-t-4 border-green-700 pt-6">
-            <h3 className="font-serif text-xl font-bold mb-4">Deportes</h3>
+
+          <div className="border-t-4 border-[#E07B39] pt-6">
+            <h3 className="font-serif text-xl font-bold mb-4">Gastronomía</h3>
             <div className="space-y-3">
               {articles
-                .filter(a => a.category === 'sports')
+                .filter(a => a.category === 'gastronomia')
                 .slice(0, 3)
                 .map(article => (
                   <ArticleCard key={article.articleId} article={article} variant="compact" />
                 ))}
             </div>
-            <Link to="/section/sports" className="text-primary font-bold text-sm hover:underline mt-4 inline-block">
-              Más noticias de Deportes →
+            <Link to="/section/gastronomia" className="text-primary font-bold text-sm hover:underline mt-4 inline-block">
+              Más noticias de Gastronomía →
             </Link>
           </div>
         </section>

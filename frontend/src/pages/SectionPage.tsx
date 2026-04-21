@@ -5,18 +5,23 @@ import { ArticleCategory } from '@/types';
 import { getCategoryLabel } from '@/utils/helpers';
 
 const categoryDescriptions: Record<string, string> = {
-  politics: 'Cobertura completa de la política local, estatal y nacional.',
-  economy: 'Las últimas noticias económicas, negocios y finanzas del Estado de México.',
-  sports: 'Noticias de deportes locales, análisis de partidos y entrevistas.',
-  culture: 'Arte, entretenimiento, eventos culturales y música de la región.',
+  'arte-visual': 'Pintura, escultura, fotografía y artes visuales de Toluca y el Estado de México.',
+  'arte-escenico': 'Teatro, danza, música y Actuación artísticas de la región.',
+  'cine-y-audiovisual': 'Cine, documental, videoarte y producción audiovisual toluqueña.',
+  'festividades-locales': 'Celebraciones, tradiciones, fiestas patronales y eventos comunitarios.',
+  'historias-familiares': 'Relatos de familias y comunidades del Valle de Toluca.',
+  'gastronomia': 'Cocina tradicional, recetas regionales y gastronomía del Estado de México.',
+  'patrimonio': 'Historia, arquitectura, sitios patrimoniales y herencia cultural.',
+  'identidad': 'Cultura, tradiciones, costumbres y identidad toluqueña.',
+  'agenda-cultural': 'Eventos culturales, exposiciones, conciertos y actividades digitales.',
 };
 
 export function SectionPage() {
   const { category } = useParams<{ category: string }>();
-  const validCategories: ArticleCategory[] = ['politics', 'economy', 'sports', 'culture'];
-  const validCategory = validCategories.includes(category as ArticleCategory) 
-    ? category as ArticleCategory 
-    : 'politics';
+  const validCategories: ArticleCategory[] = ['arte-visual', 'arte-escenico', 'cine-y-audiovisual', 'festividades-locales', 'historias-familiares', 'gastronomia', 'patrimonio', 'identidad', 'agenda-cultural'];
+  const validCategory = validCategories.includes(category as ArticleCategory)
+    ? category as ArticleCategory
+    : 'arte-visual';
   
   const { articles, loading, error } = useArticles(validCategory);
 
@@ -54,8 +59,8 @@ export function SectionPage() {
     );
   }
 
-  const displayCategory = category?.toLowerCase() || 'politics';
-  const description = categoryDescriptions[displayCategory] || categoryDescriptions.politics;
+  const displayCategory = category?.toLowerCase() || 'arte-visual';
+  const description = categoryDescriptions[displayCategory] || categoryDescriptions['arte-visual'];
 
   return (
     <div className="min-h-screen bg-white">
