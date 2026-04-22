@@ -39,6 +39,10 @@ from aws_cdk.aws_cloudfront import (
     AllowedMethods,
     CachePolicy,
     OriginSslPolicy,
+    Function as CloudFrontFunction,
+    FunctionCode,
+    FunctionEventType,
+    FunctionAssociation,
 )
 from aws_cdk.aws_cloudfront_origins import (
     HttpOrigin,
@@ -185,6 +189,37 @@ class NewsStack(Stack):
                 "viewer_protocol_policy": ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
                 "cache_policy": CachePolicy.CACHING_OPTIMIZED,
             },
+        )
+
+        spa_rewrite_function = CloudFrontFunction(
+            self, "SpaRewriteFunction",
+            function_name="spa-rewrite",
+            code=FunctionCode.from_inline(r"""
+            function handler(event) {
+                var request = event.request;
+                var uri = request.uri;
+
+                if (uri.match(/\.[^/]+$/)) {
+                    return request;
+                }
+
+                request.uri = "/index.html";
+                return request;
+            }
+            """),
+        )
+
+        distribution.add_behavior(
+            "/*",
+            S3BucketOrigin(frontend_bucket),
+            viewer_protocol_policy=ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+            cache_policy=CachePolicy.CACHING_OPTIMIZED,
+            function_associations=[
+                FunctionAssociation(
+                    function=spa_rewrite_function,
+                    event_type=FunctionEventType.VIEWER_REQUEST,
+                )
+            ],
         )
 
         backend_origin = HttpOrigin(
