@@ -4,7 +4,7 @@ import { formatDate, formatDateShort, getCategoryColor, getCategoryLabel, slugif
 describe('formatDate', () => {
   it('formats ISO date string correctly', () => {
     const result = formatDate('2024-03-15T10:00:00Z');
-    expect(result).toContain('March');
+    expect(result).toContain('marzo');
     expect(result).toContain('15');
     expect(result).toContain('2024');
   });
@@ -13,7 +13,7 @@ describe('formatDate', () => {
 describe('formatDateShort', () => {
   it('formats date in short format', () => {
     const result = formatDateShort('2024-03-15T10:00:00Z');
-    expect(result).toContain('Mar');
+    expect(result).toContain('mar');
     expect(result).toContain('15');
   });
 });
