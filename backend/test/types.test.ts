@@ -8,7 +8,7 @@ const mockArticle: Article = {
   body: 'Full article body content.',
   author: 'John Doe',
   date: '2024-03-15T10:00:00Z',
-  category: 'technology',
+  category: 'patrimonio',
   imageUrl: 'https://example.com/image.jpg',
   readTimeMinutes: 5,
 };
@@ -34,7 +34,17 @@ describe('Article Interface', () => {
   });
 
   it('should have valid category', () => {
-    const validCategories = ['technology', 'sports', 'world', 'culture'];
+    const validCategories = [
+      'arte-visual',
+      'arte-escenico',
+      'cine-y-audiovisual',
+      'festividades-locales',
+      'historias-familiares',
+      'gastronomia',
+      'patrimonio',
+      'identidad',
+      'agenda-cultural',
+    ];
     expect(validCategories).toContain(mockArticle.category);
   });
 

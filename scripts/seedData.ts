@@ -1,10 +1,12 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, BatchWriteCommand } from '@aws-sdk/lib-dynamodb';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const client = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(client);
 
-const TABLE_NAME = process.env.TABLE_NAME || 'Articles';
+const TABLE_NAME = process.env.TABLE_NAME;
 
 interface Article {
   articleId: string;

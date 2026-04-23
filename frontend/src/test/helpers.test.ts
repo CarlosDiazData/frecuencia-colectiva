@@ -19,29 +19,29 @@ describe('formatDateShort', () => {
 });
 
 describe('getCategoryColor', () => {
-  it('returns correct color for technology', () => {
-    const result = getCategoryColor('technology');
-    expect(result).toBe('bg-blue-600 text-white');
+  it('returns correct color for arte-visual', () => {
+    const result = getCategoryColor('arte-visual');
+    expect(result).toBe('bg-[#C45C3E] text-white');
   });
 
-  it('returns correct color for sports', () => {
-    const result = getCategoryColor('sports');
-    expect(result).toBe('bg-green-600 text-white');
+  it('returns correct color for patrimonio', () => {
+    const result = getCategoryColor('patrimonio');
+    expect(result).toBe('bg-[#1D6B6B] text-white');
   });
 
   it('returns default color for unknown category', () => {
     const result = getCategoryColor('unknown');
-    expect(result).toBe('bg-gray-600 text-white');
+    expect(result).toBe('bg-gray-700 text-white');
   });
 });
 
 describe('getCategoryLabel', () => {
-  it('returns correct label for technology', () => {
-    expect(getCategoryLabel('technology')).toBe('Tech');
+  it('returns correct label for arte-visual', () => {
+    expect(getCategoryLabel('arte-visual')).toBe('Arte visual');
   });
 
-  it('returns correct label for world', () => {
-    expect(getCategoryLabel('world')).toBe('World');
+  it('returns correct label for gastronomia', () => {
+    expect(getCategoryLabel('gastronomia')).toBe('Gastronomía');
   });
 
   it('returns original text for unknown category', () => {

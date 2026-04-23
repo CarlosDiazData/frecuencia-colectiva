@@ -51,13 +51,6 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b-2 border-black">
-      <div className="bg-primary text-white py-1 px-4 text-sm font-semibold">
-        <div className="max-w-7xl mx-auto flex items-center gap-2">
-          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-          <span>EN VIVO</span>
-        </div>
-      </div>
-
       <nav className="max-w-7xl mx-auto px-4" ref={dropdownRef}>
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
