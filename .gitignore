@@ -37,3 +37,6 @@ coverage/
 
 # Agents
 .agents/
+
+# Docs
+docs/
