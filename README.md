@@ -98,7 +98,7 @@ A modern digital news platform for cultural coverage in Toluca, Estado de Mexico
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd news-page
+cd frecuencia-colectiva
 
 # Install frontend dependencies
 cd frontend
@@ -133,7 +133,7 @@ npm run dev
 # Backend (terminal 2)
 cd backend
 npm run build
-cdk synth
+npm run test
 ```
 
 ### Deployment
@@ -142,15 +142,18 @@ cdk synth
 # Deploy backend
 cd backend
 npm run build
-cdk deploy --all
+npm run deploy
 
-# Frontend builds automatically via CDK bucket deployment
+# Deploy frontend (after building)
+cd ../frontend
+npm run build
+# Upload dist/ contents to S3 bucket
 ```
 
 ## Project Structure
 
 ```
-news-page/
+frecuencia-colectiva/
 ├── frontend/                 # React frontend
 │   ├── src/
 │   │   ├── components/       # UI components
@@ -179,6 +182,7 @@ news-page/
 │   │   └── infrastructure/   # CDK stack
 │   │       └── news_stack.py
 │   ├── test/                 # Unit tests
+│   ├── requirements.txt      # Python dependencies
 │   └── package.json
 │
 ├── scripts/                  # Utility scripts
@@ -241,7 +245,7 @@ cd frontend
 npm test
 
 # Backend tests
-cd backend
+cd ../backend
 npm test
 ```
 

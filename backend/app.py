@@ -2,7 +2,7 @@
 import os
 from dotenv import load_dotenv
 from aws_cdk import App
-from infrastructure.news_stack import NewsStack
+from infrastructure.frecuencia_colectiva_stack import FrecuenciaColectivaStack
 
 load_dotenv()
 
@@ -13,7 +13,7 @@ if not account:
     raise ValueError("AWS_ACCOUNT environment variable is required. Set it in .env file.")
 
 app = App()
-NewsStack(app, "NewsStack", env={
+FrecuenciaColectivaStack(app, "FrecuenciaColectivaStack", env={
     "account": account,
     "region": region
 })
