@@ -1,5 +1,16 @@
-import { describe, it, expect } from 'vitest';
-import { Article } from '../types';
+import { describe, it, expect } from '@jest/globals';
+
+interface Article {
+  articleId: string;
+  title: string;
+  summary: string;
+  body: string;
+  author: string;
+  date: string;
+  category: string;
+  imageUrl: string;
+  readTimeMinutes: number;
+}
 
 const mockArticle: Article = {
   articleId: 'test-id-123',
