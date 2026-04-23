@@ -1,0 +1,62 @@
+name: CD
+
+on:
+  push:
+    branches: [ development, main ]
+
+jobs:
+  deploy:
+    name: Deploy (${{ github.ref_name == 'development' && 'staging' || 'production' }})
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'development' && 'staging' || 'production' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure environment
+        run: |
+          if [ "${{ github.ref_name }}" == "development" ]; then
+            echo "ENV_NAME=staging" >> $GITHUB_ENV
+            echo "STACK_SUFFIX=-staging" >> $GITHUB_ENV
+            echo "API_BASE_URL=https://api.staging.frecuenciacolectiva.com/prod" >> $GITHUB_ENV
+          else
+            echo "ENV_NAME=prod" >> $GITHUB_ENV
+            echo "STACK_SUFFIX=-prod" >> $GITHUB_ENV
+            echo "API_BASE_URL=https://api.frecuenciacolectiva.com/prod" >> $GITHUB_ENV
+          fi
+        shell: bash
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CDK
+        run: pip install -r backend/requirements.txt
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+        env:
+          VITE_API_BASE_URL: ${{ env.API_BASE_URL }}
+
+      - name: Deploy CDK stack
+        run: |
+          cd backend
+          npm ci
+          npm run build
+          npx cdk deploy --all --require-approval never --ci
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          STACK_SUFFIX: ${{ env.STACK_SUFFIX }}
+          AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
