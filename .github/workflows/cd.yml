@@ -44,6 +44,12 @@ jobs:
           npm ci
           npm run build
 
+      - name: Build frontend (placeholder for CDK)
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+
       - name: Deploy CDK stack
         run: |
           cd backend
@@ -56,6 +62,7 @@ jobs:
           AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
 
       - name: Get API URL from CDK outputs
+        id: cdk-outputs
         run: |
           STACK_NAME="FrecuenciaColectivaStack${{ env.STACK_SUFFIX }}"
           API_URL=$(aws cloudformation describe-stacks \
@@ -63,16 +70,36 @@ jobs:
             --region "${{ secrets.AWS_REGION }}" \
             --query 'Stacks[0].Outputs[?OutputKey==`ApiEndpoint`].OutputValue' \
             --output text)
+          FRONTEND_BUCKET=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`FrontendBucketName`].OutputValue' \
+            --output text)
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`DistributionId`].OutputValue' \
+            --output text)
           echo "API_BASE_URL=$API_URL" >> $GITHUB_ENV
+          echo "FRONTEND_BUCKET=$FRONTEND_BUCKET" >> $GITHUB_ENV
+          echo "DISTRIBUTION_ID=$DISTRIBUTION_ID" >> $GITHUB_ENV
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
 
-      - name: Build frontend with real API URL
+      - name: Rebuild frontend with real API URL
         run: |
           cd frontend
           npm ci
           npm run build
         env:
           VITE_API_BASE_URL: ${{ env.API_BASE_URL }}
+
+      - name: Upload frontend files to S3
+        run: |
+          aws s3 sync ./frontend/dist s3://${{ env.FRONTEND_BUCKET }} --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.DISTRIBUTION_ID }} --paths "/*"

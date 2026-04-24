@@ -235,3 +235,5 @@ class FrecuenciaColectivaStack(Stack):
         CfnOutput(self, "ApiEndpoint", value=api.url)
         CfnOutput(self, "FrontendURL", value=f"https://{distribution.domain_name}")
         CfnOutput(self, "DynamoDBTableName", value=articles_table.table_name)
+        CfnOutput(self, "FrontendBucketName", value=frontend_bucket.bucket_name)
+        CfnOutput(self, "DistributionId", value=distribution.distribution_id)
