@@ -1,0 +1,130 @@
+name: CD
+
+on:
+  push:
+    branches: [ development, main ]
+
+jobs:
+  deploy:
+    name: Deploy (${{ github.ref_name == 'development' && 'staging' || 'production' }})
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'development' && 'staging' || 'production' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure environment
+        run: |
+          if [ "${{ github.ref_name }}" == "development" ]; then
+            echo "ENV_NAME=staging" >> $GITHUB_ENV
+            echo "STACK_SUFFIX=-staging" >> $GITHUB_ENV
+          else
+            echo "ENV_NAME=prod" >> $GITHUB_ENV
+            echo "STACK_SUFFIX=-prod" >> $GITHUB_ENV
+          fi
+        shell: bash
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CDK
+        run: pip install -r backend/requirements.txt
+
+      - name: Build backend TypeScript
+        run: |
+          cd backend
+          npm ci
+          npm run build
+
+      - name: Build frontend (placeholder for CDK)
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+
+      - name: Deploy CDK stack
+        run: |
+          cd backend
+          npx cdk deploy --all --require-approval never --ci
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          STACK_SUFFIX: ${{ env.STACK_SUFFIX }}
+          AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+
+      - name: Get CDK outputs
+        id: cdk-outputs
+        run: |
+          STACK_NAME="FrecuenciaColectivaStack${{ env.STACK_SUFFIX }}"
+          API_URL=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`ApiEndpoint`].OutputValue' \
+            --output text)
+          FRONTEND_BUCKET=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`FrontendBucketName`].OutputValue' \
+            --output text)
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`DistributionId`].OutputValue' \
+            --output text)
+          TABLE_NAME=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`DynamoDBTableName`].OutputValue' \
+            --output text)
+          echo "API_BASE_URL=$API_URL" >> $GITHUB_ENV
+          echo "FRONTEND_BUCKET=$FRONTEND_BUCKET" >> $GITHUB_ENV
+          echo "DISTRIBUTION_ID=$DISTRIBUTION_ID" >> $GITHUB_ENV
+          echo "TABLE_NAME=$TABLE_NAME" >> $GITHUB_ENV
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Rebuild frontend with real API URL
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+        env:
+          VITE_API_BASE_URL: ${{ env.API_BASE_URL }}
+
+      - name: Upload frontend files to S3
+        run: |
+          aws s3 sync ./frontend/dist s3://${{ env.FRONTEND_BUCKET }} --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.DISTRIBUTION_ID }} --paths "/*"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Seed DynamoDB with sample articles
+        run: |
+          cd scripts
+          npm ci
+          npm run seed
+        env:
+          TABLE_NAME: ${{ env.TABLE_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}

@@ -40,7 +40,17 @@ function createResponse(statusCode: number, body: unknown): Response {
   };
 }
 
-const validCategories = ['technology', 'sports', 'world', 'culture'];
+const validCategories = [
+  'arte-visual',
+  'arte-escenico',
+  'cine-y-audiovisual',
+  'festividades-locales',
+  'historias-familiares',
+  'gastronomia',
+  'patrimonio',
+  'identidad',
+  'agenda-cultural',
+];
 
 export async function handler(event: {
   queryStringParameters?: { category?: string };

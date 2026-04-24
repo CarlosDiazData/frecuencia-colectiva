@@ -25,11 +25,10 @@ describe('Navbar', () => {
         </SearchProvider>
       </MemoryRouter>
     );
-    
-    expect(screen.getByText('Política')).toBeInTheDocument();
-    expect(screen.getByText('Economía')).toBeInTheDocument();
-    expect(screen.getByText('Deportes')).toBeInTheDocument();
-    expect(screen.getByText('Cultura')).toBeInTheDocument();
+
+    expect(screen.getByText('EXPRESIONES ARTÍSTICAS')).toBeInTheDocument();
+    expect(screen.getByText('COSTUMBRES, CREENCIAS Y TRADICIONES')).toBeInTheDocument();
+    expect(screen.getByText('MODOS DE VIDA')).toBeInTheDocument();
   });
 
   it('has a search button', () => {

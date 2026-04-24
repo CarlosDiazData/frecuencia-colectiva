@@ -1,5 +1,16 @@
-import { describe, it, expect } from 'vitest';
-import { Article } from '../types';
+import { describe, it, expect } from '@jest/globals';
+
+interface Article {
+  articleId: string;
+  title: string;
+  summary: string;
+  body: string;
+  author: string;
+  date: string;
+  category: string;
+  imageUrl: string;
+  readTimeMinutes: number;
+}
 
 const mockArticle: Article = {
   articleId: 'test-id-123',
@@ -8,7 +19,7 @@ const mockArticle: Article = {
   body: 'Full article body content.',
   author: 'John Doe',
   date: '2024-03-15T10:00:00Z',
-  category: 'technology',
+  category: 'patrimonio',
   imageUrl: 'https://example.com/image.jpg',
   readTimeMinutes: 5,
 };
@@ -34,7 +45,17 @@ describe('Article Interface', () => {
   });
 
   it('should have valid category', () => {
-    const validCategories = ['technology', 'sports', 'world', 'culture'];
+    const validCategories = [
+      'arte-visual',
+      'arte-escenico',
+      'cine-y-audiovisual',
+      'festividades-locales',
+      'historias-familiares',
+      'gastronomia',
+      'patrimonio',
+      'identidad',
+      'agenda-cultural',
+    ];
     expect(validCategories).toContain(mockArticle.category);
   });
 

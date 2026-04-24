@@ -1,29 +1,57 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
 import { useSearch } from '@/context/SearchContext';
 
-const categories = [
-  { name: 'Política', path: '/section/politics' },
-  { name: 'Economía', path: '/section/economy' },
-  { name: 'Cultura', path: '/section/culture' },
-  { name: 'Deportes', path: '/section/sports' },
+const sections = [
+  {
+    name: 'EXPRESIONES ARTÍSTICAS',
+    items: [
+      { name: 'Arte visual', path: '/section/arte-visual' },
+      { name: 'Arte escénico', path: '/section/arte-escenico' },
+      { name: 'Cine y audiovisual', path: '/section/cine-y-audiovisual' },
+    ],
+  },
+  {
+    name: 'COSTUMBRES, CREENCIAS Y TRADICIONES',
+    items: [
+      { name: 'Festividades locales', path: '/section/festividades-locales' },
+      { name: 'Historias familiares o comunitarias', path: '/section/historias-familiares' },
+      { name: 'Gastronomía', path: '/section/gastronomia' },
+    ],
+  },
+  {
+    name: 'MODOS DE VIDA',
+    items: [
+      { name: 'Patrimonio', path: '/section/patrimonio' },
+      { name: 'Identidad', path: '/section/identidad' },
+      { name: 'Agenda cultural digital', path: '/section/agenda-cultural' },
+    ],
+  },
 ];
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const { searchQuery, setSearchQuery, isSearchOpen, toggleSearch } = useSearch();
-  const location = useLocation();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b-2 border-black">
-      <div className="bg-primary text-white py-1 px-4 text-sm font-semibold">
-        <div className="max-w-7xl mx-auto flex items-center gap-2">
-          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-          <span>EN VIVO</span>
-        </div>
-      </div>
-      
-      <nav className="max-w-7xl mx-auto px-4">
+      <nav className="max-w-7xl mx-auto px-4" ref={dropdownRef}>
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
             <span className="text-primary font-serif text-3xl font-black tracking-tight">
@@ -31,19 +59,41 @@ export function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            {categories.map(cat => (
-              <Link
-                key={cat.path}
-                to={cat.path}
-                className={`text-sm font-bold uppercase tracking-wider transition-colors ${
-                  location.pathname === cat.path 
-                    ? 'text-primary border-b-2 border-primary pb-1' 
-                    : 'text-gray-900 hover:text-primary'
-                }`}
-              >
-                {cat.name}
-              </Link>
+          <div className="hidden md:flex items-center gap-1">
+            {sections.map(section => (
+              <div key={section.name} className="relative">
+                <button
+                  onClick={() => toggleDropdown(section.name)}
+                  className={`flex items-center gap-1 px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors ${
+                    openDropdown === section.name ? 'text-primary' : 'text-gray-900 hover:text-primary'
+                  }`}
+                >
+                  <span className="whitespace-nowrap">{section.name}</span>
+                  <svg
+                    className={`w-3 h-3 transition-transform ${openDropdown === section.name ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {openDropdown === section.name && (
+                  <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 shadow-lg min-w-48 z-50">
+                    {section.items.map(item => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setOpenDropdown(null)}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
@@ -94,20 +144,41 @@ export function Navbar() {
 
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 border-t border-gray-200 pt-4">
-            <div className="flex flex-col gap-3">
-              {categories.map(cat => (
-                <Link
-                  key={cat.path}
-                  to={cat.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-sm font-bold uppercase tracking-wider py-2 ${
-                    location.pathname === cat.path ? 'text-primary' : 'text-gray-900'
-                  }`}
+            {sections.map(section => (
+              <div key={section.name} className="border-b border-gray-200 pb-2 mb-2">
+                <button
+                  onClick={() => toggleDropdown(section.name)}
+                  className="flex items-center justify-between w-full py-2 text-sm font-bold uppercase tracking-wider text-gray-900"
                 >
-                  {cat.name}
-                </Link>
-              ))}
-            </div>
+                  <span>{section.name}</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform ${openDropdown === section.name ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {openDropdown === section.name && (
+                  <div className="pl-4 flex flex-col gap-1">
+                    {section.items.map(item => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setOpenDropdown(null);
+                        }}
+                        className="text-sm text-gray-700 py-1 hover:text-primary"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         )}
       </nav>

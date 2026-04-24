@@ -10,7 +10,7 @@ export interface Article {
   readTimeMinutes: number;
 }
 
-export type ArticleCategory = 'economy' | 'sports' | 'politics' | 'culture';
+export type ArticleCategory = 'arte-visual' | 'arte-escenico' | 'cine-y-audiovisual' | 'festividades-locales' | 'historias-familiares' | 'gastronomia' | 'patrimonio' | 'identidad' | 'agenda-cultural';
 
 export interface ArticlesResponse {
   articles: Article[];
