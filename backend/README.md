@@ -12,7 +12,7 @@ backend/
 │   │   ├── getArticleHandler.ts
 │   │   └── filterByCategoryHandler.ts
 │   └── infrastructure/     # CDK stack definitions
-│       └── news_stack.py
+│       └── frecuencia_colectiva_stack.py
 ├── test/                   # Unit tests
 ├── package.json
 ├── tsconfig.json
