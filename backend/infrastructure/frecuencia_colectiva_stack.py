@@ -54,7 +54,7 @@ from aws_cdk.aws_cloudfront_origins import (
 )
 from aws_cdk.aws_s3_deployment import BucketDeployment, Source
 from aws_cdk.aws_cloudfront import S3OriginAccessControl, Signing
-from aws_cdk.aws_ses import EmailIdentity
+from aws_cdk.aws_ses import EmailIdentity, Identity
 from cdk_nag import NagSuppressions
 
 
@@ -113,7 +113,7 @@ class FrecuenciaColectivaStack(Stack):
 
         import os
         contact_email = os.getenv("CONTACT_EMAIL", "contact@frecuenciacolectiva.com")
-        EmailIdentity(self, "ContactEmailIdentity", identity=EmailIdentity.domain(contact_email))
+        EmailIdentity(self, "ContactEmailIdentity", identity=Identity.domain(contact_email))
 
         NagSuppressions.add_resource_suppressions(articles_table, [
             {
