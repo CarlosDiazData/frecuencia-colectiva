@@ -8,15 +8,14 @@ const footerLinks = {
     { name: 'Deportes', path: '/section/sports' },
   ],
   company: [
-    { name: 'Nosotros', path: '#' },
-    { name: 'Contacto', path: '#' },
-    { name: 'Trabaja con nosotros', path: '#' },
-    { name: 'Publicidad', path: '#' },
+    { name: 'Inicio', path: '/' },
+    { name: 'Nosotros', path: '/nosotros' },
+    { name: 'Directorio', path: '/directorio' },
+    { name: 'Contáctanos', path: '/contacto' },
+    { name: 'Anúnciate', path: '/anunciate' },
   ],
   legal: [
-    { name: 'Política de Privacidad', path: '#' },
-    { name: 'Términos de Servicio', path: '#' },
-    { name: 'Política de Cookies', path: '#' },
+    { name: 'Aviso de Privacidad', path: '/aviso-privacidad' },
   ],
 };
 
