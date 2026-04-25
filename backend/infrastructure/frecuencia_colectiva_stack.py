@@ -11,6 +11,9 @@ from aws_cdk.aws_apigateway import (
     LambdaIntegration,
     Cors,
     CorsOptions,
+    MockIntegration,
+    IntegrationResponse,
+    MethodResponse,
 )
 from aws_cdk.aws_lambda import (
     Function,

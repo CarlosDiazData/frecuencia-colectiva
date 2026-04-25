@@ -3,10 +3,25 @@ import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 
 const client = new SESClient({ region: process.env.AWS_REGION || 'us-east-1' });
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+  'Access-Control-Allow-Methods': 'POST,OPTIONS',
+};
+
 export const handler: APIGatewayProxyHandler = async (event) => {
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: corsHeaders,
+      body: '',
+    };
+  }
+
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Method not allowed' }),
     };
   }
@@ -14,6 +29,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
   if (!event.body) {
     return {
       statusCode: 400,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Request body is required' }),
     };
   }
@@ -24,6 +40,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
   } catch {
     return {
       statusCode: 400,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Invalid JSON body' }),
     };
   }
@@ -33,6 +50,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
   if (!name || !email || !message) {
     return {
       statusCode: 400,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Name, email, and message are required' }),
     };
   }
@@ -42,6 +60,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     console.error('CONTACT_EMAIL environment variable not set');
     return {
       statusCode: 500,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Server configuration error' }),
     };
   }
@@ -50,6 +69,7 @@ export const handler: APIGatewayProxyHandler = async (event) => {
   if (!emailRegex.test(email)) {
     return {
       statusCode: 400,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Invalid email format' }),
     };
   }
@@ -87,12 +107,14 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
     return {
       statusCode: 200,
+      headers: corsHeaders,
       body: JSON.stringify({ success: true, message: 'Email sent successfully' }),
     };
   } catch (error) {
     console.error('Error sending email:', error);
     return {
       statusCode: 500,
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Failed to send email' }),
     };
   }
