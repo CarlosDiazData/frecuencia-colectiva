@@ -74,3 +74,6 @@ jobs:
 
       - name: CDK Synthesize
         run: npx cdk synth
+        env:
+          AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
