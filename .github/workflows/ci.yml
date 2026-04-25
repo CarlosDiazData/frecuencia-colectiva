@@ -64,6 +64,12 @@ jobs:
       - name: Build TypeScript
         run: npm run build
 
+      - name: Build frontend
+        run: |
+          cd ../frontend
+          npm ci
+          npm run build
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
