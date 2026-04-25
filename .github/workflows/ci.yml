@@ -64,5 +64,13 @@ jobs:
       - name: Build TypeScript
         run: npm run build
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CDK dependencies
+        run: pip install -r requirements.txt
+
       - name: CDK Synthesize
         run: npx cdk synth
