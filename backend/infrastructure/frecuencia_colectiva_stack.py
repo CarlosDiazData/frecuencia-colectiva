@@ -20,6 +20,7 @@ from aws_cdk.aws_lambda import (
     Runtime,
     Code,
 )
+from aws_cdk.aws_lambda_nodejs import NodejsFunction
 from aws_cdk.aws_dynamodb import (
     Table,
     AttributeType,
@@ -110,6 +111,13 @@ class FrecuenciaColectivaStack(Stack):
             }
         ])
 
+        NagSuppressions.add_resource_suppressions(articles_table, [
+            {
+                "id": "AwsSolutions-DDB3",
+                "reason": "Point-in-time recovery not required for development environment - articles are seeded from external source"
+            }
+        ])
+
         list_articles_fn = Function(
             self, "ListArticlesHandler",
             runtime=Runtime.NODEJS_20_X,
@@ -168,6 +176,13 @@ class FrecuenciaColectivaStack(Stack):
             timeout=Duration.seconds(10),
         )
 
+        NagSuppressions.add_resource_suppressions([list_articles_fn, get_article_fn, filter_by_category_fn, contact_fn], [
+            {
+                "id": "AwsSolutions-L1",
+                "reason": "NODEJS_20_X is the current LTS runtime - using latest would require Node.js 22 which may not be available in all Lambda@Edge regions"
+            }
+        ])
+
         api = RestApi(
             self, "NewsApi",
             rest_api_name="News API",
@@ -203,11 +218,19 @@ class FrecuenciaColectivaStack(Stack):
             LambdaIntegration(contact_fn),
         )
 
+        frontend_bucket_log = Bucket(
+            self, "FrontendBucketLogs",
+            public_read_access=False,
+            block_public_access=BlockPublicAccess.BLOCK_ALL,
+            removal_policy=RemovalPolicy.DESTROY,
+        )
+
         frontend_bucket = Bucket(
             self, "FrontendBucket",
             public_read_access=False,
             block_public_access=BlockPublicAccess.BLOCK_ALL,
             removal_policy=RemovalPolicy.DESTROY,
+            server_access_logs_bucket=frontend_bucket_log,
         )
 
         origin_access_control = S3OriginAccessControl(
@@ -229,7 +252,22 @@ class FrecuenciaColectivaStack(Stack):
                 "viewer_protocol_policy": ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
                 "cache_policy": CachePolicy.CACHING_OPTIMIZED,
             },
+            log_bucket=frontend_bucket_log,
         )
+
+        NagSuppressions.add_resource_suppressions(frontend_bucket, [
+            {
+                "id": "AwsSolutions-S10",
+                "reason": "Bucket policy is managed by CloudFront OAC - HTTPS is enforced at distribution level"
+            }
+        ])
+
+        NagSuppressions.add_resource_suppressions(frontend_bucket_log, [
+            {
+                "id": "AwsSolutions-S10",
+                "reason": "Access logs bucket does not require SSL - it only receives access logs from CloudFront"
+            }
+        ])
 
         spa_rewrite_function = CloudFrontFunction(
             self, "SpaRewriteFunction",
