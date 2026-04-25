@@ -111,6 +111,10 @@ class FrecuenciaColectivaStack(Stack):
             }
         ])
 
+        import os
+        contact_email = os.getenv("CONTACT_EMAIL", "contact@frecuenciacolectiva.com")
+        EmailIdentity(self, "ContactEmailIdentity", identity=EmailIdentity.domain(contact_email))
+
         NagSuppressions.add_resource_suppressions(articles_table, [
             {
                 "id": "AwsSolutions-DDB3",

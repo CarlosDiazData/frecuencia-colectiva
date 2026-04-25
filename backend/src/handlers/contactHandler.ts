@@ -112,10 +112,12 @@ export const handler: APIGatewayProxyHandler = async (event) => {
     };
   } catch (error) {
     console.error('Error sending email:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('Error details:', errorMessage);
     return {
       statusCode: 500,
       headers: corsHeaders,
-      body: JSON.stringify({ error: 'Failed to send email' }),
+      body: JSON.stringify({ error: 'Failed to send email', details: errorMessage }),
     };
   }
 };
