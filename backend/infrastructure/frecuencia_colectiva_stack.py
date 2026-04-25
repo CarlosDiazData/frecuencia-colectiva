@@ -170,8 +170,7 @@ class FrecuenciaColectivaStack(Stack):
             role=lambda_role,
             environment={
                 "CONTACT_EMAIL": os.getenv("CONTACT_EMAIL", "contact@frecuenciacolectiva.com"),
-                "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
-                "AWS_REGION": os.getenv("AWS_REGION", "us-east-1"),
+                "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
             },
             memory_size=256,
             timeout=Duration.seconds(10),
