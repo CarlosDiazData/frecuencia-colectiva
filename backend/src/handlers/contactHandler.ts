@@ -76,10 +76,10 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
   const params = {
     Source: contactEmail,
-    ReplyToAddresses: [email],
     Destination: {
       ToAddresses: [contactEmail],
     },
+    ReplyToAddresses: [email],
     Message: {
       Subject: {
         Data: `Nuevo mensaje de contacto: ${name}`,
