@@ -27,6 +27,7 @@ from aws_cdk.aws_iam import (
     Role,
     ServicePrincipal,
     ManagedPolicy,
+    PolicyStatement,
 )
 from aws_cdk.aws_s3 import (
     Bucket,
@@ -49,6 +50,7 @@ from aws_cdk.aws_cloudfront_origins import (
 )
 from aws_cdk.aws_s3_deployment import BucketDeployment, Source
 from aws_cdk.aws_cloudfront import S3OriginAccessControl, Signing
+from aws_cdk.aws_ses import EmailIdentity
 
 
 class FrecuenciaColectivaStack(Stack):
@@ -89,6 +91,13 @@ class FrecuenciaColectivaStack(Stack):
         )
 
         articles_table.grant_read_data(lambda_role)
+
+        lambda_role.add_to_policy(
+            PolicyStatement(
+                actions=["ses:SendEmail", "ses:SendRawEmail", "ses:SendTemplatedEmail"],
+                resources=["*"],
+            )
+        )
 
         list_articles_fn = Function(
             self, "ListArticlesHandler",
@@ -132,6 +141,22 @@ class FrecuenciaColectivaStack(Stack):
             timeout=Duration.seconds(10),
         )
 
+        import os
+
+        contact_fn = Function(
+            self, "ContactHandler",
+            runtime=Runtime.NODEJS_20_X,
+            handler="contactHandler.handler",
+            code=Code.from_asset("dist/handlers"),
+            role=lambda_role,
+            environment={
+                "CONTACT_EMAIL": os.getenv("CONTACT_EMAIL", "contact@frecuenciacolectiva.com"),
+                "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+            },
+            memory_size=256,
+            timeout=Duration.seconds(10),
+        )
+
         api = RestApi(
             self, "NewsApi",
             rest_api_name="News API",
@@ -159,6 +184,12 @@ class FrecuenciaColectivaStack(Stack):
         article_by_id.add_method(
             "GET",
             LambdaIntegration(get_article_fn),
+        )
+
+        contact = api.root.add_resource("contact")
+        contact.add_method(
+            "POST",
+            LambdaIntegration(contact_fn),
         )
 
         frontend_bucket = Bucket(

@@ -60,6 +60,7 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           STACK_SUFFIX: ${{ env.STACK_SUFFIX }}
           AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
 
       - name: Get CDK outputs
         id: cdk-outputs
