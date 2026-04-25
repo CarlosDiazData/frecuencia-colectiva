@@ -3,6 +3,8 @@ import os
 from dotenv import load_dotenv
 from aws_cdk import App
 from infrastructure.frecuencia_colectiva_stack import FrecuenciaColectivaStack
+from cdk_nag import Aspects
+from cdk_nag_rules_alpha import AwsSolutionsChecks
 
 load_dotenv()
 
@@ -18,4 +20,5 @@ FrecuenciaColectivaStack(app, f"FrecuenciaColectivaStack{stack_suffix}", env={
     "account": account,
     "region": region
 })
+Aspects.of(app).add(AwsSolutionsChecks())
 app.synth()

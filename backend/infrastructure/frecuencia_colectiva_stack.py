@@ -54,6 +54,7 @@ from aws_cdk.aws_cloudfront_origins import (
 from aws_cdk.aws_s3_deployment import BucketDeployment, Source
 from aws_cdk.aws_cloudfront import S3OriginAccessControl, Signing
 from aws_cdk.aws_ses import EmailIdentity
+from cdk_nag import NagSuppressions
 
 
 class FrecuenciaColectivaStack(Stack):
@@ -101,6 +102,13 @@ class FrecuenciaColectivaStack(Stack):
                 resources=["*"],
             )
         )
+
+        NagSuppressions.add_resource_suppressions(lambda_role, [
+            {
+                "id": "AwsSolutions-IAM5",
+                "reason": "SES permissions require wildcard resource for email sending - email identity is verified via SES console"
+            }
+        ])
 
         list_articles_fn = Function(
             self, "ListArticlesHandler",

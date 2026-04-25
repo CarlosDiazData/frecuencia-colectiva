@@ -63,3 +63,6 @@ jobs:
 
       - name: Build TypeScript
         run: npm run build
+
+      - name: CDK Synthesize
+        run: npx cdk synth
