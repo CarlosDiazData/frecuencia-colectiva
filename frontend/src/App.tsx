@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SearchProvider } from '@/context/SearchContext';
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer, ScrollToTop } from '@/components';
 import { HomePage, SectionPage, ArticlePage, NosotrosPage, DirectorioPage, ContactPage, AnunciatePage, AvisoPrivacidadPage } from '@/pages';
 
 export function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <SearchProvider>
         <div className="min-h-screen flex flex-col">
           <Navbar />
