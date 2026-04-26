@@ -58,17 +58,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
-
       - name: Build TypeScript
         run: npm run build
 
-      - name: Build frontend
-        run: |
-          cd ../frontend
-          npm ci
-          npm run build
+      - name: Run tests
+        run: npm test
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -77,6 +71,12 @@ jobs:
 
       - name: Install CDK dependencies
         run: pip install -r requirements.txt
+
+      - name: CDK Synthesize
+        run: |
+          npm ci
+          npm run build
+        working-directory: frontend
 
       - name: CDK Synthesize
         run: npx cdk synth
