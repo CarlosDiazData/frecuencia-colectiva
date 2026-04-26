@@ -73,6 +73,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: CDK Synthesize
+        run: |
+          npm ci
+          npm run build
+        working-directory: frontend
+
+      - name: CDK Synthesize
         run: npx cdk synth
         env:
           AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
