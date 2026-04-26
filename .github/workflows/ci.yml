@@ -63,3 +63,23 @@ jobs:
 
       - name: Build TypeScript
         run: npm run build
+
+      - name: Build frontend
+        run: |
+          cd ../frontend
+          npm ci
+          npm run build
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CDK dependencies
+        run: pip install -r requirements.txt
+
+      - name: CDK Synthesize
+        run: npx cdk synth
+        env:
+          AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}

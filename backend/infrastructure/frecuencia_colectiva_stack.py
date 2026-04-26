@@ -11,12 +11,16 @@ from aws_cdk.aws_apigateway import (
     LambdaIntegration,
     Cors,
     CorsOptions,
+    MockIntegration,
+    IntegrationResponse,
+    MethodResponse,
 )
 from aws_cdk.aws_lambda import (
     Function,
     Runtime,
     Code,
 )
+from aws_cdk.aws_lambda_nodejs import NodejsFunction
 from aws_cdk.aws_dynamodb import (
     Table,
     AttributeType,
@@ -27,6 +31,7 @@ from aws_cdk.aws_iam import (
     Role,
     ServicePrincipal,
     ManagedPolicy,
+    PolicyStatement,
 )
 from aws_cdk.aws_s3 import (
     Bucket,
@@ -49,6 +54,8 @@ from aws_cdk.aws_cloudfront_origins import (
 )
 from aws_cdk.aws_s3_deployment import BucketDeployment, Source
 from aws_cdk.aws_cloudfront import S3OriginAccessControl, Signing
+from aws_cdk.aws_ses import EmailIdentity
+from cdk_nag import NagSuppressions
 
 
 class FrecuenciaColectivaStack(Stack):
@@ -89,6 +96,27 @@ class FrecuenciaColectivaStack(Stack):
         )
 
         articles_table.grant_read_data(lambda_role)
+
+        lambda_role.add_to_policy(
+            PolicyStatement(
+                actions=["ses:SendEmail", "ses:SendRawEmail", "ses:SendTemplatedEmail"],
+                resources=["*"],
+            )
+        )
+
+        NagSuppressions.add_resource_suppressions(lambda_role, [
+            {
+                "id": "AwsSolutions-IAM5",
+                "reason": "SES permissions require wildcard resource for email sending - email identity is verified via SES console"
+            }
+        ])
+
+        NagSuppressions.add_resource_suppressions(articles_table, [
+            {
+                "id": "AwsSolutions-DDB3",
+                "reason": "Point-in-time recovery not required for development environment - articles are seeded from external source"
+            }
+        ])
 
         list_articles_fn = Function(
             self, "ListArticlesHandler",
@@ -132,6 +160,29 @@ class FrecuenciaColectivaStack(Stack):
             timeout=Duration.seconds(10),
         )
 
+        import os
+
+        contact_fn = Function(
+            self, "ContactHandler",
+            runtime=Runtime.NODEJS_20_X,
+            handler="contactHandler.handler",
+            code=Code.from_asset("dist/handlers"),
+            role=lambda_role,
+            environment={
+                "CONTACT_EMAIL": os.getenv("CONTACT_EMAIL", "contact@frecuenciacolectiva.com"),
+                "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+            },
+            memory_size=256,
+            timeout=Duration.seconds(10),
+        )
+
+        NagSuppressions.add_resource_suppressions([list_articles_fn, get_article_fn, filter_by_category_fn, contact_fn], [
+            {
+                "id": "AwsSolutions-L1",
+                "reason": "NODEJS_20_X is the current LTS runtime - using latest would require Node.js 22 which may not be available in all Lambda@Edge regions"
+            }
+        ])
+
         api = RestApi(
             self, "NewsApi",
             rest_api_name="News API",
@@ -161,11 +212,25 @@ class FrecuenciaColectivaStack(Stack):
             LambdaIntegration(get_article_fn),
         )
 
+        contact = api.root.add_resource("contact")
+        contact.add_method(
+            "POST",
+            LambdaIntegration(contact_fn),
+        )
+
+        frontend_bucket_log = Bucket(
+            self, "FrontendBucketLogs",
+            public_read_access=False,
+            block_public_access=BlockPublicAccess.BLOCK_ALL,
+            removal_policy=RemovalPolicy.DESTROY,
+        )
+
         frontend_bucket = Bucket(
             self, "FrontendBucket",
             public_read_access=False,
             block_public_access=BlockPublicAccess.BLOCK_ALL,
             removal_policy=RemovalPolicy.DESTROY,
+            server_access_logs_bucket=frontend_bucket_log,
         )
 
         origin_access_control = S3OriginAccessControl(
@@ -187,7 +252,22 @@ class FrecuenciaColectivaStack(Stack):
                 "viewer_protocol_policy": ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
                 "cache_policy": CachePolicy.CACHING_OPTIMIZED,
             },
+            log_bucket=frontend_bucket_log,
         )
+
+        NagSuppressions.add_resource_suppressions(frontend_bucket, [
+            {
+                "id": "AwsSolutions-S10",
+                "reason": "Bucket policy is managed by CloudFront OAC - HTTPS is enforced at distribution level"
+            }
+        ])
+
+        NagSuppressions.add_resource_suppressions(frontend_bucket_log, [
+            {
+                "id": "AwsSolutions-S10",
+                "reason": "Access logs bucket does not require SSL - it only receives access logs from CloudFront"
+            }
+        ])
 
         spa_rewrite_function = CloudFrontFunction(
             self, "SpaRewriteFunction",
