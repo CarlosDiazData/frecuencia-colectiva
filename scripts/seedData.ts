@@ -60,6 +60,52 @@ Finalmente, el Ayuntamiento de Toluca reitera su invitación a la población a s
     category: 'arte-visual',
     imageUrl: 'https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.82787-15/671261642_18587587561039548_317813685417641817_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=Mzg5NDI1MDgyMjc3OTc1MzE2Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNjk0LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=JCaukk4u88MQ7kNvwHhC_dD&_nc_oc=AdrcfaHZhnOB-Yw46fQIWssrYVWjaC3iXvyFQdOc7EI44uWgZ4KcfLJYu9MS1UEDbK_FEBhuFy5NsFj-TkUiSHpM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpbc6-1.fna&_nc_gid=crZo7jcY6-AqRp7yAoa6dg&_nc_ss=7a22e&oh=00_Af4Ke9yqjdt1Q9Z4p_9Wm05ssSD_f1ChjfEaIKg6hd1kwQ&oe=6A07D531',
     readTimeMinutes: 3,
+  },
+  {
+    articleId: 'av-003-2024-0002',
+    title: 'Festival MAREVA: Sabino hizo cantar a Lerma con un concierto gratuito.',
+    summary: 'Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.',
+    body: `Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.  
+
+El Ayuntamiento de Lerma expone en su sitio web oficial que el municipio es el corazón cultural del Estado de México, con el Festival Cultural Martín Reolín Varejón (MAREVA) se consolida una oferta cultural con personalidad propia, que privilegia las más elevadas expresiones humanas, en arte, tradición y cultura.  
+
+En cuanto dieron las 7 de la noche apareció la primera sorpresa de la noche, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante, porque cuando termino su primer tema le aplaudieron y gritaron “Te amo Marco” en repetidas ocasiones.  
+
+Después de que Mares se despidiera de la audiencia, a las 20:00 horas entro a la escena el baterista para explicar las reglas del show con la finalidad de darle la bienvenida a Sabino 
+
+“¿Ustedes son los grandes rebeldes del hop? ¿Sí o no? Entonces ustedes contestan cuando yo digo los rebeldes del Pop: HU HU. Y si yo digo ‘Sab’ tú me contestas: HOP HOP”, expreso Tio Torres con firmeza. Acto seguido Sabino comenzó su concierto con el tema "Sab Hop". 
+
+En un instante inesperado, Sabino se quitó la camisa a petición de sus fans y para demostrar que no está enfermo, como algunos comentarios en redes sociales lo han insinuado.  
+
+Con el tema “Guapa!” se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovecho para tomarse fotos desde el escenario hasta que volvió el audio, le pregunto a su audiencia si retomaban la canción. 
+
+“No opines de los demás, enfócate en ti… Eres un motor que me hace seguir con vida” expresó Sabino, refiriéndose a todos como “cariño”, lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a "9:15", "Conmigo siempre" y "Tú". 
+
+Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes. 
+
+Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito “Película”, armando el ambiente para la foto final y su despedida.  
+`,
+    author: 'Marisol Ramirez',
+    date: '2026-04-20T14:30:00Z',
+    category: 'arte-escenico',
+    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t51.82787-15/670973414_18588540952055513_5577718994429706924_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pWg_SwG_d3EQ7kNvwHpnYeS&_nc_oc=AdqP1bsmDe7XUKAM9phuMHyt8W-L5yY2pjY3yNLoxN2HR84Wf6nTN71rn41hmDnRhOb812gHk4EbnPTRTVzEe4iw&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=I_RsvyGoqpbCf9poiogmAQ&_nc_ss=7b289&oh=00_Af7KzJU7-BvXOQkCNgO0fMhE6aY7_2EwW_8MAzz5yrOeYA&oe=6A0926FE',
+    readTimeMinutes: 4,
+  },
+  {
+    articleId: 'av-004-2024-0002',
+    title: 'Sheinbaum lanza convocatoria de “México Canta” para impulsar talento juvenil del regional mexicano.',
+    summary: 'La presidenta Claudia Sheinbaum presentó la segunda edición de “México Canta”, un certamen dirigido a jóvenes compositores e intérpretes de regional mexicano de México y de la comunidad mexicoestadunidense. La convocatoria estará abierta del 11 de mayo al 10 de junio y busca promover narrativas de paz en la música.',
+    body: `La presidenta Claudia Sheinbaum Pardo presentó este lunes, durante la Mañanera del Pueblo, la convocatoria de la segunda edición de “México Canta”, un certamen con el que el gobierno federal busca impulsar el talento de jóvenes compositores e intérpretes de regional mexicano. En el anuncio participaron también la secretaria de Cultura, Claudia Curiel de Icaza, así como las cantantes Majo Aguilar y Junior H.  
+
+De acuerdo con la información difundida por AMEXI, la convocatoria está dirigida a jóvenes de entre 18 y 29 años, tanto de México como de la comunidad mexicoestadunidense, quienes podrán registrarse hasta el 10 de junio de 2026. El proyecto busca dar espacio a propuestas musicales con una narrativa de paz y alejada de la apología del delito.  
+
+La final del certamen está prevista para el 13 de septiembre en el Auditorio Nacional, mientras que las semifinales se realizarán en Los Ángeles, Estados Unidos, y Mazatlán, Sinaloa. Además, las personas ganadoras tendrán la oportunidad de abrir el concierto del 15 de septiembre en el Zócalo capitalino.  
+`,
+    author: 'Francisco Mireles',
+    date: '2026-05-11T14:30:00Z',
+    category: 'arte-escenico',
+    imageUrl: 'https://www.jornada.com.mx/ndjsimg/images/jornada/jornadaimg/junto-a-majo-aguilar-y-junior-h-sheinbaum-lanza-la-segunda-edicion-de-mexico-canta/junto-a-majo-aguilar-y-junior-h-sheinbaum-lanza-la-segunda-edicion-de-mexico-canta_cf7a6aee-9af7-49f5-9d07-c33bc93e86cc_medialjnimgndimage=fullsize',
+    readTimeMinutes: 5,
   }
 ];
 
