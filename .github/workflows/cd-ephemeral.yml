@@ -19,8 +19,18 @@ jobs:
       - name: Check for open PR
         id: check
         run: |
-          PR_NUMBER=$(gh pr list --head "${{ github.ref_name }}" --state open --json number --jq '.[0].number // empty' 2>/dev/null)
-          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          if PR_NUMBER=$(gh pr list --head "${{ github.ref_name }}" --state open --json number -q '.[0].number // empty' 2>/dev/null); then
+            echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+            if [ -n "$PR_NUMBER" ] && [ "$PR_NUMBER" != "null" ] && [ "$PR_NUMBER" != "empty" ]; then
+              echo "PR #$PR_NUMBER found — will deploy ephemeral environment"
+            else
+              echo "pr_number=" >> "$GITHUB_OUTPUT"
+              echo "No open PR found — skipping ephemeral deploy"
+            fi
+          else
+            echo "pr_number=" >> "$GITHUB_OUTPUT"
+            echo "gh pr list failed — skipping ephemeral deploy"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
