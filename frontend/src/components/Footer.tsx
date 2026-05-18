@@ -1,12 +1,23 @@
 import { Link } from 'react-router-dom';
+import { getCategoryLabel } from '@/utils/helpers';
+
+const SECTION_SLUGS = [
+  'arte-visual',
+  'arte-escenico',
+  'cine-y-audiovisual',
+  'festividades-locales',
+  'historias-familiares',
+  'gastronomia',
+  'patrimonio',
+  'identidad',
+  'agenda-cultural',
+];
 
 const footerLinks = {
-  sections: [
-    { name: 'Política', path: '/section/politics' },
-    { name: 'Economía', path: '/section/economy' },
-    { name: 'Cultura', path: '/section/culture' },
-    { name: 'Deportes', path: '/section/sports' },
-  ],
+  sections: SECTION_SLUGS.map((slug) => ({
+    name: getCategoryLabel(slug),
+    path: `/section/${slug}`,
+  })),
   company: [
     { name: 'Inicio', path: '/' },
     { name: 'Nosotros', path: '/nosotros' },
