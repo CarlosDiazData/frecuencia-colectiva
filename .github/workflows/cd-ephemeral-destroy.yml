@@ -1,0 +1,59 @@
+name: CD Ephemeral Destroy
+
+on:
+  delete:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cd-ephemeral-destroy-${{ github.event.ref }}
+  cancel-in-progress: true
+
+jobs:
+  destroy-ephemeral:
+    name: Destroy Ephemeral (${{ github.event.ref }})
+    if: github.event.ref_type == 'branch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sanitize branch name
+        run: |
+          SANITIZED=$(echo "${{ github.event.ref }}" | tr '/' '-' | tr '[:upper:]' '[:lower:]' | cut -c1-40)
+          echo "STACK_NAME=FrecuenciaColectivaStack-$SANITIZED" >> "$GITHUB_ENV"
+          echo "Stack name: FrecuenciaColectivaStack-$SANITIZED"
+
+      - name: Check if stack exists
+        id: stack-check
+        run: |
+          if aws cloudformation describe-stacks \
+            --stack-name "${{ env.STACK_NAME }}" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].StackName' \
+            --output text 2>/dev/null; then
+            echo "stack_exists=true" >> "$GITHUB_OUTPUT"
+            echo "Stack found — will destroy"
+          else
+            echo "stack_exists=false" >> "$GITHUB_OUTPUT"
+            echo "No stack found — nothing to destroy"
+          fi
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Destroy stack
+        if: steps.stack-check.outputs.stack_exists == 'true'
+        run: |
+          aws cloudformation delete-stack \
+            --stack-name "${{ env.STACK_NAME }}" \
+            --region "${{ secrets.AWS_REGION }}"
+          echo "Stack ${{ env.STACK_NAME }} deletion initiated"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Skip — nothing to destroy
+        if: steps.stack-check.outputs.stack_exists == 'false'
+        run: echo "No ephemeral stack for ${{ github.event.ref }} — clean exit"
