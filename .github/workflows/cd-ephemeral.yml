@@ -6,42 +6,14 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 concurrency:
   group: cd-ephemeral-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
-  check-pr:
-    name: Check PR Gate
-    runs-on: ubuntu-latest
-    outputs:
-      pr_number: ${{ steps.check.outputs.pr_number }}
-
-    steps:
-      - name: Check for open PR
-        id: check
-        run: |
-          if PR_NUMBER=$(gh pr list --head "${{ github.ref_name }}" --state open --json number -q '.[0].number // empty' 2>/dev/null); then
-            echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
-            if [ -n "$PR_NUMBER" ] && [ "$PR_NUMBER" != "null" ] && [ "$PR_NUMBER" != "empty" ]; then
-              echo "PR #$PR_NUMBER found — will deploy ephemeral environment"
-            else
-              echo "pr_number=" >> "$GITHUB_OUTPUT"
-              echo "No open PR found — skipping ephemeral deploy"
-            fi
-          else
-            echo "pr_number=" >> "$GITHUB_OUTPUT"
-            echo "gh pr list failed — skipping ephemeral deploy"
-          fi
-        env:
-          GH_TOKEN: ${{ github.token }}
-
   deploy-ephemeral:
     name: Deploy Ephemeral (${{ github.ref_name }})
-    needs: check-pr
-    if: needs.check-pr.outputs.pr_number != ''
     runs-on: ubuntu-latest
 
     steps:
@@ -178,14 +150,3 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-
-      - name: Comment PR with ephemeral URLs
-        run: |
-          gh pr comment ${{ needs.check-pr.outputs.pr_number }} --body "## ✨ Ephemeral Environment Deployed
-
-          | Resource | URL |
-          |----------|-----|
-          | **Frontend** | ${{ env.FRONTEND_URL }} |
-          | **API** | ${{ env.API_BASE_URL }} |"
-        env:
-          GH_TOKEN: ${{ github.token }}
