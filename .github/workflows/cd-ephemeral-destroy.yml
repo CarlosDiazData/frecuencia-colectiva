@@ -3,7 +3,6 @@ name: CD Ephemeral Destroy
 on:
   pull_request:
     types: [closed]
-    branches-ignore: [development, main]
 
 concurrency:
   group: cd-ephemeral-destroy-${{ github.head_ref }}
