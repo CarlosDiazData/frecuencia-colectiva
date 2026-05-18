@@ -1,0 +1,178 @@
+name: CD Ephemeral
+
+on:
+  push:
+    branches-ignore: [development, main]
+
+concurrency:
+  group: cd-ephemeral-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  check-pr:
+    name: Check PR Gate
+    runs-on: ubuntu-latest
+    outputs:
+      pr_number: ${{ steps.check.outputs.pr_number }}
+
+    steps:
+      - name: Check for open PR
+        id: check
+        run: |
+          PR_NUMBER=$(gh pr list --head "${{ github.ref_name }}" --state open --json number --jq '.[0].number // empty' 2>/dev/null)
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-ephemeral:
+    name: Deploy Ephemeral (${{ github.ref_name }})
+    needs: check-pr
+    if: needs.check-pr.outputs.pr_number != ''
+    runs-on: ubuntu-latest
+    environment: ephemeral
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sanitize branch name
+        run: |
+          SANITIZED=$(echo "${{ github.ref_name }}" | tr '/' '-' | tr '[:upper:]' '[:lower:]' | cut -c1-40)
+          echo "STACK_SUFFIX=-$SANITIZED" >> "$GITHUB_ENV"
+          echo "SANITIZED_BRANCH=$SANITIZED" >> "$GITHUB_ENV"
+        shell: bash
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CDK
+        run: pip install -r backend/requirements.txt
+
+      - name: Setup Node.js for backend
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Build backend TypeScript
+        run: |
+          cd backend
+          npm ci
+          npm run build
+
+      - name: Ensure frontend dist folder exists for CDK
+        run: mkdir -p frontend/dist
+
+      - name: Deploy CDK stack
+        run: |
+          cd backend
+          npx cdk deploy --all --require-approval never --ci
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          STACK_SUFFIX: ${{ env.STACK_SUFFIX }}
+          AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+
+      - name: Get CDK outputs
+        id: cdk-outputs
+        run: |
+          STACK_NAME="FrecuenciaColectivaStack${{ env.STACK_SUFFIX }}"
+          API_URL=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`ApiEndpoint`].OutputValue' \
+            --output text)
+          FRONTEND_BUCKET=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`FrontendBucketName`].OutputValue' \
+            --output text)
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`DistributionId`].OutputValue' \
+            --output text)
+          TABLE_NAME=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`DynamoDBTableName`].OutputValue' \
+            --output text)
+          FRONTEND_URL=$(aws cloudformation describe-stacks \
+            --stack-name "$STACK_NAME" \
+            --region "${{ secrets.AWS_REGION }}" \
+            --query 'Stacks[0].Outputs[?OutputKey==`FrontendURL`].OutputValue' \
+            --output text)
+          echo "API_BASE_URL=$API_URL" >> "$GITHUB_ENV"
+          echo "FRONTEND_BUCKET=$FRONTEND_BUCKET" >> "$GITHUB_ENV"
+          echo "DISTRIBUTION_ID=$DISTRIBUTION_ID" >> "$GITHUB_ENV"
+          echo "TABLE_NAME=$TABLE_NAME" >> "$GITHUB_ENV"
+          echo "FRONTEND_URL=$FRONTEND_URL" >> "$GITHUB_ENV"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Setup Node.js for frontend
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+        env:
+          VITE_API_BASE_URL: ${{ env.API_BASE_URL }}
+
+      - name: Upload frontend files to S3
+        run: |
+          aws s3 sync ./frontend/dist s3://${{ env.FRONTEND_BUCKET }} --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.DISTRIBUTION_ID }} --paths "/*"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Setup Node.js for scripts
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Run seed
+        run: |
+          cd scripts
+          npm ci
+          npm run seed
+        env:
+          TABLE_NAME: ${{ env.TABLE_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      - name: Comment PR with ephemeral URLs
+        run: |
+          gh pr comment ${{ needs.check-pr.outputs.pr_number }} --body "## ✨ Ephemeral Environment Deployed
+
+          | Resource | URL |
+          |----------|-----|
+          | **Frontend** | ${{ env.FRONTEND_URL }} |
+          | **API** | ${{ env.API_BASE_URL }} |"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
