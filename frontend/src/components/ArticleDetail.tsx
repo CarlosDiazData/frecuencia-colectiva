@@ -90,7 +90,7 @@ export function ArticleDetail({ articleId }: ArticleDetailProps) {
       </figure>
 
       <div 
-        className="prose prose-lg max-w-none"
+        className="prose prose-lg max-w-none [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.body) }}
       />
 
