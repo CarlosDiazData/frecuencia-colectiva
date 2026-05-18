@@ -4,6 +4,10 @@ on:
   push:
     branches-ignore: [development, main]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 concurrency:
   group: cd-ephemeral-${{ github.ref_name }}
   cancel-in-progress: true
@@ -32,7 +36,7 @@ jobs:
             echo "gh pr list failed — skipping ephemeral deploy"
           fi
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
 
   deploy-ephemeral:
     name: Deploy Ephemeral (${{ github.ref_name }})
@@ -184,4 +188,4 @@ jobs:
           | **Frontend** | ${{ env.FRONTEND_URL }} |
           | **API** | ${{ env.API_BASE_URL }} |"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}

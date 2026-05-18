@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [closed]
 
+permissions:
+  contents: read
+  pull-requests: write
+
 concurrency:
   group: cd-ephemeral-destroy-${{ github.head_ref }}
   cancel-in-progress: true
@@ -81,11 +85,11 @@ jobs:
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "🧹 Ephemeral environment **${{ env.SANITIZED_BRANCH }}** has been destroyed."
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
 
       - name: Comment PR — nothing to destroy
         if: env.STACK_EXISTS == 'false'
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "ℹ️ No ephemeral environment found for branch **${{ env.SANITIZED_BRANCH }}** — nothing to destroy."
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
