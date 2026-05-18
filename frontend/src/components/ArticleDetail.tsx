@@ -106,7 +106,6 @@ export function ArticleDetail({ articleId }: ArticleDetailProps) {
             </div>
             <div>
               <p className="font-semibold text-gray-900">Written by {article.author}</p>
-              <p className="text-sm text-gray-500">Staff Writer</p>
             </div>
           </div>
           <Link 
