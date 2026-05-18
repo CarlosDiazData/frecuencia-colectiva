@@ -117,13 +117,39 @@ La compañía teatral pone a disposición de las y los toluqueños una nueva for
 
 Entre las obras presentadas se encuentran Astros arrullos para Lulú, dirigida a adolescentes y adultos; Trump The King, para adolescentes y adultos; La hoguera, para mayores de edad; El Médico a Palos y El Mechacorta, dirigidas a adolescentes y adultos; y Un Reino de Brujos y niños, para un público familiar e infantil.
 
-En el Teatro Universitario "Los Jaguares", El médico a palos se presenta del 7 de mayo al 28 de junio, jueves a sábado a las 17:00 horas y domingos a las 16:00 horas. El mechacorta, del 7 de mayo al 28 de junio, jueves a sábado a las 19:00 horas y domingos a las 18:00 horas. Un reino de brujos y niños, del 9 de mayo al 28 de junio, sábados y domingos a las 13:00 horas. La hoguera, del 11 de mayo al 23 de junio, lunes y martes a las 19:00 horas.
+**Costos, horarios y ubicaciones**
 
-En el Teatro Universitario De Cámara "Esvón Gamaliel", Astros, arrullos para Lulú se presenta del 7 de mayo al 27 de junio, jueves a sábados a las 17:00 horas. Trump The King, del 7 de mayo al 27 de junio, jueves a sábados a las 19:00 horas.
+**Teatro Universitario "Los Jaguares"**
+
+**El médico a palos**
+- **Fechas:** Del 7 de mayo al 28 de junio
+- **Horarios:** jueves a sábado: 17:00 horas y domingos: 16:00 horas
+
+**El mechacorta**
+- **Fechas:** Del 7 de mayo al 28 de junio
+- **Horarios:** jueves a sábado: 19:00 horas y domingos: 18:00 horas
+
+**Un reino de brujos y niños**
+- **Fechas:** Del 9 de mayo al 28 de junio
+- **Horarios:** sábados y domingos: 13:00 horas
+
+**La hoguera**
+- **Fechas:** Del 11 de mayo al 23 de junio
+- **Horarios:** lunes y martes: 19:00 horas
+
+**Teatro Universitario De Cámara "Esvón Gamaliel"**
+
+**Astros, arrullos para Lulú**
+- **Fechas:** Del 7 de mayo al 27 de junio
+- **Horarios:** jueves a sábados: 17:00 horas
+
+**Trump The King**
+- **Fechas:** Del 7 de mayo al 27 de junio
+- **Horarios:** jueves a sábados: 19:00 horas
 
 Los costos de recuperación van desde los $55 hasta los $120, dependiendo de la función y el tipo de acceso, por lo que la compañía invita al público a disfrutar de esta experiencia cultural y teatral en la ciudad de Toluca.`,
-    author: 'Redacción',
-    date: '2026-05-12T10:00:00Z',
+    author: 'Rosario Romero Pérez',
+    date: '2026-05-07T10:00:00Z',
     category: 'arte-escenico',
     imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/687851663_1410229707578192_3652722379638341731_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B-QZMmFKXWUQ7kNvwHetqY6&_nc_oc=AdojKeTAWQCH2T6pKZg1LHZr04jyXbDEG1UFrFNayinoavvE0F5-loNNsven5qGOFXzzkOzpv5J7232cImK1ByB-&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=9c5KVzhijB8ER9-c1pmQHQ&_nc_ss=7b289&oh=00_Af5Sv-SmO12_HGgNkjvmK_05_lD1VJaD6ObKgiv2eH_z3Q&oe=6A11365D',
     readTimeMinutes: 4,
