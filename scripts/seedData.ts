@@ -106,6 +106,27 @@ La final del certamen está prevista para el 13 de septiembre en el Auditorio Na
     category: 'arte-escenico',
     imageUrl: 'https://www.jornada.com.mx/ndjsimg/images/jornada/jornadaimg/junto-a-majo-aguilar-y-junior-h-sheinbaum-lanza-la-segunda-edicion-de-mexico-canta/junto-a-majo-aguilar-y-junior-h-sheinbaum-lanza-la-segunda-edicion-de-mexico-canta_cf7a6aee-9af7-49f5-9d07-c33bc93e86cc_medialjnimgndimage=fullsize',
     readTimeMinutes: 5,
+  },
+  {
+    articleId: 'av-005-2024-0002',
+    title: 'La UAEMéx abre el telón a su tercera temporada de teatro en Toluca',
+    summary: 'La cartelera integra seis propuestas teatrales dirigidas a públicos infantiles, juveniles y adultos. Las funciones estarán disponibles en los teatros universitarios "Los Jaguares" y "Esvón Gamaliel".',
+    body: `La compañía Universitaria de Teatro de la UAEMex, a través de sus redes sociales, dio a conocer su tercera temporada del 2026. Esta temporada consta de seis puestas en escena que abarcan géneros como la comedia, la sátira política, drama e historias infantiles, ofreciendo al público una diversidad de temas de interés.
+
+La compañía teatral pone a disposición de las y los toluqueños una nueva forma de entretenimiento con obras dirigidas a públicos de todas las edades, acercando así el arte y las actividades culturales a la sociedad. Estas producciones teatrales estarán disponibles en el Teatro Universitario Los Jaguares y el Teatro de Cámara Esvón Gamaliel desde el 7 de mayo hasta el 28 de junio del 2026.
+
+Entre las obras presentadas se encuentran Astros arrullos para Lulú, dirigida a adolescentes y adultos; Trump The King, para adolescentes y adultos; La hoguera, para mayores de edad; El Médico a Palos y El Mechacorta, dirigidas a adolescentes y adultos; y Un Reino de Brujos y niños, para un público familiar e infantil.
+
+En el Teatro Universitario "Los Jaguares", El médico a palos se presenta del 7 de mayo al 28 de junio, jueves a sábado a las 17:00 horas y domingos a las 16:00 horas. El mechacorta, del 7 de mayo al 28 de junio, jueves a sábado a las 19:00 horas y domingos a las 18:00 horas. Un reino de brujos y niños, del 9 de mayo al 28 de junio, sábados y domingos a las 13:00 horas. La hoguera, del 11 de mayo al 23 de junio, lunes y martes a las 19:00 horas.
+
+En el Teatro Universitario De Cámara "Esvón Gamaliel", Astros, arrullos para Lulú se presenta del 7 de mayo al 27 de junio, jueves a sábados a las 17:00 horas. Trump The King, del 7 de mayo al 27 de junio, jueves a sábados a las 19:00 horas.
+
+Los costos de recuperación van desde los $55 hasta los $120, dependiendo de la función y el tipo de acceso, por lo que la compañía invita al público a disfrutar de esta experiencia cultural y teatral en la ciudad de Toluca.`,
+    author: 'Redacción',
+    date: '2026-05-12T10:00:00Z',
+    category: 'arte-escenico',
+    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/687851663_1410229707578192_3652722379638341731_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B-QZMmFKXWUQ7kNvwHetqY6&_nc_oc=AdojKeTAWQCH2T6pKZg1LHZr04jyXbDEG1UFrFNayinoavvE0F5-loNNsven5qGOFXzzkOzpv5J7232cImK1ByB-&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=9c5KVzhijB8ER9-c1pmQHQ&_nc_ss=7b289&oh=00_Af5Sv-SmO12_HGgNkjvmK_05_lD1VJaD6ObKgiv2eH_z3Q&oe=6A11365D',
+    readTimeMinutes: 4,
   }
 ];
 
