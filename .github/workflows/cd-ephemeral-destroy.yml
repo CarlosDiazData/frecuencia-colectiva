@@ -12,7 +12,6 @@ jobs:
   destroy-ephemeral:
     name: Destroy Ephemeral (${{ github.head_ref }})
     runs-on: ubuntu-latest
-    environment: ephemeral
 
     steps:
       - name: Checkout code

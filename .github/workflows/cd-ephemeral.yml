@@ -29,7 +29,6 @@ jobs:
     needs: check-pr
     if: needs.check-pr.outputs.pr_number != ''
     runs-on: ubuntu-latest
-    environment: ephemeral
 
     steps:
       - name: Checkout code
