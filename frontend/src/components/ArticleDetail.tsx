@@ -1,6 +1,7 @@
 import { useArticle } from '@/hooks';
 import { Link } from 'react-router-dom';
 import { formatDate, getCategoryColor, getCategoryLabel } from '@/utils/helpers';
+import DOMPurify from 'dompurify';
 
 interface ArticleDetailProps {
   articleId: string;
@@ -42,8 +43,6 @@ export function ArticleDetail({ articleId }: ArticleDetailProps) {
   }
 
   if (!article) return null;
-
-  const paragraphs = article.body.split('\n\n');
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
@@ -90,13 +89,10 @@ export function ArticleDetail({ articleId }: ArticleDetailProps) {
         />
       </figure>
 
-      <div className="prose prose-lg max-w-none">
-        {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-gray-800 leading-relaxed mb-6 font-serif text-lg">
-            {paragraph}
-          </p>
-        ))}
-      </div>
+      <div 
+        className="prose prose-lg max-w-none"
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.body) }}
+      />
 
       <footer className="mt-12 pt-8 border-t border-gray-200">
         <div className="flex items-center justify-between">

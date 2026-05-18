@@ -26,17 +26,17 @@ const sampleArticles: Article[] = [
     articleId: 'av-001-2024-0001',
     title: 'La Cineteca Mexiquense celebrará el Día de las Madres con funciones gratuitas',
     summary: 'El recinto cultural ofrecerá este 10 de mayo tres proyecciones abiertas al público para fomentar la convivencia familiar a través del cine.',
-    body: `El cine se convertirá este Día de las Madres en un espacio de encuentro familiar y celebración. La Cineteca Mexiquense anunció una programación especial con entrada gratuita para tres funciones dirigidas al público en general como parte de sus actividades culturales programadas para este 10 de mayo en el Estado de México.
+    body: `<p>El cine se convertirá este Día de las Madres en un espacio de encuentro familiar y celebración. La Cineteca Mexiquense anunció una programación especial con entrada gratuita para tres funciones dirigidas al público en general como parte de sus actividades culturales programadas para este 10 de mayo en el Estado de México.</p>
 
-Ubicada en Toluca, la Cineteca Mexiquense se ha consolidado como uno de los espacios culturales más importantes de la ciudad, albergando festivales, ciclos de cine y actividades relacionadas con la difusión audiovisual. A través de este tipo de eventos, el recinto mantiene una línea de trabajo enfocada en ampliar el acceso a la cultura y fortalecer la participación del público en actividades artísticas.
+<p>Ubicada en Toluca, la Cineteca Mexiquense se ha consolidado como uno de los espacios culturales más importantes de la ciudad, albergando festivales, ciclos de cine y actividades relacionadas con la difusión audiovisual. A través de este tipo de eventos, el recinto mantiene una línea de trabajo enfocada en ampliar el acceso a la cultura y fortalecer la participación del público en actividades artísticas.</p>
 
-La jornada comenzará a las 12:30 horas con la proyección de ¡Patos!, película animada enfocada en la aventura y convivencia familiar, más tarde a las 14:10 horas, se presentará Cosas que importan, cinta centrada en las relaciones humanas y los vínculos emocionales. Finalmente, el cierre de la programación será a las 16:35 horas con Mamma Mia: Vamos otra vez, musical reconocido por su temática familiar y ambiente festivo.
+<p>La jornada comenzará a las 12:30 horas con la proyección de ¡Patos!, película animada enfocada en la aventura y convivencia familiar, más tarde a las 14:10 horas, se presentará Cosas que importan, cinta centrada en las relaciones humanas y los vínculos emocionales. Finalmente, el cierre de la programación será a las 16:35 horas con Mamma Mia: Vamos otra vez, musical reconocido por su temática familiar y ambiente festivo.</p>
 
-Con esta iniciativa, la Cineteca Mexiquense busca ofrecer una alternativa cultural para las familias durante una de las fechas más representativas del año, además de ofrecer una opción de entretenimiento, el recinto pretende acercar al público a distintas propuestas cinematográficas en un ambiente accesible y recreativo.
+<p>Con esta iniciativa, la Cineteca Mexiquense busca ofrecer una alternativa cultural para las familias durante una de las fechas más representativas del año, además de ofrecer una opción de entretenimiento, el recinto pretende acercar al público a distintas propuestas cinematográficas en un ambiente accesible y recreativo.</p>
 
-La celebración también representa una oportunidad para fortalecer la convivencia social a través del cine, una de las expresiones artísticas con mayor capacidad para reunir distintas generaciones. En ese sentido, la programación fue pensada para incluir contenidos dirigidos tanto al público infantil como a jóvenes y adultos, permitiendo que madres, hijos y familiares compartan una experiencia conjunta.
+<p>La celebración también representa una oportunidad para fortalecer la convivencia social a través del cine, una de las expresiones artísticas con mayor capacidad para reunir distintas generaciones. En ese sentido, la programación fue pensada para incluir contenidos dirigidos tanto al público infantil como a jóvenes y adultos, permitiendo que madres, hijos y familiares compartan una experiencia conjunta.</p>
 
-La entrada gratuita estará disponible únicamente este 10 de mayo y hasta completar el aforo de cada función. La invitación permanece abierta para quienes deseen celebrar desde un espacio cultural donde el cine será el principal protagonista de la jornada.`,
+<p>La entrada gratuita estará disponible únicamente este 10 de mayo y hasta completar el aforo de cada función. La invitación permanece abierta para quienes deseen celebrar desde un espacio cultural donde el cine será el principal protagonista de la jornada.</p>`,
     author: 'Rodrigo Segura',
     date: '2026-05-09T10:00:00Z',
     category: 'cine-y-audiovisual',
@@ -47,14 +47,13 @@ La entrada gratuita estará disponible únicamente este 10 de mayo y hasta compl
     articleId: 'av-002-2024-0002',
     title: 'Así se vivió el homenaje a las madres este 10 de mayo en el teatro Morelos, Toluca',
     summary: 'El gobierno municipal de Toluca, bajo la dirección del edil Ricardo Moreno Bastida, inauguró este domingo un extenso calendario de actividades culturales con motivo del día de las Madres.',
-    body: `Enfatizando la utilización de lugares significativos y la distribución de eventos hacia las diversas comunidades del municipio, el evento principal de esta celebración es la presentación sin costo alguno, titulada "Amor Eterno", ejecutada por la Orquesta Filarmónica de Toluca (OFiT) en el Teatro Morelos. La orquesta, bajo la batuta del maestro Gerardo Urbán y Fernández, programó dos actuaciones (a las 11:00 y 13:00 horas), ofreciendo un repertorio inspirado en la obra del afamado cantautor Juan Gabriel,  teniendo como solistas invitados a Rocío de la Vega y Harold Guerra. El programa exhibió composiciones emblemáticas como “Querida”, “Hasta que te conocí” y “Costumbres”, adaptadas para su interpretación sinfónica.
+    body: `<p>Enfatizando la utilización de lugares significativos y la distribución de eventos hacia las diversas comunidades del municipio, el evento principal de esta celebración es la presentación sin costo alguno, titulada "Amor Eterno", ejecutada por la Orquesta Filarmónica de Toluca (OFiT) en el Teatro Morelos. La orquesta, bajo la batuta del maestro Gerardo Urbán y Fernández, programó dos actuaciones (a las 11:00 y 13:00 horas), ofreciendo un repertorio inspirado en la obra del afamado cantautor Juan Gabriel,  teniendo como solistas invitados a Rocío de la Vega y Harold Guerra. El programa exhibió composiciones emblemáticas como "Querida", "Hasta que te conocí" y "Costumbres", adaptadas para su interpretación sinfónica.</p>
 
-Según el Comunicado 474/2026 emitido por la Dirección General de Educación, Cultura y Turismo, la planificación de este año trascendió el ámbito del centro urbano. Este fin de semana la cultura destacó con talleres creativos, eventos artísticos desplegados en bibliotecas Municipales y delegaciones como Santiago Tlacotepec y San Antonio Buenavista, con el objetivo principal de fortificar el entramado social y hacerla más accesible, eliminando el viaje largo. La era digital trajo consigo la "Serenata a mamá", propuesta del municipio manejada por convocatorias en redes sociales del gobierno. La gente podia proponer madres para serenatas, uniendo lo virtual de la participación ciudadana con la calidez de eventos presenciales que tocaban las emociones.
+<p>Según el Comunicado 474/2026 emitido por la Dirección General de Educación, Cultura y Turismo, la planificación de este año trascendió el ámbito del centro urbano. Este fin de semana la cultura destacó con talleres creativos, eventos artísticos desplegados en bibliotecas Municipales y delegaciones como Santiago Tlacotepec y San Antonio Buenavista, con el objetivo principal de fortificar el entramado social y hacerla más accesible, eliminando el viaje largo. La era digital trajo consigo la "Serenata a mamá", propuesta del municipio manejada por convocatorias en redes sociales del gobierno. La gente podia proponer madres para serenatas, uniendo lo virtual de la participación ciudadana con la calidez de eventos presenciales que tocaban las emociones.</p>
 
-Los museos locales, incluyendo Bellas Artes y la Estampa, ofrecieron arteterapia y exhibiciones como "H2O para llevar", mientras que la seguridad estuvo garantizada. La Dirección General de Seguridad y Protección implementó un operativo entre recintos culturales y áreas de gran concurrencia.
+<p>Los museos locales, incluyendo Bellas Artes y la Estampa, ofrecieron arteterapia y exhibiciones como "H2O para llevar", mientras que la seguridad estuvo garantizada. La Dirección General de Seguridad y Protección implementó un operativo entre recintos culturales y áreas de gran concurrencia.</p>
 
-Finalmente, el Ayuntamiento de Toluca reitera su invitación a la población a seguir consultando la cartelera cultural digital a través de los canales oficiales para los próximos eventos de la temporada de primavera. 
-`,
+<p>Finalmente, el Ayuntamiento de Toluca reitera su invitación a la población a seguir consultando la cartelera cultural digital a través de los canales oficiales para los próximos eventos de la temporada de primavera.</p>`,
     author: 'Laura Neira Bernal',
     date: '2026-05-10T14:30:00Z',
     category: 'arte-visual',
@@ -65,26 +64,25 @@ Finalmente, el Ayuntamiento de Toluca reitera su invitación a la población a s
     articleId: 'av-003-2024-0002',
     title: 'Festival MAREVA: Sabino hizo cantar a Lerma con un concierto gratuito.',
     summary: 'Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.',
-    body: `Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.  
+    body: `<p>Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.</p>
 
-El Ayuntamiento de Lerma expone en su sitio web oficial que el municipio es el corazón cultural del Estado de México, con el Festival Cultural Martín Reolín Varejón (MAREVA) se consolida una oferta cultural con personalidad propia, que privilegia las más elevadas expresiones humanas, en arte, tradición y cultura.  
+<p>El Ayuntamiento de Lerma expone en su sitio web oficial que el municipio es el corazón cultural del Estado de México, con el Festival Cultural Martín Reolín Varejón (MAREVA) se consolida una oferta cultural con personalidad propia, que privilegia las más elevadas expresiones humanas, en arte, tradición y cultura.</p>
 
-En cuanto dieron las 7 de la noche apareció la primera sorpresa de la noche, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante, porque cuando termino su primer tema le aplaudieron y gritaron “Te amo Marco” en repetidas ocasiones.  
+<p>En cuanto dieron las 7 de la noche apareció la primera sorpresa de la noche, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante, porque cuando termino su primer tema le aplaudieron y gritaron "Te amo Marco" en repetidas ocasiones.</p>
 
-Después de que Mares se despidiera de la audiencia, a las 20:00 horas entro a la escena el baterista para explicar las reglas del show con la finalidad de darle la bienvenida a Sabino 
+<p>Después de que Mares se despidiera de la audiencia, a las 20:00 horas entro a la escena el baterista para explicar las reglas del show con la finalidad de darle la bienvenida a Sabino.</p>
 
-“¿Ustedes son los grandes rebeldes del hop? ¿Sí o no? Entonces ustedes contestan cuando yo digo los rebeldes del Pop: HU HU. Y si yo digo ‘Sab’ tú me contestas: HOP HOP”, expreso Tio Torres con firmeza. Acto seguido Sabino comenzó su concierto con el tema "Sab Hop". 
+<p>"¿Ustedes son los grandes rebeldes del hop? ¿Sí o no? Entonces ustedes contestan cuando yo digo los rebeldes del Pop: HU HU. Y si yo digo 'Sab' tú me contestas: HOP HOP", expreso Tio Torres con firmeza. Acto seguido Sabino comenzó su concierto con el tema "Sab Hop".</p>
 
-En un instante inesperado, Sabino se quitó la camisa a petición de sus fans y para demostrar que no está enfermo, como algunos comentarios en redes sociales lo han insinuado.  
+<p>En un instante inesperado, Sabino se quitó la camisa a petición de sus fans y para demostrar que no está enfermo, como algunos comentarios en redes sociales lo han insinuado.</p>
 
-Con el tema “Guapa!” se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovecho para tomarse fotos desde el escenario hasta que volvió el audio, le pregunto a su audiencia si retomaban la canción. 
+<p>Con el tema "Guapa!" se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovecho para tomarse fotos desde el escenario hasta que volvió el audio, le pregunto a su audiencia si retomaban la canción.</p>
 
-“No opines de los demás, enfócate en ti… Eres un motor que me hace seguir con vida” expresó Sabino, refiriéndose a todos como “cariño”, lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a "9:15", "Conmigo siempre" y "Tú". 
+<p>"No opines de los demás, enfócate en ti… Eres un motor que me hace seguir con vida" expresó Sabino, refiriéndose a todos como "cariño", lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a "9:15", "Conmigo siempre" y "Tú".</p>
 
-Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes. 
+<p>Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes.</p>
 
-Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito “Película”, armando el ambiente para la foto final y su despedida.  
-`,
+<p>Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito "Película", armando el ambiente para la foto final y su despedida.</p>`,
     author: 'Marisol Ramirez',
     date: '2026-04-20T14:30:00Z',
     category: 'arte-escenico',
@@ -95,12 +93,11 @@ Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,
     articleId: 'av-004-2024-0002',
     title: 'Sheinbaum lanza convocatoria de “México Canta” para impulsar talento juvenil del regional mexicano.',
     summary: 'La presidenta Claudia Sheinbaum presentó la segunda edición de “México Canta”, un certamen dirigido a jóvenes compositores e intérpretes de regional mexicano de México y de la comunidad mexicoestadunidense. La convocatoria estará abierta del 11 de mayo al 10 de junio y busca promover narrativas de paz en la música.',
-    body: `La presidenta Claudia Sheinbaum Pardo presentó este lunes, durante la Mañanera del Pueblo, la convocatoria de la segunda edición de “México Canta”, un certamen con el que el gobierno federal busca impulsar el talento de jóvenes compositores e intérpretes de regional mexicano. En el anuncio participaron también la secretaria de Cultura, Claudia Curiel de Icaza, así como las cantantes Majo Aguilar y Junior H.  
+    body: `<p>La presidenta Claudia Sheinbaum Pardo presentó este lunes, durante la Mañanera del Pueblo, la convocatoria de la segunda edición de "México Canta", un certamen con el que el gobierno federal busca impulsar el talento de jóvenes compositores e intérpretes de regional mexicano. En el anuncio participaron también la secretaria de Cultura, Claudia Curiel de Icaza, así como las cantantes Majo Aguilar y Junior H.</p>
 
-De acuerdo con la información difundida por AMEXI, la convocatoria está dirigida a jóvenes de entre 18 y 29 años, tanto de México como de la comunidad mexicoestadunidense, quienes podrán registrarse hasta el 10 de junio de 2026. El proyecto busca dar espacio a propuestas musicales con una narrativa de paz y alejada de la apología del delito.  
+<p>De acuerdo con la información difundida por AMEXI, la convocatoria está dirigida a jóvenes de entre 18 y 29 años, tanto de México como de la comunidad mexicoestadunidense, quienes podrán registrarse hasta el 10 de junio de 2026. El proyecto busca dar espacio a propuestas musicales con una narrativa de paz y alejada de la apología del delito.</p>
 
-La final del certamen está prevista para el 13 de septiembre en el Auditorio Nacional, mientras que las semifinales se realizarán en Los Ángeles, Estados Unidos, y Mazatlán, Sinaloa. Además, las personas ganadoras tendrán la oportunidad de abrir el concierto del 15 de septiembre en el Zócalo capitalino.  
-`,
+<p>La final del certamen está prevista para el 13 de septiembre en el Auditorio Nacional, mientras que las semifinales se realizarán en Los Ángeles, Estados Unidos, y Mazatlán, Sinaloa. Además, las personas ganadoras tendrán la oportunidad de abrir el concierto del 15 de septiembre en el Zócalo capitalino.</p>`,
     author: 'Francisco Mireles',
     date: '2026-05-11T14:30:00Z',
     category: 'arte-escenico',
@@ -111,43 +108,55 @@ La final del certamen está prevista para el 13 de septiembre en el Auditorio Na
     articleId: 'av-005-2024-0002',
     title: 'La UAEMéx abre el telón a su tercera temporada de teatro en Toluca',
     summary: 'La cartelera integra seis propuestas teatrales dirigidas a públicos infantiles, juveniles y adultos. Las funciones estarán disponibles en los teatros universitarios "Los Jaguares" y "Esvón Gamaliel".',
-    body: `La compañía Universitaria de Teatro de la UAEMex, a través de sus redes sociales, dio a conocer su tercera temporada del 2026. Esta temporada consta de seis puestas en escena que abarcan géneros como la comedia, la sátira política, drama e historias infantiles, ofreciendo al público una diversidad de temas de interés.
+    body: `<p>La compañía Universitaria de Teatro de la UAEMex, a través de sus redes sociales, dio a conocer su tercera temporada del 2026. Esta temporada consta de seis puestas en escena que abarcan géneros como la comedia, la sátira política, drama e historias infantiles, ofreciendo al público una diversidad de temas de interés.</p>
 
-La compañía teatral pone a disposición de las y los toluqueños una nueva forma de entretenimiento con obras dirigidas a públicos de todas las edades, acercando así el arte y las actividades culturales a la sociedad. Estas producciones teatrales estarán disponibles en el Teatro Universitario Los Jaguares y el Teatro de Cámara Esvón Gamaliel desde el 7 de mayo hasta el 28 de junio del 2026.
+<p>La compañía teatral pone a disposición de las y los toluqueños una nueva forma de entretenimiento con obras dirigidas a públicos de todas las edades, acercando así el arte y las actividades culturales a la sociedad. Estas producciones teatrales estarán disponibles en el Teatro Universitario Los Jaguares y el Teatro de Cámara Esvón Gamaliel desde el 7 de mayo hasta el 28 de junio del 2026.</p>
 
-Entre las obras presentadas se encuentran Astros arrullos para Lulú, dirigida a adolescentes y adultos; Trump The King, para adolescentes y adultos; La hoguera, para mayores de edad; El Médico a Palos y El Mechacorta, dirigidas a adolescentes y adultos; y Un Reino de Brujos y niños, para un público familiar e infantil.
+<p>Entre las obras presentadas se encuentran <strong>Astros, arrullos para Lulú</strong>, dirigida a adolescentes y adultos; <strong>Trump The King</strong>, para adolescentes y adultos; <strong>La hoguera</strong>, para mayores de edad; <strong>El Médico a Palos</strong> y <strong>El Mechacorta</strong>, dirigidas a adolescentes y adultos; y <strong>Un Reino de Brujos y niños</strong>, para un público familiar e infantil.</p>
 
-**Costos, horarios y ubicaciones**
+<strong>Costos, horarios y ubicaciones</strong>
 
-**Teatro Universitario "Los Jaguares"**
+<strong>Teatro Universitario "Los Jaguares"</strong>
 
-**El médico a palos**
-- **Fechas:** Del 7 de mayo al 28 de junio
-- **Horarios:** jueves a sábado: 17:00 horas y domingos: 16:00 horas
+<strong>El médico a palos</strong>
+<ul>
+<li><strong>Fechas:</strong> Del 7 de mayo al 28 de junio</li>
+<li><strong>Horarios:</strong> jueves a sábado: 17:00 horas y domingos: 16:00 horas</li>
+</ul>
 
-**El mechacorta**
-- **Fechas:** Del 7 de mayo al 28 de junio
-- **Horarios:** jueves a sábado: 19:00 horas y domingos: 18:00 horas
+<strong>El mechacorta</strong>
+<ul>
+<li><strong>Fechas:</strong> Del 7 de mayo al 28 de junio</li>
+<li><strong>Horarios:</strong> jueves a sábado: 19:00 horas y domingos: 18:00 horas</li>
+</ul>
 
-**Un reino de brujos y niños**
-- **Fechas:** Del 9 de mayo al 28 de junio
-- **Horarios:** sábados y domingos: 13:00 horas
+<strong>Un reino de brujos y niños</strong>
+<ul>
+<li><strong>Fechas:</strong> Del 9 de mayo al 28 de junio</li>
+<li><strong>Horarios:</strong> sábados y domingos: 13:00 horas</li>
+</ul>
 
-**La hoguera**
-- **Fechas:** Del 11 de mayo al 23 de junio
-- **Horarios:** lunes y martes: 19:00 horas
+<strong>La hoguera</strong>
+<ul>
+<li><strong>Fechas:</strong> Del 11 de mayo al 23 de junio</li>
+<li><strong>Horarios:</strong> lunes y martes: 19:00 horas</li>
+</ul>
 
-**Teatro Universitario De Cámara "Esvón Gamaliel"**
+<strong>Teatro Universitario De Cámara "Esvón Gamaliel"</strong>
 
-**Astros, arrullos para Lulú**
-- **Fechas:** Del 7 de mayo al 27 de junio
-- **Horarios:** jueves a sábados: 17:00 horas
+<strong>Astros, arrullos para Lulú</strong>
+<ul>
+<li><strong>Fechas:</strong> Del 7 de mayo al 27 de junio</li>
+<li><strong>Horarios:</strong> jueves a sábados: 17:00 horas</li>
+</ul>
 
-**Trump The King**
-- **Fechas:** Del 7 de mayo al 27 de junio
-- **Horarios:** jueves a sábados: 19:00 horas
+<strong>Trump The King</strong>
+<ul>
+<li><strong>Fechas:</strong> Del 7 de mayo al 27 de junio</li>
+<li><strong>Horarios:</strong> jueves a sábados: 19:00 horas</li>
+</ul>
 
-Los costos de recuperación van desde los $55 hasta los $120, dependiendo de la función y el tipo de acceso, por lo que la compañía invita al público a disfrutar de esta experiencia cultural y teatral en la ciudad de Toluca.`,
+<p>Los costos de recuperación van desde los $55 hasta los $120, dependiendo de la función y el tipo de acceso, por lo que la compañía invita al público a disfrutar de esta experiencia cultural y teatral en la ciudad de Toluca.</p>`,
     author: 'Rosario Romero Pérez',
     date: '2026-05-07T10:00:00Z',
     category: 'arte-escenico',
