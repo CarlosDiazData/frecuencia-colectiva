@@ -12,7 +12,7 @@ const bedrockClient = new BedrockRuntimeClient({
 const TABLE_NAME = process.env.TABLE_NAME || 'Articles';
 const BEDROCK_MODEL_ID =
   process.env.BEDROCK_MODEL_ID ||
-  'anthropic.claude-haiku-4-5-20251001-v1:0';
+  'us.anthropic.claude-haiku-4-5-20251001-v1:0';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -163,12 +163,10 @@ export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
     answer = response.output?.message?.content?.[0]?.text || '';
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    const errorName = error instanceof Error ? error.name : 'Unknown';
     console.error('Error calling Bedrock:', errorMessage);
     console.error('Bedrock error details:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
     return createResponse(502, {
       error: 'AI service temporarily unavailable',
-      debug: `${errorName}: ${errorMessage}`,
     });
   }
 
