@@ -162,10 +162,13 @@ export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
     const response = await bedrockClient.send(converseCommand);
     answer = response.output?.message?.content?.[0]?.text || '';
   } catch (error) {
-    console.error('Error calling Bedrock:', error instanceof Error ? error.message : error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    const errorName = error instanceof Error ? error.name : 'Unknown';
+    console.error('Error calling Bedrock:', errorMessage);
     console.error('Bedrock error details:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
     return createResponse(502, {
       error: 'AI service temporarily unavailable',
+      debug: `${errorName}: ${errorMessage}`,
     });
   }
 
