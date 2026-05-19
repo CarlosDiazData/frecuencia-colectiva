@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SearchProvider } from '@/context/SearchContext';
-import { Navbar, Footer, ScrollToTop } from '@/components';
+import { Navbar, Footer, ScrollToTop, ChatBubble } from '@/components';
 import { HomePage, SectionPage, ArticlePage, NosotrosPage, DirectorioPage, ContactPage, AnunciatePage, AvisoPrivacidadPage, ChatPage } from '@/pages';
 
 export function App() {
@@ -24,6 +24,7 @@ export function App() {
             </Routes>
           </main>
           <Footer />
+          <ChatBubble />
         </div>
       </SearchProvider>
     </BrowserRouter>
