@@ -39,5 +39,8 @@ coverage/
 # Agents
 .agents/
 
+# Worktrees
+.worktrees/
+
 # Docs
 docs/
