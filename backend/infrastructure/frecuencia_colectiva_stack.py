@@ -104,6 +104,15 @@ class FrecuenciaColectivaStack(Stack):
             )
         )
 
+        lambda_role.add_to_policy(
+            PolicyStatement(
+                actions=["bedrock:InvokeModel"],
+                resources=[
+                    "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0"
+                ],
+            )
+        )
+
         NagSuppressions.add_resource_suppressions(lambda_role, [
             {
                 "id": "AwsSolutions-IAM5",
@@ -176,7 +185,22 @@ class FrecuenciaColectivaStack(Stack):
             timeout=Duration.seconds(10),
         )
 
-        NagSuppressions.add_resource_suppressions([list_articles_fn, get_article_fn, filter_by_category_fn, contact_fn], [
+        chat_fn = Function(
+            self, "ChatHandler",
+            runtime=Runtime.NODEJS_20_X,
+            handler="chatHandler.handler",
+            code=Code.from_asset("dist/handlers"),
+            role=lambda_role,
+            environment={
+                "TABLE_NAME": articles_table.table_name,
+                "BEDROCK_MODEL_ID": "anthropic.claude-haiku-4-5-20251001-v1:0",
+                "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+            },
+            memory_size=512,
+            timeout=Duration.seconds(30),
+        )
+
+        NagSuppressions.add_resource_suppressions([list_articles_fn, get_article_fn, filter_by_category_fn, contact_fn, chat_fn], [
             {
                 "id": "AwsSolutions-L1",
                 "reason": "NODEJS_20_X is the current LTS runtime - using latest would require Node.js 22 which may not be available in all Lambda@Edge regions"
@@ -216,6 +240,12 @@ class FrecuenciaColectivaStack(Stack):
         contact.add_method(
             "POST",
             LambdaIntegration(contact_fn),
+        )
+
+        chat = api.root.add_resource("chat")
+        chat.add_method(
+            "POST",
+            LambdaIntegration(chat_fn),
         )
 
         frontend_bucket_log = Bucket(
