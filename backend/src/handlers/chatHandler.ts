@@ -1,18 +1,14 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, ScanCommand } from '@aws-sdk/lib-dynamodb';
-import { BedrockRuntimeClient, ConverseCommand } from '@aws-sdk/client-bedrock-runtime';
 import type { Citation, ChatResponse } from '../types/chat';
 
 const ddbClient = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(ddbClient);
-const bedrockClient = new BedrockRuntimeClient({
-  region: process.env.AWS_REGION || 'us-east-1',
-});
 
 const TABLE_NAME = process.env.TABLE_NAME || 'Articles';
-const BEDROCK_MODEL_ID =
-  process.env.BEDROCK_MODEL_ID ||
-  'us.anthropic.claude-haiku-4-5-20251001-v1:0';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
+const GEMINI_MODEL = 'gemini-2.0-flash';
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -89,6 +85,14 @@ interface HandlerResponse {
   body: string;
 }
 
+interface GeminiResponse {
+  candidates?: {
+    content?: {
+      parts?: { text?: string }[];
+    };
+  }[];
+}
+
 export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
   // Method guard
   if (event.httpMethod === 'OPTIONS') {
@@ -130,7 +134,7 @@ export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
     return createResponse(500, { error: 'Failed to retrieve articles' });
   }
 
-  // If no articles found, return early without calling Bedrock
+  // If no articles found, return early without calling Gemini
   if (articles.length === 0) {
     return createResponse(200, {
       answer:
@@ -139,32 +143,44 @@ export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
     });
   }
 
-  // Build context blocks and invoke Bedrock
+  // Build context and invoke Gemini
   let answer: string;
   try {
     const contextMessage = `${buildArticleContext(articles)}\n\nPregunta del usuario: ${parsedBody.message}`;
 
-    const converseCommand = new ConverseCommand({
-      modelId: BEDROCK_MODEL_ID,
-      system: [{ text: SYSTEM_PROMPT }],
-      messages: [
-        {
-          role: 'user',
-          content: [{ text: contextMessage }],
-        },
-      ],
-      inferenceConfig: {
-        maxTokens: 1024,
-        temperature: 0,
-      },
-    });
+    const geminiResponse = await fetch(
+      `${GEMINI_URL}?key=${GEMINI_API_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: contextMessage }],
+            },
+          ],
+          systemInstruction: {
+            parts: [{ text: SYSTEM_PROMPT }],
+          },
+          generationConfig: {
+            temperature: 0,
+            maxOutputTokens: 1024,
+          },
+        }),
+      }
+    );
 
-    const response = await bedrockClient.send(converseCommand);
-    answer = response.output?.message?.content?.[0]?.text || '';
+    if (!geminiResponse.ok) {
+      const errorText = await geminiResponse.text();
+      console.error('Gemini API error:', geminiResponse.status, errorText);
+      throw new Error(`Gemini API returned ${geminiResponse.status}`);
+    }
+
+    const data = (await geminiResponse.json()) as GeminiResponse;
+    answer = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error('Error calling Bedrock:', errorMessage);
-    console.error('Bedrock error details:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
+    console.error('Error calling Gemini:', errorMessage);
     return createResponse(502, {
       error: 'AI service temporarily unavailable',
     });
@@ -173,4 +189,4 @@ export async function handler(event: HandlerEvent): Promise<HandlerResponse> {
   const citations = parseCitations(answer);
 
   return createResponse(200, { answer, citations } satisfies ChatResponse);
-};
+}

@@ -62,6 +62,7 @@ jobs:
           STACK_SUFFIX: ${{ env.STACK_SUFFIX }}
           AWS_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Get CDK outputs
         id: cdk-outputs

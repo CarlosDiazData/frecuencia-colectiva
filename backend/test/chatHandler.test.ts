@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach, jest } from '@jest/globals';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mockDynamoDbSend: any = jest.fn();
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const mockBedrockSend: any = jest.fn();
+const mockFetch: any = jest.fn();
 
 jest.mock('@aws-sdk/client-dynamodb', () => ({
   DynamoDBClient: jest.fn(() => ({})),
@@ -18,12 +18,11 @@ jest.mock('@aws-sdk/lib-dynamodb', () => ({
   ScanCommand: jest.fn(),
 }));
 
-jest.mock('@aws-sdk/client-bedrock-runtime', () => ({
-  BedrockRuntimeClient: jest.fn(() => ({
-    send: mockBedrockSend,
-  })),
-  ConverseCommand: jest.fn(),
-}));
+// Mock global fetch for Gemini API calls
+global.fetch = mockFetch;
+
+// Set a dummy API key so the handler doesn't use empty string
+process.env.GEMINI_API_KEY = 'test-key';
 
 import { handler } from '../src/handlers/chatHandler';
 
@@ -39,6 +38,30 @@ const baseEvent: TestEvent = {
   body: JSON.stringify({ message: '¿qué eventos culturales hay este mes?' }),
 };
 
+function mockGeminiResponse(text: string) {
+  return Promise.resolve({
+    ok: true,
+    json: () =>
+      Promise.resolve({
+        candidates: [
+          {
+            content: {
+              parts: [{ text }],
+            },
+          },
+        ],
+      }),
+  });
+}
+
+function mockGeminiError(status: number, body?: string) {
+  return Promise.resolve({
+    ok: false,
+    status,
+    text: () => Promise.resolve(body || 'Error'),
+  });
+}
+
 describe('chatHandler', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -49,14 +72,14 @@ describe('chatHandler', () => {
       const response = await handler({ ...baseEvent, httpMethod: 'GET' });
       expect(response.statusCode).toBe(405);
       expect(mockDynamoDbSend).not.toHaveBeenCalled();
-      expect(mockBedrockSend).not.toHaveBeenCalled();
+      expect(mockFetch).not.toHaveBeenCalled();
     });
 
     it('should return 200 for OPTIONS requests', async () => {
       const response = await handler({ ...baseEvent, httpMethod: 'OPTIONS' });
       expect(response.statusCode).toBe(200);
       expect(mockDynamoDbSend).not.toHaveBeenCalled();
-      expect(mockBedrockSend).not.toHaveBeenCalled();
+      expect(mockFetch).not.toHaveBeenCalled();
     });
   });
 
@@ -105,24 +128,24 @@ describe('chatHandler', () => {
       mockDynamoDbSend.mockRejectedValueOnce(new Error('DynamoDB error'));
       const response = await handler(baseEvent);
       expect(response.statusCode).toBe(500);
-      expect(mockBedrockSend).not.toHaveBeenCalled();
+      expect(mockFetch).not.toHaveBeenCalled();
     });
   });
 
   describe('Zero Articles', () => {
-    it('should return "No encontré información" without calling Bedrock when no articles exist', async () => {
+    it('should return "No encontré información" without calling Gemini when no articles exist', async () => {
       mockDynamoDbSend.mockResolvedValueOnce({ Items: [] });
       const response = await handler(baseEvent);
       expect(response.statusCode).toBe(200);
       const body = JSON.parse(response.body);
       expect(body.answer).toContain('No encontré información');
       expect(body.citations).toEqual([]);
-      expect(mockBedrockSend).not.toHaveBeenCalled();
+      expect(mockFetch).not.toHaveBeenCalled();
     });
   });
 
-  describe('Bedrock Error', () => {
-    it('should return 502 when Bedrock API call fails', async () => {
+  describe('Gemini Error', () => {
+    it('should return 502 when Gemini API call fails', async () => {
       mockDynamoDbSend.mockResolvedValueOnce({
         Items: [
           {
@@ -139,7 +162,7 @@ describe('chatHandler', () => {
           },
         ],
       });
-      mockBedrockSend.mockRejectedValueOnce(new Error('Bedrock unavailable'));
+      mockFetch.mockResolvedValueOnce(mockGeminiError(500));
 
       const response = await handler(baseEvent);
       expect(response.statusCode).toBe(502);
@@ -166,17 +189,11 @@ describe('chatHandler', () => {
       ];
 
       mockDynamoDbSend.mockResolvedValueOnce({ Items: mockArticles });
-      mockBedrockSend.mockResolvedValueOnce({
-        output: {
-          message: {
-            content: [
-              {
-                text: 'Te recomiendo visitar [Evento Cultural](https://example.com/evento).',
-              },
-            ],
-          },
-        },
-      });
+      mockFetch.mockResolvedValueOnce(
+        mockGeminiResponse(
+          'Te recomiendo visitar [Evento Cultural](https://example.com/evento).'
+        )
+      );
 
       const response = await handler(baseEvent);
       expect(response.statusCode).toBe(200);
@@ -216,17 +233,11 @@ describe('chatHandler', () => {
       ];
 
       mockDynamoDbSend.mockResolvedValueOnce({ Items: mockArticles });
-      mockBedrockSend.mockResolvedValueOnce({
-        output: {
-          message: {
-            content: [
-              {
-                text: 'Puedes visitar [Evento Cultural](https://example.com/evento) y también [Museo Abierto](https://example.com/museo).',
-              },
-            ],
-          },
-        },
-      });
+      mockFetch.mockResolvedValueOnce(
+        mockGeminiResponse(
+          'Puedes visitar [Evento Cultural](https://example.com/evento) y también [Museo Abierto](https://example.com/museo).'
+        )
+      );
 
       const response = await handler(baseEvent);
       const body = JSON.parse(response.body);

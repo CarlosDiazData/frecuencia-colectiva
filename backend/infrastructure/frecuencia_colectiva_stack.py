@@ -104,15 +104,6 @@ class FrecuenciaColectivaStack(Stack):
             )
         )
 
-        lambda_role.add_to_policy(
-            PolicyStatement(
-                actions=["bedrock:InvokeModel"],
-                resources=[
-                    "arn:aws:bedrock:us-east-1::inference-profile/us.anthropic.claude-haiku-4-5-20251001-v1:0"
-                ],
-            )
-        )
-
         NagSuppressions.add_resource_suppressions(lambda_role, [
             {
                 "id": "AwsSolutions-IAM5",
@@ -193,7 +184,7 @@ class FrecuenciaColectivaStack(Stack):
             role=lambda_role,
             environment={
                 "TABLE_NAME": articles_table.table_name,
-                "BEDROCK_MODEL_ID": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+                "GEMINI_API_KEY": os.getenv("GEMINI_API_KEY", ""),
                 "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
             },
             memory_size=512,
