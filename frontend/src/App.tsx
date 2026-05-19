@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SearchProvider } from '@/context/SearchContext';
 import { Navbar, Footer, ScrollToTop } from '@/components';
-import { HomePage, SectionPage, ArticlePage, NosotrosPage, DirectorioPage, ContactPage, AnunciatePage, AvisoPrivacidadPage } from '@/pages';
+import { HomePage, SectionPage, ArticlePage, NosotrosPage, DirectorioPage, ContactPage, AnunciatePage, AvisoPrivacidadPage, ChatPage } from '@/pages';
 
 export function App() {
   return (
@@ -20,6 +20,7 @@ export function App() {
               <Route path="/contacto" element={<ContactPage />} />
               <Route path="/anunciate" element={<AnunciatePage />} />
               <Route path="/aviso-privacidad" element={<AvisoPrivacidadPage />} />
+              <Route path="/chat" element={<ChatPage />} />
             </Routes>
           </main>
           <Footer />

@@ -5,3 +5,4 @@ export { ArticleDetail } from './ArticleDetail';
 export { Footer } from './Footer';
 export { RelatedArticles } from './RelatedArticles';
 export { ScrollToTop } from './ScrollToTop';
+export { ChatWidget } from './ChatWidget';

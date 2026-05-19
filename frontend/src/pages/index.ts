@@ -6,3 +6,4 @@ export { DirectorioPage } from './DirectorioPage';
 export { ContactPage } from './ContactPage';
 export { AnunciatePage } from './AnunciatePage';
 export { AvisoPrivacidadPage } from './AvisoPrivacidadPage';
+export { ChatPage } from './ChatPage';
