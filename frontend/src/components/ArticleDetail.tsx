@@ -6,7 +6,7 @@ import DOMPurify from 'dompurify';
 DOMPurify.addHook('afterSanitizeAttributes', (node) => {
   if (node.tagName === 'IFRAME') {
     const src = node.getAttribute('src') || '';
-    if (!src.includes('youtube.com/embed/') && !src.includes('youtube-nocookie.com/embed/')) {
+    if (!src.includes('youtube.com/embed/') && !src.includes('youtube-nocookie.com/embed/') && !src.includes('facebook.com/plugins/video.php') && !src.includes('facebook.com/video/embed')) {
       node.removeAttribute('src');
     }
   }

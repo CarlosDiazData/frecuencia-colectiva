@@ -181,6 +181,44 @@ const sampleArticles: Article[] = [
     category: 'arte-escenico',
     imageUrl: 'https://i.pinimg.com/736x/37/ba/9a/37ba9aa45e6516ddb65218072e013262.jpg',
     readTimeMinutes: 4,
+  },
+  {
+    articleId: 'av-007-2026-0003',
+    title: 'El documental "La nube en el jardín" de Ed Maverick llega a salas de Metepec',
+    summary: 'El proyecto cinematográfico basado en el álbum "La nube en el jardín" del cantautor mexicano Ed Maverick comenzó su exhibición en salas de cine del país, incluyendo funciones en Metepec. El documental muestra una presentación en vivo grabada desde la Sala Nezahualcóyotl y expande la propuesta visual y emocional del artista chihuahuense.',
+    body: `<p>El documental "La nube en el jardín", inspirado en el álbum homónimo de Ed Maverick, llegó este mes a distintas salas de cine de México, incluyendo funciones en Metepec dentro del complejo Cinemex ubicado en Town Square Metepec. La producción presenta una experiencia cinematográfica construida a partir del concierto grabado en vivo desde la Sala Nezahualcóyotl, uno de los recintos culturales más importantes del país.</p>
+
+<p>A través de una propuesta visual íntima y contemplativa, el proyecto muestra la interpretación completa del álbum lanzado por el cantante originario de Chihuahua. Desde su anuncio en redes sociales, el documental generó expectativa entre seguidores del cantautor, especialmente por tratarse de una de las etapas musicales más personales de Ed Maverick. "La nube en el jardín" se caracteriza por sonidos acústicos, arreglos orquestales y letras enfocadas en la nostalgia, la soledad y la introspección.</p>
+
+<p>La exhibición forma parte de una serie de funciones especiales distribuidas en distintas ciudades del país a partir del 13 de mayo. En Metepec, las funciones pueden consultarse directamente en la cartelera digital de Cinemex.</p>`,
+    author: 'Francisco Mireles',
+    date: '2026-05-13T10:00:00Z',
+    category: 'cine-y-audiovisual',
+    imageUrl: 'https://www.melodiaviajera.com/wp-content/uploads/2026/04/unnamed-14-1.jpg',
+    readTimeMinutes: 3,
+  },
+  {
+    articleId: 'av-008-2026-0003',
+    title: 'Iluminan de morado edificios históricos por el Día Mundial del Lupus',
+    summary: 'El Día Mundial del Lupus se conmemoró este 10 de mayo con un gesto simbólico que iluminó de color morado congresos estatales y edificios históricos en distintas entidades de la República Mexicana, entre ellas Puebla, Guanajuato, Tamaulipas, Coahuila, Chihuahua y Baja California.',
+    body: `<p>El Día Mundial del Lupus se conmemoró este 10 de mayo con un gesto simbólico que iluminó de color morado congresos estatales y edificios históricos en distintas entidades de la República Mexicana, entre ellas Puebla, Guanajuato, Tamaulipas, Coahuila, Chihuahua y Baja California.</p>
+
+<p>La iniciativa busca visibilizar y concientizar sobre la importancia de las enfermedades autoinmunes, de acuerdo con el medio "El Tiempo MX" señala que en México existen más de 5 millones de personas con enfermedades autoinmunes y crónicas.</p>
+
+<p>En particular, las personas que padecen lupus en México se estima que son 20 de cada 100,000 con una mayor prevalencia en mujeres, según el Registro Mexicano de Lupus por la Universidad Nacional Autónoma de México (UNAM). Por ende, la iluminación morada en congresos es por la iniciativa de la llamada Ley Lupus y Autoinmunes, que pretende garantizar derechos y atención médica adecuada a quienes viven con estos padecimientos.</p>
+
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1YHX27R1Ez%2F&show_text=false&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+<p>En el encendido participaron asociaciones civiles junto con diputados locales que respaldan la legislación en sus estados, reforzando el compromiso de lucha por los derechos de las personas afectadas.</p>
+
+<p>Tal es el caso del Centro de Estudios Transdisciplinarios Athié-Calleja por los Derechos de las Personas con Lupus A.C. (Cetlu), una organización que lidera "La Ola Morada" como un proyecto de Laura Athié y Efrén Calleja Macedo con el fin de formar un cuerpo social que comparte esperanzas y voluntades para romper el aislamiento, la competencia y el silenciamiento a los cuerpos enfermos. Por medio de los canales oficiales, el Congreso del Estado Libre y Soberano de Tamaulipas mencionó por la iluminación institucional de color morado que "A través de este acto simbólico, el Poder Legislativo refrenda su compromiso de promover la empatía, la visibilización y el respaldo a quienes enfrentan diariamente esta condición, reconociendo también la fortaleza y resiliencia de las familias que les acompañan".</p>
+
+<p>El color morado, símbolo de esta causa, se convirtió en un recordatorio de unidad y de la necesidad de impulsar políticas públicas que atiendan de manera integral a quienes enfrentan el lupus y otras enfermedades autoinmunes.</p>`,
+    author: 'Marisol Ramirez',
+    date: '2026-05-11T10:00:00Z',
+    category: 'patrimonio',
+    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/696286743_908476958914350_1474143920230196813_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bVEkfziE_-8Q7kNvwFfTV9B&_nc_oc=AdpKCgJdRDjN85T3OU__RMVvD7Su0zlBXdzqu37PiBI6tRq6yCFDD-uiZb9ku6twW-TrKdQizhpzJZTcSdkFjreh&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=WSlIv_OKYjGXJZgYIDoAPA&_nc_ss=7b289&oh=00_Af48aV4MZs0JflvD52RczCS5CUAqQJdgVdj2XYlO-oD67g&oe=6A1C04D6',
+    readTimeMinutes: 4,
   }
 ];
 
