@@ -28,4 +28,10 @@
   .breaking-bar {
     @apply bg-primary text-white py-1 px-4 text-sm font-semibold;
   }
+
+  .prose iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
 }
