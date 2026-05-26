@@ -207,7 +207,7 @@ const sampleArticles: Article[] = [
 
 <p>En particular, las personas que padecen lupus en México se estima que son 20 de cada 100,000 con una mayor prevalencia en mujeres, según el Registro Mexicano de Lupus por la Universidad Nacional Autónoma de México (UNAM). Por ende, la iluminación morada en congresos es por la iniciativa de la llamada Ley Lupus y Autoinmunes, que pretende garantizar derechos y atención médica adecuada a quienes viven con estos padecimientos.</p>
 
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1YHX27R1Ez%2F&show_text=false&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1Fu1Dcu4FH%2F&show_text=false&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 <p>En el encendido participaron asociaciones civiles junto con diputados locales que respaldan la legislación en sus estados, reforzando el compromiso de lucha por los derechos de las personas afectadas.</p>
 
