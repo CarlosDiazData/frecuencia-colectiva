@@ -162,6 +162,25 @@ const sampleArticles: Article[] = [
     category: 'arte-escenico',
     imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/687851663_1410229707578192_3652722379638341731_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B-QZMmFKXWUQ7kNvwHetqY6&_nc_oc=AdojKeTAWQCH2T6pKZg1LHZr04jyXbDEG1UFrFNayinoavvE0F5-loNNsven5qGOFXzzkOzpv5J7232cImK1ByB-&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=9c5KVzhijB8ER9-c1pmQHQ&_nc_ss=7b289&oh=00_Af5Sv-SmO12_HGgNkjvmK_05_lD1VJaD6ObKgiv2eH_z3Q&oe=6A11365D',
     readTimeMinutes: 4,
+  },
+  {
+    articleId: 'av-006-2026-0003',
+    title: 'La experimentación sonora tomó el Museo Leopoldo Flores con "Arquitectura de Pulso"',
+    summary: 'EmilHerdez y Xanat García presentaron un set de música electrónica experimental acompañado de visuales en vivo ante más de 30 asistentes dentro del Museo Universitario Leopoldo Flores.',
+    body: `<p>Los sonidos atmosféricos y las visuales envolvieron el espacio del Museo Universitario Leopoldo Flores durante la presentación del proyecto performático Arquitectura de Pulso, realizado el jueves 14 de mayo de 2026. El evento reunió a más de 30 personas que asistieron para presenciar una propuesta enfocada en la música electrónica experimental y la exploración audiovisual en vivo.</p>
+
+<p>El artista EmilHerdez, acompañado de Xanat García, presentó un set experimental construido a partir de sonidos ambientales, atmósferas electrónicas y secuencias inmersivas que transformaron el recinto en una experiencia sensorial. La presentación estuvo acompañada de visuales proyectadas en tiempo real, generando una conexión entre sonido, imagen y espacio.</p>
+
+<p>La propuesta destacó por su carácter experimental, alejándose de las estructuras tradicionales de la música electrónica para centrarse en paisajes sonoros lentos y envolventes. A lo largo de la presentación, los asistentes permanecieron atentos a las variaciones de sonido y a la interacción visual que acompañaba cada transición musical.</p>
+
+<p>El proyecto Arquitectura de Pulso forma parte de una serie de actividades artísticas que buscan integrar distintas disciplinas dentro de espacios culturales universitarios. En este caso, la combinación de música electrónica y arte visual permitió crear una experiencia enfocada en la contemplación y la percepción sensorial del público.</p>
+
+<p>Con eventos de este tipo, el Museo Universitario Leopoldo Flores continúa funcionando como un espacio abierto a propuestas contemporáneas y experimentales, dando lugar a artistas emergentes y proyectos que exploran nuevas formas de expresión artística dentro de la escena cultural mexiquense.</p>`,
+    author: 'Rodrigo Segura',
+    date: '2026-05-14T10:00:00Z',
+    category: 'arte-escenico',
+    imageUrl: 'https://i.pinimg.com/736x/37/ba/9a/37ba9aa45e6516ddb65218072e013262.jpg',
+    readTimeMinutes: 4,
   }
 ];
 
