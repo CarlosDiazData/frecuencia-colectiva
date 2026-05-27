@@ -30,7 +30,7 @@ const sampleArticles: Article[] = [
 
 <p>Ubicada en Toluca, la Cineteca Mexiquense se ha consolidado como uno de los espacios culturales más importantes de la ciudad, albergando festivales, ciclos de cine y actividades relacionadas con la difusión audiovisual. A través de este tipo de eventos, el recinto mantiene una línea de trabajo enfocada en ampliar el acceso a la cultura y fortalecer la participación del público en actividades artísticas.</p>
 
-<p>La jornada comenzará a las 12:30 horas con la proyección de ¡Patos!, película animada enfocada en la aventura y convivencia familiar, más tarde a las 14:10 horas, se presentará Cosas que importan, cinta centrada en las relaciones humanas y los vínculos emocionales. Finalmente, el cierre de la programación será a las 16:35 horas con Mamma Mia: Vamos otra vez, musical reconocido por su temática familiar y ambiente festivo.</p>
+<p>La jornada comenzará a las 12:30 horas con la proyección de <cite>¡Patos!</cite>, película animada enfocada en la aventura y convivencia familiar, más tarde a las 14:10 horas, se presentará <cite>Cosas que importan</cite>, cinta centrada en las relaciones humanas y los vínculos emocionales. Finalmente, el cierre de la programación será a las 16:35 horas con <cite>Mamma Mia: Vamos otra vez</cite>, musical reconocido por su temática familiar y ambiente festivo.</p>
 
 <p>Con esta iniciativa, la Cineteca Mexiquense busca ofrecer una alternativa cultural para las familias durante una de las fechas más representativas del año, además de ofrecer una opción de entretenimiento, el recinto pretende acercar al público a distintas propuestas cinematográficas en un ambiente accesible y recreativo.</p>
 
@@ -47,11 +47,11 @@ const sampleArticles: Article[] = [
     articleId: 'av-002-2024-0002',
     title: 'Así se vivió el homenaje a las madres este 10 de mayo en el teatro Morelos, Toluca',
     summary: 'El gobierno municipal de Toluca, bajo la dirección del edil Ricardo Moreno Bastida, inauguró este domingo un extenso calendario de actividades culturales con motivo del día de las Madres.',
-    body: `<p>Enfatizando la utilización de lugares significativos y la distribución de eventos hacia las diversas comunidades del municipio, el evento principal de esta celebración es la presentación sin costo alguno, titulada "Amor Eterno", ejecutada por la Orquesta Filarmónica de Toluca (OFiT) en el Teatro Morelos. La orquesta, bajo la batuta del maestro Gerardo Urbán y Fernández, programó dos actuaciones (a las 11:00 y 13:00 horas), ofreciendo un repertorio inspirado en la obra del afamado cantautor Juan Gabriel,  teniendo como solistas invitados a Rocío de la Vega y Harold Guerra. El programa exhibió composiciones emblemáticas como "Querida", "Hasta que te conocí" y "Costumbres", adaptadas para su interpretación sinfónica.</p>
+    body: `<p>Enfatizando la utilización de lugares significativos y la distribución de eventos hacia las diversas comunidades del municipio, el evento principal de esta celebración es la presentación sin costo alguno, titulada <cite>Amor Eterno</cite>, ejecutada por la Orquesta Filarmónica de Toluca (OFiT) en el Teatro Morelos. La orquesta, bajo la batuta del maestro Gerardo Urbán y Fernández, programó dos actuaciones (a las 11:00 y 13:00 horas), ofreciendo un repertorio inspirado en la obra del afamado cantautor Juan Gabriel,  teniendo como solistas invitados a Rocío de la Vega y Harold Guerra. El programa exhibió composiciones emblemáticas como <cite>Querida</cite>, <cite>Hasta que te conocí</cite> y <cite>Costumbres</cite>, adaptadas para su interpretación sinfónica.</p>
 
-<p>Según el Comunicado 474/2026 emitido por la Dirección General de Educación, Cultura y Turismo, la planificación de este año trascendió el ámbito del centro urbano. Este fin de semana la cultura destacó con talleres creativos, eventos artísticos desplegados en bibliotecas Municipales y delegaciones como Santiago Tlacotepec y San Antonio Buenavista, con el objetivo principal de fortificar el entramado social y hacerla más accesible, eliminando el viaje largo. La era digital trajo consigo la "Serenata a mamá", propuesta del municipio manejada por convocatorias en redes sociales del gobierno. La gente podia proponer madres para serenatas, uniendo lo virtual de la participación ciudadana con la calidez de eventos presenciales que tocaban las emociones.</p>
+<p>Según el Comunicado 474/2026 emitido por la Dirección General de Educación, Cultura y Turismo, la planificación de este año trascendió el ámbito del centro urbano. Este fin de semana la cultura destacó con talleres creativos, eventos artísticos desplegados en bibliotecas Municipales y delegaciones como Santiago Tlacotepec y San Antonio Buenavista, con el objetivo principal de fortificar el entramado social y hacerla más accesible, eliminando el viaje largo. La era digital trajo consigo la <cite>Serenata a mamá</cite>, propuesta del municipio manejada por convocatorias en redes sociales del gobierno. La gente podia proponer madres para serenatas, uniendo lo virtual de la participación ciudadana con la calidez de eventos presenciales que tocaban las emociones.</p>
 
-<p>Los museos locales, incluyendo Bellas Artes y la Estampa, ofrecieron arteterapia y exhibiciones como "H2O para llevar", mientras que la seguridad estuvo garantizada. La Dirección General de Seguridad y Protección implementó un operativo entre recintos culturales y áreas de gran concurrencia.</p>
+<p>Los museos locales, incluyendo Bellas Artes y la Estampa, ofrecieron arteterapia y exhibiciones como <cite>H2O para llevar</cite>, mientras que la seguridad estuvo garantizada. La Dirección General de Seguridad y Protección implementó un operativo entre recintos culturales y áreas de gran concurrencia.</p>
 
 <p>Finalmente, el Ayuntamiento de Toluca reitera su invitación a la población a seguir consultando la cartelera cultural digital a través de los canales oficiales para los próximos eventos de la temporada de primavera.</p>`,
     author: 'Laura Neira Bernal',
@@ -68,21 +68,31 @@ const sampleArticles: Article[] = [
 
 <p>El Ayuntamiento de Lerma expone en su sitio web oficial que el municipio es el corazón cultural del Estado de México, con el Festival Cultural Martín Reolín Varejón (MAREVA) se consolida una oferta cultural con personalidad propia, que privilegia las más elevadas expresiones humanas, en arte, tradición y cultura.</p>
 
-<p>En cuanto dieron las 7 de la noche apareció la primera sorpresa de la noche, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante, porque cuando termino su primer tema le aplaudieron y gritaron "Te amo Marco" en repetidas ocasiones.</p>
+<p>En cuanto dieron las 7 de la noche apareció la primera sorpresa de la noche, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante, porque cuando termino su primer tema le aplaudieron y gritaron <q>Te amo Marco</q> en repetidas ocasiones.</p>
 
 <p>Después de que Mares se despidiera de la audiencia, a las 20:00 horas entro a la escena el baterista para explicar las reglas del show con la finalidad de darle la bienvenida a Sabino.</p>
 
-<p>"¿Ustedes son los grandes rebeldes del hop? ¿Sí o no? Entonces ustedes contestan cuando yo digo los rebeldes del Pop: HU HU. Y si yo digo 'Sab' tú me contestas: HOP HOP", expreso Tio Torres con firmeza. Acto seguido Sabino comenzó su concierto con el tema "Sab Hop".</p>
+<blockquote>
+<p>¿Ustedes son los grandes rebeldes del hop? ¿Sí o no? Entonces ustedes contestan cuando yo digo los rebeldes del Pop: HU HU. Y si yo digo 'Sab' tú me contestas: HOP HOP</p>
+<cite>— Tío Torres, baterista</cite>
+</blockquote>
+
+<p>Acto seguido Sabino comenzó su concierto con el tema <cite>Sab Hop</cite>.</p>
 
 <p>En un instante inesperado, Sabino se quitó la camisa a petición de sus fans y para demostrar que no está enfermo, como algunos comentarios en redes sociales lo han insinuado.</p>
 
-<p>Con el tema "Guapa!" se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovecho para tomarse fotos desde el escenario hasta que volvió el audio, le pregunto a su audiencia si retomaban la canción.</p>
+<p>Con el tema <cite>Guapa!</cite> se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovecho para tomarse fotos desde el escenario hasta que volvió el audio, le pregunto a su audiencia si retomaban la canción.</p>
 
-<p>"No opines de los demás, enfócate en ti… Eres un motor que me hace seguir con vida" expresó Sabino, refiriéndose a todos como "cariño", lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a "9:15", "Conmigo siempre" y "Tú".</p>
+<blockquote>
+<p>No opines de los demás, enfócate en ti… Eres un motor que me hace seguir con vida</p>
+<cite>— Sabino</cite>
+</blockquote>
+
+<p>refiriéndose a todos como <q>cariño</q>, lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a <cite>9:15</cite>, <cite>Conmigo siempre</cite> y <cite>Tú</cite>.</p>
 
 <p>Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes.</p>
 
-<p>Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito "Película", armando el ambiente para la foto final y su despedida.</p>`,
+<p>Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito <cite>Película</cite>, armando el ambiente para la foto final y su despedida.</p>`,
     author: 'Marisol Ramirez',
     date: '2026-04-20T14:30:00Z',
     category: 'arte-escenico',
@@ -93,7 +103,7 @@ const sampleArticles: Article[] = [
     articleId: 'av-004-2024-0002',
     title: 'Sheinbaum lanza convocatoria de “México Canta” para impulsar talento juvenil del regional mexicano.',
     summary: 'La presidenta Claudia Sheinbaum presentó la segunda edición de “México Canta”, un certamen dirigido a jóvenes compositores e intérpretes de regional mexicano de México y de la comunidad mexicoestadunidense. La convocatoria estará abierta del 11 de mayo al 10 de junio y busca promover narrativas de paz en la música.',
-    body: `<p>La presidenta Claudia Sheinbaum Pardo presentó este lunes, durante la Mañanera del Pueblo, la convocatoria de la segunda edición de "México Canta", un certamen con el que el gobierno federal busca impulsar el talento de jóvenes compositores e intérpretes de regional mexicano. En el anuncio participaron también la secretaria de Cultura, Claudia Curiel de Icaza, así como las cantantes Majo Aguilar y Junior H.</p>
+    body: `<p>La presidenta Claudia Sheinbaum Pardo presentó este lunes, durante la Mañanera del Pueblo, la convocatoria de la segunda edición de <cite>México Canta</cite>, un certamen con el que el gobierno federal busca impulsar el talento de jóvenes compositores e intérpretes de regional mexicano. En el anuncio participaron también la secretaria de Cultura, Claudia Curiel de Icaza, así como las cantantes Majo Aguilar y Junior H.</p>
 
 <p>De acuerdo con la información difundida por AMEXI, la convocatoria está dirigida a jóvenes de entre 18 y 29 años, tanto de México como de la comunidad mexicoestadunidense, quienes podrán registrarse hasta el 10 de junio de 2026. El proyecto busca dar espacio a propuestas musicales con una narrativa de paz y alejada de la apología del delito.</p>
 
@@ -112,7 +122,7 @@ const sampleArticles: Article[] = [
 
 <p>La compañía teatral pone a disposición de las y los toluqueños una nueva forma de entretenimiento con obras dirigidas a públicos de todas las edades, acercando así el arte y las actividades culturales a la sociedad. Estas producciones teatrales estarán disponibles en el Teatro Universitario Los Jaguares y el Teatro de Cámara Esvón Gamaliel desde el 7 de mayo hasta el 28 de junio del 2026.</p>
 
-<p>Entre las obras presentadas se encuentran <strong>Astros, arrullos para Lulú</strong>, dirigida a adolescentes y adultos; <strong>Trump The King</strong>, para adolescentes y adultos; <strong>La hoguera</strong>, para mayores de edad; <strong>El Médico a Palos</strong> y <strong>El Mechacorta</strong>, dirigidas a adolescentes y adultos; y <strong>Un Reino de Brujos y niños</strong>, para un público familiar e infantil.</p>
+<p>Entre las obras presentadas se encuentran <cite>Astros, arrullos para Lulú</cite>, dirigida a adolescentes y adultos; <cite>Trump The King</cite>, para adolescentes y adultos; <cite>La hoguera</cite>, para mayores de edad; <cite>El Médico a Palos</cite> y <cite>El Mechacorta</cite>, dirigidas a adolescentes y adultos; y <cite>Un Reino de Brujos y niños</cite>, para un público familiar e infantil.</p>
 
 <strong>Costos, horarios y ubicaciones</strong>
 
@@ -173,7 +183,7 @@ const sampleArticles: Article[] = [
 
 <p>La propuesta destacó por su carácter experimental, alejándose de las estructuras tradicionales de la música electrónica para centrarse en paisajes sonoros lentos y envolventes. A lo largo de la presentación, los asistentes permanecieron atentos a las variaciones de sonido y a la interacción visual que acompañaba cada transición musical.</p>
 
-<p>El proyecto Arquitectura de Pulso forma parte de una serie de actividades artísticas que buscan integrar distintas disciplinas dentro de espacios culturales universitarios. En este caso, la combinación de música electrónica y arte visual permitió crear una experiencia enfocada en la contemplación y la percepción sensorial del público.</p>
+<p>El proyecto <cite>Arquitectura de Pulso</cite> forma parte de una serie de actividades artísticas que buscan integrar distintas disciplinas dentro de espacios culturales universitarios. En este caso, la combinación de música electrónica y arte visual permitió crear una experiencia enfocada en la contemplación y la percepción sensorial del público.</p>
 
 <p>Con eventos de este tipo, el Museo Universitario Leopoldo Flores continúa funcionando como un espacio abierto a propuestas contemporáneas y experimentales, dando lugar a artistas emergentes y proyectos que exploran nuevas formas de expresión artística dentro de la escena cultural mexiquense.</p>`,
     author: 'Rodrigo Segura',
@@ -186,9 +196,9 @@ const sampleArticles: Article[] = [
     articleId: 'av-007-2026-0003',
     title: 'El documental "La nube en el jardín" de Ed Maverick llega a salas de Metepec',
     summary: 'El proyecto cinematográfico basado en el álbum "La nube en el jardín" del cantautor mexicano Ed Maverick comenzó su exhibición en salas de cine del país, incluyendo funciones en Metepec. El documental muestra una presentación en vivo grabada desde la Sala Nezahualcóyotl y expande la propuesta visual y emocional del artista chihuahuense.',
-    body: `<p>El documental "La nube en el jardín", inspirado en el álbum homónimo de Ed Maverick, llegó este mes a distintas salas de cine de México, incluyendo funciones en Metepec dentro del complejo Cinemex ubicado en Town Square Metepec. La producción presenta una experiencia cinematográfica construida a partir del concierto grabado en vivo desde la Sala Nezahualcóyotl, uno de los recintos culturales más importantes del país.</p>
+    body: `<p>El documental <cite>La nube en el jardín</cite>, inspirado en el álbum homónimo de Ed Maverick, llegó este mes a distintas salas de cine de México, incluyendo funciones en Metepec dentro del complejo Cinemex ubicado en Town Square Metepec. La producción presenta una experiencia cinematográfica construida a partir del concierto grabado en vivo desde la Sala Nezahualcóyotl, uno de los recintos culturales más importantes del país.</p>
 
-<p>A través de una propuesta visual íntima y contemplativa, el proyecto muestra la interpretación completa del álbum lanzado por el cantante originario de Chihuahua. Desde su anuncio en redes sociales, el documental generó expectativa entre seguidores del cantautor, especialmente por tratarse de una de las etapas musicales más personales de Ed Maverick. "La nube en el jardín" se caracteriza por sonidos acústicos, arreglos orquestales y letras enfocadas en la nostalgia, la soledad y la introspección.</p>
+<p>A través de una propuesta visual íntima y contemplativa, el proyecto muestra la interpretación completa del álbum lanzado por el cantante originario de Chihuahua. Desde su anuncio en redes sociales, el documental generó expectativa entre seguidores del cantautor, especialmente por tratarse de una de las etapas musicales más personales de Ed Maverick. <cite>La nube en el jardín</cite> se caracteriza por sonidos acústicos, arreglos orquestales y letras enfocadas en la nostalgia, la soledad y la introspección.</p>
 
 <p>La exhibición forma parte de una serie de funciones especiales distribuidas en distintas ciudades del país a partir del 13 de mayo. En Metepec, las funciones pueden consultarse directamente en la cartelera digital de Cinemex.</p>`,
     author: 'Francisco Mireles',
@@ -203,7 +213,7 @@ const sampleArticles: Article[] = [
     summary: 'El Día Mundial del Lupus se conmemoró este 10 de mayo con un gesto simbólico que iluminó de color morado congresos estatales y edificios históricos en distintas entidades de la República Mexicana, entre ellas Puebla, Guanajuato, Tamaulipas, Coahuila, Chihuahua y Baja California.',
     body: `<p>El Día Mundial del Lupus se conmemoró este 10 de mayo con un gesto simbólico que iluminó de color morado congresos estatales y edificios históricos en distintas entidades de la República Mexicana, entre ellas Puebla, Guanajuato, Tamaulipas, Coahuila, Chihuahua y Baja California.</p>
 
-<p>La iniciativa busca visibilizar y concientizar sobre la importancia de las enfermedades autoinmunes, de acuerdo con el medio "El Tiempo MX" señala que en México existen más de 5 millones de personas con enfermedades autoinmunes y crónicas.</p>
+<p>La iniciativa busca visibilizar y concientizar sobre la importancia de las enfermedades autoinmunes, de acuerdo con el medio <cite>El Tiempo MX</cite> señala que en México existen más de 5 millones de personas con enfermedades autoinmunes y crónicas.</p>
 
 <p>En particular, las personas que padecen lupus en México se estima que son 20 de cada 100,000 con una mayor prevalencia en mujeres, según el Registro Mexicano de Lupus por la Universidad Nacional Autónoma de México (UNAM). Por ende, la iluminación morada en congresos es por la iniciativa de la llamada Ley Lupus y Autoinmunes, que pretende garantizar derechos y atención médica adecuada a quienes viven con estos padecimientos.</p>
 
@@ -211,7 +221,12 @@ const sampleArticles: Article[] = [
 
 <p>En el encendido participaron asociaciones civiles junto con diputados locales que respaldan la legislación en sus estados, reforzando el compromiso de lucha por los derechos de las personas afectadas.</p>
 
-<p>Tal es el caso del Centro de Estudios Transdisciplinarios Athié-Calleja por los Derechos de las Personas con Lupus A.C. (Cetlu), una organización que lidera "La Ola Morada" como un proyecto de Laura Athié y Efrén Calleja Macedo con el fin de formar un cuerpo social que comparte esperanzas y voluntades para romper el aislamiento, la competencia y el silenciamiento a los cuerpos enfermos. Por medio de los canales oficiales, el Congreso del Estado Libre y Soberano de Tamaulipas mencionó por la iluminación institucional de color morado que "A través de este acto simbólico, el Poder Legislativo refrenda su compromiso de promover la empatía, la visibilización y el respaldo a quienes enfrentan diariamente esta condición, reconociendo también la fortaleza y resiliencia de las familias que les acompañan".</p>
+<p>Tal es el caso del Centro de Estudios Transdisciplinarios Athié-Calleja por los Derechos de las Personas con Lupus A.C. (Cetlu), una organización que lidera <cite>La Ola Morada</cite> como un proyecto de Laura Athié y Efrén Calleja Macedo con el fin de formar un cuerpo social que comparte esperanzas y voluntades para romper el aislamiento, la competencia y el silenciamiento a los cuerpos enfermos. Por medio de los canales oficiales, el Congreso del Estado Libre y Soberano de Tamaulipas declaró:</p>
+
+<blockquote>
+<p>A través de este acto simbólico, el Poder Legislativo refrenda su compromiso de promover la empatía, la visibilización y el respaldo a quienes enfrentan diariamente esta condición, reconociendo también la fortaleza y resiliencia de las familias que les acompañan.</p>
+<cite>— Congreso del Estado Libre y Soberano de Tamaulipas</cite>
+</blockquote>
 
 <p>El color morado, símbolo de esta causa, se convirtió en un recordatorio de unidad y de la necesidad de impulsar políticas públicas que atiendan de manera integral a quienes enfrentan el lupus y otras enfermedades autoinmunes.</p>`,
     author: 'Marisol Ramirez',
