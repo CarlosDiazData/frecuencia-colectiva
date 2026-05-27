@@ -57,7 +57,7 @@ const sampleArticles: Article[] = [
     author: 'Laura Neira Bernal',
     date: '2026-05-10T14:30:00Z',
     category: 'arte-visual',
-    imageUrl: 'https://instagram.fpbc6-1.fna.fbcdn.net/v/t51.82787-15/671261642_18587587561039548_317813685417641817_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=Mzg5NDI1MDgyMjc3OTc1MzE2Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNjk0LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=JCaukk4u88MQ7kNvwHhC_dD&_nc_oc=AdrcfaHZhnOB-Yw46fQIWssrYVWjaC3iXvyFQdOc7EI44uWgZ4KcfLJYu9MS1UEDbK_FEBhuFy5NsFj-TkUiSHpM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpbc6-1.fna&_nc_gid=crZo7jcY6-AqRp7yAoa6dg&_nc_ss=7a22e&oh=00_Af4Ke9yqjdt1Q9Z4p_9Wm05ssSD_f1ChjfEaIKg6hd1kwQ&oe=6A07D531',
+    imageUrl: 'https://imgur.com/a/zuAygTw',
     readTimeMinutes: 3,
   },
   {

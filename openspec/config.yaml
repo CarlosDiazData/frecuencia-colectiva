@@ -1,0 +1,36 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Tech stack: React 18.2 + TypeScript 5.3 + Vite 5.1 (frontend), TypeScript 5.3 Lambda +
+    AWS SDK v3 (backend), AWS CDK v2 Python (infrastructure).
+  Architecture: Monorepo (frontend/, backend/, scripts/). Frontend: SPA with react-router-dom 6,
+    path alias @/src, TailwindCSS 3.4 editorial design. Backend: Lambda handlers in src/handlers/,
+    CDK infrastructure in infrastructure/ + app.py.
+  Testing: Vitest 1.6 + @testing-library/react 14.2 (frontend), Jest 29.7 + ts-jest (backend).
+    No E2E. No coverage runner installed for frontend.
+  Style: ESLint 8.57 + @typescript-eslint + react-hooks plugin (frontend).
+    TypeScript strict mode both ends. Prettier not detected.
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    - Follow existing code patterns
+    tdd: true
+    test_command: "cd frontend && npx vitest --run"
+  verify:
+    test_command: "cd frontend && npx vitest --run && cd ../backend && npx jest"
+    build_command: "cd frontend && npx tsc --noEmit && cd ../backend && npx tsc --noEmit"
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas
