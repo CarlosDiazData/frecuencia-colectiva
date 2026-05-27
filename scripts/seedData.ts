@@ -234,6 +234,41 @@ const sampleArticles: Article[] = [
     category: 'patrimonio',
     imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/696286743_908476958914350_1474143920230196813_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bVEkfziE_-8Q7kNvwFfTV9B&_nc_oc=AdpKCgJdRDjN85T3OU__RMVvD7Su0zlBXdzqu37PiBI6tRq6yCFDD-uiZb9ku6twW-TrKdQizhpzJZTcSdkFjreh&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=WSlIv_OKYjGXJZgYIDoAPA&_nc_ss=7b289&oh=00_Af48aV4MZs0JflvD52RczCS5CUAqQJdgVdj2XYlO-oD67g&oe=6A1C04D6',
     readTimeMinutes: 4,
+  },
+  {
+    articleId: 'av-009-2026-0003',
+    title: 'El Gusto de la Resistencia: la Ciencia y la Memoria del Pulque en Toluca',
+    summary: 'Desde una mirada colombiana, Laura Neira explora la tradición del pulque en Toluca y Metepec: un legado biocultural que une ciencia, resistencia y memoria colectiva frente al olvido.',
+    body: `<p>Afrontar el Valle de Toluca viniendo desde Colombia, forzosamente supone una confrontación con la elevación del terreno y el rigor helado del sol. A aquellos de nosotros criados en el perfume del café, la capital mexiquense puede exhibirse en una evaluación preliminar, como un núcleo de hormigón desenvuelto con premura. Con todo, al concederse uno la licencia de menoscabar lo aparente y explorar sus márgenes, se desvela que este territorio alberga vestigios de una opulencia biológica y humana sumamente conmovedora. La más significativa travesía cultural durante esta travesía no se manifestó dentro de un recinto museístico, sino al pie de las austeras entradas de un tinacal, desentrañando la esencia del pulque.</p>
+
+<p>Desde mi posición como colombiana, la manifestación del pulque provocó en mí un reconocimiento instantáneo y de forma simultánea, un profundo asombro. En mi patria, la chicha, esa bebida de maíz fermentado de raigambre, vivió una suerte calcada a la del néctar del maguey. Una ofensiva coordinada de descrédito irrumpió a principios del siglo pasado, orquestada por los emporios cerveceros. Estos la difamaron, tachándola de <q>insalubre</q> y <q>prohibida</q>, con el fin de forzar la adopción de sus productos industriales. En consecuencia, observar el pulque, con su defensa apasionada y su disfrute pleno en Toluca y Metepec, no solo representa para mí un deleite de sabor; es ser testigo de un triunfo de la resistencia cultural, porque el pulque se erige más allá de ser un simple refresco popular; es más bien un entramado de tradición, en el cual la herencia colectiva se entrelaza con algunos procesos microbiológicos.</p>
+
+<p>Para calibrar la solidez de este legado, tuve el honor de dialogar con sus custodios. Don Ernesto Morales, un cultivador con más de cuarenta años inmerso en el cuidado del maguey (<em>Agave salmiana</em>) en las áreas rurales aledañas a Metepec, me comentó que aquí, la espera se contabiliza en lustros y el proceso se capta con percepción innata.</p>
+
+<blockquote>
+<p>Gran parte de la población en las urbanizaciones recientes de Metepec o el núcleo de Toluca tiende a creer que el pulque es un producto espontáneo del campo o que es originado por casualidad, pero la verdad es que es una labor artesanal que demanda de mucho cuidado.</p>
+<cite>— Ernesto Morales, maestro tlachiquero</cite>
+</blockquote>
+
+<p>Me explicó también que para que un maguey alcance su punto de maduración en esta región de clima templado, un lapso de ocho a doce años es indispensable, permitiendo su descalibre inicial y después raspado. Si se omite la interpretación de las señales que comunica la planta, el maguey se pudrirá, dañando así una década de esfuerzo en cuestión de horas.</p>
+
+<blockquote>
+<p>Después de recoger el aguamiel, empieza lo que considero el reto en el tinacal. La temperatura de Toluca influye mucho sobre los microorganismos, de bacterias y levaduras, que son la esencia de la tarea de fermentación como tal del pulque. Siempre evitamos que haya sustancias químicas y esas cosas artificiales; todo lo que es la temperatura y preservación de la cultura iniciadora, a saber, el pulque materno, es empírico, pero pienso que también es de una exactitud heredada.</p>
+<cite>— Ernesto Morales, maestro tlachiquero de la zona</cite>
+</blockquote>
+
+<p>La declaración de Don Ernesto derriba cualquier noción preconcebida y colonial sobre el conocimiento autóctono y rural. Los productores de pulque no actúan por mero azar, sino que implementan una tradición ancestral ajustada a sus necesidades. Ejemplares proyectos de la región, como el Tinacal "El Capulín", dan a conocer cómo el paso a materiales inofensivos y protocolos de higiene rigurosos ha salvaguardado el ecosistema de bacterias lácticas y levaduras, asegurando la integridad del producto sin interferir en su distintivo sabor; y esta no es una visión meramente personal de una relatora cautivada, pues el rigor científico fundamenta cada sorbo:</p>
+
+<p>Investigaciones del Instituto Politécnico Nacional (IPN), en especial el CICATA, lograron aislar las bacterias lácticas del pulque, exhibiendo potentes cualidades probióticas. Se evidenció su facultad para frenar microorganismos dañinos y un elevado volumen de aminoácidos, así como vitaminas esenciales.</p>
+
+<p>Por otro lado, desde una óptica ecológica, la Facultad de Ciencias Agrícolas de la UAEMéx ha consignado que la siembra del <em>Agave salmiana</em> opera como un escudo biológico crucial en Toluca y Metepec. Su sistema radicular extenso detiene la desestabilización hídrica del suelo y su metabolismo se ha adaptado de manera óptima para fijar carbono y propiciar la infiltración de agua al manto acuífero de la zona, que sufre de sobreexplotación.</p>
+
+<p>Vivir la idiosincrasia del pulque en Toluca, comprender la multiplicidad de sus curados —en los que se fusionan insumos como la avena o la piña con el proceso de fermentación— y observar a universitarios jóvenes uniéndose en tertulia para tomarlo, puede ser una de las vivencias más interesantes de mi estancia en México. La praxis del periodismo cultural debidamente ejercida conlleva una obligación, la de enaltecer estos espacios. Que el pulque ya no sea abordado meramente como un objeto de interés exótico para el visitante o un pasatiempo de tinte nostálgico para alguno que otro ocaso semanal. Lo veo más bien, un legado biocultural dinámico, y una enseñanza valiosa para aquel que lo conozca. En ocasiones, se hace imprescindible una perspectiva ajena para rememorar aquello que la rutina tiende a difuminar y que en las raíces profundas del agave originario de esta región mexiquense late una disciplina tan rigurosa y merecedora de respeto como la que se investiga en cualquier recinto científico a nivel planetario.</p>`,
+    author: 'Laura Neira',
+    date: '2026-05-23T10:00:00Z',
+    category: 'patrimonio',
+    imageUrl: 'https://www.mexicodesconocido.com.mx/wp-content/uploads/2024/12/pulque-ok-900x506.png',
+    readTimeMinutes: 4,
   }
 ];
 
