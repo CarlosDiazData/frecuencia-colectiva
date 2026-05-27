@@ -96,7 +96,7 @@ const sampleArticles: Article[] = [
     author: 'Marisol Ramirez',
     date: '2026-04-20T14:30:00Z',
     category: 'arte-escenico',
-    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t51.82787-15/670973414_18588540952055513_5577718994429706924_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pWg_SwG_d3EQ7kNvwHpnYeS&_nc_oc=AdqP1bsmDe7XUKAM9phuMHyt8W-L5yY2pjY3yNLoxN2HR84Wf6nTN71rn41hmDnRhOb812gHk4EbnPTRTVzEe4iw&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=I_RsvyGoqpbCf9poiogmAQ&_nc_ss=7b289&oh=00_Af7KzJU7-BvXOQkCNgO0fMhE6aY7_2EwW_8MAzz5yrOeYA&oe=6A0926FE',
+    imageUrl: 'https://i.imgur.com/egQPv7e.jpeg',
     readTimeMinutes: 4,
   },
   {
