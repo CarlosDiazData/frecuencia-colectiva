@@ -40,7 +40,7 @@ const sampleArticles: Article[] = [
     author: 'Rodrigo Segura',
     date: '2026-05-09T10:00:00Z',
     category: 'cine-y-audiovisual',
-    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/697098980_1391093186398448_6308216465685133046_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=hs0H4SCqKo0Q7kNvwE4mMmC&_nc_oc=AdoZDE17FyBN5twd7dPvQKOQdVgB0tTzUqxGFAD146Qy_J11lk5N6qMsngKqsRB5J5uLKrJMMlZFMR9RoXwL7UtA&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=nvMQIVrowfTSzv1v6WWudg&_nc_ss=7b289&oh=00_Af5-cXePnGn1NBoeJdtfJDwf0wKJ0NnB6PzheQtcm2NRVw&oe=6A07C5F3',
+    imageUrl: 'https://i.imgur.com/45rj3a3.jpeg',
     readTimeMinutes: 5,
   },
   {
@@ -170,7 +170,7 @@ const sampleArticles: Article[] = [
     author: 'Rosario Romero Pérez',
     date: '2026-05-07T10:00:00Z',
     category: 'arte-escenico',
-    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/687851663_1410229707578192_3652722379638341731_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B-QZMmFKXWUQ7kNvwHetqY6&_nc_oc=AdojKeTAWQCH2T6pKZg1LHZr04jyXbDEG1UFrFNayinoavvE0F5-loNNsven5qGOFXzzkOzpv5J7232cImK1ByB-&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=9c5KVzhijB8ER9-c1pmQHQ&_nc_ss=7b289&oh=00_Af5Sv-SmO12_HGgNkjvmK_05_lD1VJaD6ObKgiv2eH_z3Q&oe=6A11365D',
+    imageUrl: 'https://i.imgur.com/XA9GGh4.jpeg',
     readTimeMinutes: 4,
   },
   {
