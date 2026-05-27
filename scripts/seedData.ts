@@ -57,7 +57,7 @@ const sampleArticles: Article[] = [
     author: 'Laura Neira Bernal',
     date: '2026-05-10T14:30:00Z',
     category: 'arte-visual',
-    imageUrl: 'https://imgur.com/a/zuAygTw',
+    imageUrl: 'https://i.imgur.com/45rj3a3.jpeg',
     readTimeMinutes: 3,
   },
   {
