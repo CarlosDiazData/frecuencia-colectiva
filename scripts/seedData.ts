@@ -361,6 +361,53 @@ const sampleArticles: Article[] = [
     category: 'patrimonio',
     imageUrl: 'https://www.mexicodesconocido.com.mx/wp-content/uploads/2024/12/pulque-ok-900x506.png',
     readTimeMinutes: 4,
+  },
+  {
+    articleId: 'av-012-2026-0003',
+    title: 'Gente del centro: El latido oculto en el corazón de Toluca',
+    summary: 'Un viaje periodístico y fotográfico al corazón de Toluca que rinde homenaje a sus rostros anónimos, crónicas mudas e historias invisibles. Más allá del bullicio comercial y el frío de su arquitectura, este ensayo retrata la verdadera identidad y la poesía urbana de la capital mexiquense, invitando al lector a romper la rutina y redescubrir la magia oculta en las calles de su vibrante centro histórico.',
+    body: `<p>Toluca no se erige únicamente sobre la sobriedad de su cantera, el frío de sus calles o el bullicio de sus comercios. Su verdadero espíritu respira en los rostros anónimos que, día con día, tejen el mapa invisible de su centro histórico. Entre el rugido de los motores y la tiranía del reloj, habitan crónicas mudas: el acorde de una guitarra solitaria, las manos agrietadas de un viejo trabajador o la risa efímera de una familia que cruza el asfalto. Este recorrido es un homenaje a esos instantes suspendidos en el tiempo, a la poesía urbana que la prisa cotidiana nos impide ver, pero que define el pulso real de la capital mexiquense.</p>
+
+<p><strong>Ensayo fotográfico:</strong></p>
+
+<img src="https://i.imgur.com/aw1FVtq.jpeg" alt="El hombre inmóvil" />
+
+<p><strong>El hombre inmóvil</strong></p><p>Mientras el mundo corre desbocado a su alrededor, él permanece inmutable. Los artistas urbanos del centro son faros de quietud en un mar de rostros difusos. Convierten la banqueta gris en un escenario sagrado, desafiando el vértigo de la modernidad con una mirada fija y un cuerpo congelado que obliga a los transeúntes, aunque sea por un destello, a detener el tiempo y mirarse a sí mismos.</p>
+
+<img src="https://i.imgur.com/8b3bpnf.jpeg" alt="El refugio de las generaciones" />
+
+<p><strong>El refugio de las generaciones</strong></p><p>Bajo los icónicos arcos coloniales se respira la verdadera identidad toluqueña. Los Portales no son solo arquitectura; son el epicentro de los encuentros fortuitos. Aquí se cruzan el abuelo que arrastra los pies y los recuerdos, el vendedor que ofrece el dulce tradicional de la nostalgia, y el joven que camina de prisa hacia el futuro. Es un santuario vivo donde el pasado y el presente conversan en voz baja.</p>
+
+<img src="https://i.imgur.com/Zg1w4zF.jpeg" alt="Melodías de la prisa" />
+
+<p><strong>Melodías de la prisa</strong></p><p>Una guitarra desgastada y una voz rasposa cantándole a la indiferencia. La música callejera es el soundtrack invisible de Toluca. Los músicos plantan su trinchera de arte en las esquinas, regalando acordes a una multitud sorda que avanza a contrarreloj. Ellos no tocan buscando el gran escenario; tocan para recordarle a las calles que, a pesar del caos, todavía tienen alma.</p>
+
+<img src="https://i.imgur.com/qDIdXKA.jpeg" alt="El carnaval de lo cotidiano" />
+
+<p><strong>El carnaval de lo cotidiano</strong></p><p>La rutina se rompe con fogonazos de color, ingenio y excentricidad. Un personaje caricaturesco que baila sin ritmo en una esquina, el aroma a comida tradicional que inunda el aire y la decoración improvisada de un local independiente. Son pequeñas revoluciones visuales, destellos de cultura popular que rescatan al ciudadano de la monotonía grisácea y demuestran que el ingenio siempre encuentra una grieta para florecer.</p>
+
+<img src="https://i.imgur.com/bJ0oAe1.jpeg" alt="Arterias de asfalto" />
+
+<p><strong>Arterias de asfalto</strong></p><p>Las calles que conducen al corazón de la ciudad son ríos humanos en constante ebullición. Estudiantes con mochilas cargadas de ilusiones, comerciantes que empujan el día con el cuerpo y oficinistas que persiguen el transporte público. En este hormiguero urbano, la velocidad es la ley suprema y el trayecto mismo se convierte en el destino.</p>
+
+<img src="https://i.imgur.com/WCRtkjM.jpeg" alt="Espera" />
+
+<p><strong>Espera</strong></p><p>Incluso en el vórtice más concurrido de la ciudad, existe el vacío. Entre el caos, un oficial de policía permanece firme, resguardando el entorno pero habitando su propio silencio. Son pausas humanas que nadie más nota. La prisa urbana aísla; en medio de miles de almas, el centro también aloja esos islotes de melancolía y reflexión que se ahogan discretamente detrás de un uniforme o de una mirada perdida en el bullicio general.</p>
+
+<img src="https://i.imgur.com/uiaLxEO.jpeg" alt="Oficios invisibles" />
+
+<p><strong>Oficios invisibles</strong></p><p>Hay manos que sostienen la memoria y el calzado de la ciudad. El tintineo rítmico del cepillo contra el cajón del bolero es un eco del ayer que se resiste a desaparecer en la era digital. Estos oficios tradicionales, cobijados por miradas sabias y cansadas, sostienen la economía más humana y digna del centro, aunque la soberbia de la prisa a menudo los vuelva invisibles.</p>
+
+<img src="https://i.imgur.com/82heR03.jpeg" alt="Regreso" />
+
+<p><strong>Regreso</strong></p><p>Cuando el sol cae y las luces de los comercios comienzan a parpadear, el centro revela su verdad más honesta. No son los monumentos ni los grandes edificios lo que le dan vida, sino la familia que camina de la mano rumbo a casa, o el trabajador que exhala un suspiro al terminar su jornada. Toluca pertenece a quienes la caminan, la sufren y la aman. Al final del día, la ciudad no está hecha de piedra: está hecha de carne, hueso y esperanza.</p>
+
+<p><strong>Cierre:</strong> Al cerrar este recorrido visual, queda claro que el centro de Toluca es mucho más que la suma de su arquitectura o el vaivén incesante del comercio. Es, en realidad, un mosaico efímero de almas donde cada personaje aporta un fragmento indispensable a la identidad colectiva. La lente ha logrado congelar aquello que la prisa cotidiana insiste en robarnos: la profunda humanidad que late en los momentos de pausa, recordándonos que la capital mexiquense no se define por la frialdad de su concreto, sino por el calor de las crónicas anónimas que resguardan sus banquetas. Este ensayo fotográfico funciona, en última instancia, como un espejo y una tregua en medio del caos. Nos convoca a dejar de ser simples náufragos del asfalto para convertirnos en testigos empáticos de nuestro propio entorno, recordándonos que el espacio público cobra sentido solo a través de quienes lo habitan. Porque mientras las calles del corazón de la ciudad sigan albergando la dignidad de los oficios que resisten al tiempo, el color de sus expresiones populares y la sutil melancolía de las miradas perdidas, Toluca continuará siendo un espacio intensamente vivo; un hogar compartido donde, en medio de la multitud, basta un segundo de verdadera observación para volver a reconocernos humanos.</p>`,
+    author: 'Francisco Mireles',
+    date: '2026-05-28T10:00:00Z',
+    category: 'historias-familiares',
+    imageUrl: 'https://i.imgur.com/qDIdXKA.jpeg',
+    readTimeMinutes: 7,
   }
 ];
 
