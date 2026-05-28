@@ -236,6 +236,73 @@ const sampleArticles: Article[] = [
     readTimeMinutes: 4,
   },
   {
+    articleId: 'av-010-2026-0003',
+    title: 'CromaToluca: Tonos de una ciudad viva',
+    summary: 'CromaToluca es un ensayo fotográfico periodístico que recorre algunos de los espacios más representativos de la capital mexiquense para mostrar cómo la historia, el patrimonio, la cultura y la vida cotidiana han construido su identidad. A través de distintas imágenes, el proyecto busca revelar los colores que permanecen en la memoria de la ciudad y que continúan dando significado a sus paisajes, símbolos y habitantes.',
+    body: `<p>Toluca es una ciudad donde la historia, la tradición y el crecimiento urbano conviven diariamente. A través de sus espacios más representativos, es posible observar cómo se ha construido una identidad marcada por el patrimonio, la cultura y la vida cotidiana. Entre edificios, calles y paisajes, sobreviven colores adheridos a la memoria y al paso del tiempo. Algunos se manifiestan en espacios visibles; otros permanecen discretamente en la arquitectura, el movimiento de las personas y en aquello que cada generación deja sobre la ciudad. Más allá del concreto y de la rutina urbana, estos elementos continúan transformando la manera en que sus habitantes observan y habitan su entorno.</p>
+
+<img src="https://i.imgur.com/6C9j3nZ.jpeg" alt="Nevado de Toluca / Xinantécatl" />
+
+<p><strong>Nevado de Toluca / Xinantécatl</strong> Desde Sierra Morelos, localizado en Zinacantepec, puede apreciarse el Nevado de Toluca, una de las formaciones naturales más importantes del Estado de México. Para los pueblos prehispánicos del valle, el Xinantécatl tenía un carácter ceremonial y simbólico, convirtiéndose con el tiempo en uno de los principales referentes naturales e identitarios de la región.</p>
+
+<p><a href="https://maps.app.goo.gl/ZAprMy9s4YKC8SmF8?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/HIWmhxj.jpeg" alt="Iglesia del Carmen" />
+
+<p><strong>Iglesia del Carmen (1698)</strong> En el centro histórico se encuentra la Iglesia del Carmen, parte importante del legado colonial de la ciudad. Además de su relevancia religiosa, funcionó como espacio de convivencia social durante la época virreinal. Su arquitectura y sus tonalidades cálidas continúan destacando dentro del paisaje urbano contemporáneo.</p>
+
+<p><a href="https://maps.app.goo.gl/NZaNdAEg8dgoM6nR9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/ebmEEBq.jpeg" alt="Catedral de Toluca" />
+
+<p><strong>Catedral de Toluca (1867 – inicio de construcción actual)</strong> Frente a la Plaza de los Mártires se levanta la Catedral, uno de los espacios más representativos de la ciudad. Su construcción refleja el crecimiento urbano y social que tuvo la capital mexiquense durante el siglo XIX, convirtiéndose en un punto clave para la vida pública y religiosa de la población.</p>
+
+<p><a href="https://maps.app.goo.gl/xXXztoMP6GZFRVB69?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/8KtLQ3L.jpeg" alt="Palacio de Gobierno del Estado de México" />
+
+<p><strong>Palacio de Gobierno del Estado de México (1969)</strong> Sobre la Plaza de los Mártires también se encuentra el Palacio de Gobierno, símbolo de la consolidación política de la entidad mexiquense. Además de su función administrativa, el edificio conserva murales que representan distintos momentos históricos y sociales del estado.</p>
+
+<p><a href="https://maps.app.goo.gl/hMFacPv77gXvgvwM7?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/YnlmiHw.jpeg" alt="Portales y comercio tradicional" />
+
+<p><strong>Portales y comercio tradicional (Siglo XIX)</strong> Dentro del centro histórico, los Portales han sido durante décadas uno de los espacios comerciales más importantes de la ciudad. Las dulcerías tradicionales representan la permanencia de costumbres y actividades económicas que continúan formando parte de la identidad cotidiana de la región.</p>
+
+<p><a href="https://maps.app.goo.gl/7r7AyV2TbKgJozxVA?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/KYKHGRQ.jpeg" alt="Cosmovitral" />
+
+<p><strong>Cosmovitral (1980)</strong> Sobre la avenida Sebastián Lerdo de Tejada se localiza el Cosmovitral, un espacio que nació a partir de la transformación de un antiguo mercado en uno de los sitios culturales más importantes del Estado de México. Sus vitrales, diseñados por Leopoldo Flores, integran naturaleza, arte y luz dentro de uno de los principales símbolos contemporáneos de la ciudad.</p>
+
+<p><a href="https://maps.app.goo.gl/TA293SjTJrw2n7Yr9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/c5XDJzf.jpeg" alt="Estadio Nemesio Diez" />
+
+<p><strong>Estadio Nemesio Diez (1954)</strong> En la avenida Morelos se encuentra el Estadio Nemesio Diez, uno de los espacios deportivos más importantes de la capital mexiquense. Además de ser la casa del equipo masculino y femenino de los Diablos Rojos del Toluca, el estadio se ha convertido en un lugar de encuentro donde miles de personas comparten emoción, identidad y sentido de pertenencia a través del fútbol.</p>
+
+<p><a href="https://maps.app.goo.gl/3MNEsG4SSn1uP8Qa9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/ZXl1L9E.jpeg" alt="Torres Bicentenario" />
+
+<p><strong>Torres Bicentenario (2008)</strong> A un costado de Paseo Tollocan se levantan las Torres Bicentenario, representando parte del crecimiento moderno y urbano de la ciudad. Su diseño contemporáneo refleja la transformación visual de un espacio que continúa expandiéndose y modificando constantemente su paisaje.</p>
+
+<p><a href="https://maps.app.goo.gl/23QuvxKdnm8rjxWX8?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<img src="https://i.imgur.com/wwSbqed.jpeg" alt="Tren y zona industrial" />
+
+<p><strong>Tren y zona industrial (Desarrollo industrial consolidado durante el siglo XX)</strong> La zona industrial, extendida principalmente hacia Paseo Tollocan y Lerma, impulsó el crecimiento económico de la región durante el siglo XX. El ferrocarril y la industria marcaron una etapa importante de modernización y conexión con otras partes del país, transformando el desarrollo urbano y laboral del valle mexiquense.</p>
+
+<p><a href="https://maps.app.goo.gl/pnErVqVR1DErFe5T6?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
+
+<p>La identidad de Toluca se construye a partir de espacios históricos, culturales y cotidianos que continúan dejando huella en la memoria colectiva. Más allá del concreto, permanecen tradiciones, símbolos y colores que siguen dando significado a la manera en que las personas viven, recorren y recuerdan su entorno.</p>`,
+    author: 'Rodrigo Segura',
+    date: '2026-05-28T10:00:00Z',
+    category: 'patrimonio',
+    imageUrl: 'https://i.imgur.com/8KtLQ3L.jpeg',
+    readTimeMinutes: 5,
+  },
+  {
     articleId: 'av-009-2026-0003',
     title: 'El Gusto de la Resistencia: la Ciencia y la Memoria del Pulque en Toluca',
     summary: 'Desde una mirada colombiana, Laura Neira explora la tradición del pulque en Toluca y Metepec: un legado biocultural que une ciencia, resistencia y memoria colectiva frente al olvido.',
