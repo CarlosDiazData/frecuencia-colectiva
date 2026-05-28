@@ -243,55 +243,55 @@ const sampleArticles: Article[] = [
 
 <img src="https://i.imgur.com/6C9j3nZ.jpeg" alt="Nevado de Toluca / Xinantécatl" />
 
-<p><strong>Nevado de Toluca / Xinantécatl</strong> Desde Sierra Morelos, localizado en Zinacantepec, puede apreciarse el Nevado de Toluca, una de las formaciones naturales más importantes del Estado de México. Para los pueblos prehispánicos del valle, el Xinantécatl tenía un carácter ceremonial y simbólico, convirtiéndose con el tiempo en uno de los principales referentes naturales e identitarios de la región.</p>
+<p><strong>Nevado de Toluca / Xinantécatl</strong></p><p>Desde Sierra Morelos, localizado en Zinacantepec, puede apreciarse el Nevado de Toluca, una de las formaciones naturales más importantes del Estado de México. Para los pueblos prehispánicos del valle, el Xinantécatl tenía un carácter ceremonial y simbólico, convirtiéndose con el tiempo en uno de los principales referentes naturales e identitarios de la región.</p>
 
 <p><a href="https://maps.app.goo.gl/ZAprMy9s4YKC8SmF8?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/HIWmhxj.jpeg" alt="Iglesia del Carmen" />
 
-<p><strong>Iglesia del Carmen (1698)</strong> En el centro histórico se encuentra la Iglesia del Carmen, parte importante del legado colonial de la ciudad. Además de su relevancia religiosa, funcionó como espacio de convivencia social durante la época virreinal. Su arquitectura y sus tonalidades cálidas continúan destacando dentro del paisaje urbano contemporáneo.</p>
+<p><strong>Iglesia del Carmen (1698)</strong></p><p>En el centro histórico se encuentra la Iglesia del Carmen, parte importante del legado colonial de la ciudad. Además de su relevancia religiosa, funcionó como espacio de convivencia social durante la época virreinal. Su arquitectura y sus tonalidades cálidas continúan destacando dentro del paisaje urbano contemporáneo.</p>
 
 <p><a href="https://maps.app.goo.gl/NZaNdAEg8dgoM6nR9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/ebmEEBq.jpeg" alt="Catedral de Toluca" />
 
-<p><strong>Catedral de Toluca (1867 – inicio de construcción actual)</strong> Frente a la Plaza de los Mártires se levanta la Catedral, uno de los espacios más representativos de la ciudad. Su construcción refleja el crecimiento urbano y social que tuvo la capital mexiquense durante el siglo XIX, convirtiéndose en un punto clave para la vida pública y religiosa de la población.</p>
+<p><strong>Catedral de Toluca (1867 – inicio de construcción actual)</strong></p><p>Frente a la Plaza de los Mártires se levanta la Catedral, uno de los espacios más representativos de la ciudad. Su construcción refleja el crecimiento urbano y social que tuvo la capital mexiquense durante el siglo XIX, convirtiéndose en un punto clave para la vida pública y religiosa de la población.</p>
 
 <p><a href="https://maps.app.goo.gl/xXXztoMP6GZFRVB69?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/8KtLQ3L.jpeg" alt="Palacio de Gobierno del Estado de México" />
 
-<p><strong>Palacio de Gobierno del Estado de México (1969)</strong> Sobre la Plaza de los Mártires también se encuentra el Palacio de Gobierno, símbolo de la consolidación política de la entidad mexiquense. Además de su función administrativa, el edificio conserva murales que representan distintos momentos históricos y sociales del estado.</p>
+<p><strong>Palacio de Gobierno del Estado de México (1969)</strong></p><p>Sobre la Plaza de los Mártires también se encuentra el Palacio de Gobierno, símbolo de la consolidación política de la entidad mexiquense. Además de su función administrativa, el edificio conserva murales que representan distintos momentos históricos y sociales del estado.</p>
 
 <p><a href="https://maps.app.goo.gl/hMFacPv77gXvgvwM7?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/YnlmiHw.jpeg" alt="Portales y comercio tradicional" />
 
-<p><strong>Portales y comercio tradicional (Siglo XIX)</strong> Dentro del centro histórico, los Portales han sido durante décadas uno de los espacios comerciales más importantes de la ciudad. Las dulcerías tradicionales representan la permanencia de costumbres y actividades económicas que continúan formando parte de la identidad cotidiana de la región.</p>
+<p><strong>Portales y comercio tradicional (Siglo XIX)</strong></p><p>Dentro del centro histórico, los Portales han sido durante décadas uno de los espacios comerciales más importantes de la ciudad. Las dulcerías tradicionales representan la permanencia de costumbres y actividades económicas que continúan formando parte de la identidad cotidiana de la región.</p>
 
 <p><a href="https://maps.app.goo.gl/7r7AyV2TbKgJozxVA?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/KYKHGRQ.jpeg" alt="Cosmovitral" />
 
-<p><strong>Cosmovitral (1980)</strong> Sobre la avenida Sebastián Lerdo de Tejada se localiza el Cosmovitral, un espacio que nació a partir de la transformación de un antiguo mercado en uno de los sitios culturales más importantes del Estado de México. Sus vitrales, diseñados por Leopoldo Flores, integran naturaleza, arte y luz dentro de uno de los principales símbolos contemporáneos de la ciudad.</p>
+<p><strong>Cosmovitral (1980)</strong></p><p>Sobre la avenida Sebastián Lerdo de Tejada se localiza el Cosmovitral, un espacio que nació a partir de la transformación de un antiguo mercado en uno de los sitios culturales más importantes del Estado de México. Sus vitrales, diseñados por Leopoldo Flores, integran naturaleza, arte y luz dentro de uno de los principales símbolos contemporáneos de la ciudad.</p>
 
 <p><a href="https://maps.app.goo.gl/TA293SjTJrw2n7Yr9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/c5XDJzf.jpeg" alt="Estadio Nemesio Diez" />
 
-<p><strong>Estadio Nemesio Diez (1954)</strong> En la avenida Morelos se encuentra el Estadio Nemesio Diez, uno de los espacios deportivos más importantes de la capital mexiquense. Además de ser la casa del equipo masculino y femenino de los Diablos Rojos del Toluca, el estadio se ha convertido en un lugar de encuentro donde miles de personas comparten emoción, identidad y sentido de pertenencia a través del fútbol.</p>
+<p><strong>Estadio Nemesio Diez (1954)</strong></p><p>En la avenida Morelos se encuentra el Estadio Nemesio Diez, uno de los espacios deportivos más importantes de la capital mexiquense. Además de ser la casa del equipo masculino y femenino de los Diablos Rojos del Toluca, el estadio se ha convertido en un lugar de encuentro donde miles de personas comparten emoción, identidad y sentido de pertenencia a través del fútbol.</p>
 
 <p><a href="https://maps.app.goo.gl/3MNEsG4SSn1uP8Qa9?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/ZXl1L9E.jpeg" alt="Torres Bicentenario" />
 
-<p><strong>Torres Bicentenario (2008)</strong> A un costado de Paseo Tollocan se levantan las Torres Bicentenario, representando parte del crecimiento moderno y urbano de la ciudad. Su diseño contemporáneo refleja la transformación visual de un espacio que continúa expandiéndose y modificando constantemente su paisaje.</p>
+<p><strong>Torres Bicentenario (2008)</strong></p><p>A un costado de Paseo Tollocan se levantan las Torres Bicentenario, representando parte del crecimiento moderno y urbano de la ciudad. Su diseño contemporáneo refleja la transformación visual de un espacio que continúa expandiéndose y modificando constantemente su paisaje.</p>
 
 <p><a href="https://maps.app.goo.gl/23QuvxKdnm8rjxWX8?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
 <img src="https://i.imgur.com/wwSbqed.jpeg" alt="Tren y zona industrial" />
 
-<p><strong>Tren y zona industrial (Desarrollo industrial consolidado durante el siglo XX)</strong> La zona industrial, extendida principalmente hacia Paseo Tollocan y Lerma, impulsó el crecimiento económico de la región durante el siglo XX. El ferrocarril y la industria marcaron una etapa importante de modernización y conexión con otras partes del país, transformando el desarrollo urbano y laboral del valle mexiquense.</p>
+<p><strong>Tren y zona industrial (Desarrollo industrial consolidado durante el siglo XX)</strong></p><p>La zona industrial, extendida principalmente hacia Paseo Tollocan y Lerma, impulsó el crecimiento económico de la región durante el siglo XX. El ferrocarril y la industria marcaron una etapa importante de modernización y conexión con otras partes del país, transformando el desarrollo urbano y laboral del valle mexiquense.</p>
 
 <p><a href="https://maps.app.goo.gl/pnErVqVR1DErFe5T6?g_st=ic" target="_blank" rel="noopener noreferrer">📍 Ver en Google Maps</a></p>
 
@@ -301,6 +301,25 @@ const sampleArticles: Article[] = [
     category: 'patrimonio',
     imageUrl: 'https://i.imgur.com/8KtLQ3L.jpeg',
     readTimeMinutes: 5,
+  },
+  {
+    articleId: 'av-011-2026-0003',
+    title: 'El latido del Tecuani: identidad en Santa María Jajalpa',
+    summary: 'El eco del tambor en el atrio de la iglesia de Santa María Jajalpa, Estado de México, advierte que no se trata de un baile común. Este espacio sagrado se transforma cada año en el epicentro de un teatro callejero que desborda adrenalina, música y fervor popular.',
+    body: `<p>La atmósfera musical no depende de una gran orquesta. Toda la energía del ambiente nace de apenas dos elementos: un tambor pequeño y una flauta modificada. Apoyados por micrófonos y bocinas colocadas alrededor del atrio, este dueto instrumental se basta para guiar el ritmo de la cacería y mantener la atención absoluta de los asistentes. Aunque esta representación no es originaria de la localidad, los habitantes la cobijaron con tanto misticismo que terminó por convertirse en el pilar indiscutible de las fiestas patronales en honor a la Virgen de la Natividad, consolidándose como una de las expresiones culturales más valiosas del pueblo.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OQnZYLsrPpA" title="Danza de los Tecuanes - Santa María Jajalpa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>El relato escénico revive la amenaza del tecuani (el jaguar), una fiera astuta que invade los terrenos del hacendado Salvadorchi para devorar a sus animales. Esto desata una frenética persecución donde cada personaje cumple un rol clave: Agustinci y Juan Tirador, los rastreadores principales encargados de buscar el rastro de la fiera; el viejo rastrero, los lazadores, el flechero y el lancero, personajes que inyectan dinamismo, tensión y dramatismo a la coreografía; y el doctor, la figura que introduce la nota humorística al atender de forma cómica a quienes resultan heridos por los zarpazos del felino.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9NvE7zKO_cc" title="Danza de los Tecuanes - Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Durante el festejo, el público se vuelve cómplice de los danzantes; la audiencia ríe y se emociona mientras el jaguar escapa y contraataca una y otra vez, todo bajo el cobijo del ritmo hipnótico e insistente de la música. La historia alcanza su clímax cuando la bestia es finalmente acorralada y vencida en su escondite. El acto concluye formalmente con la llegada simbólica de los zopilotes y la recompensa que Salvadorchi entrega a sus cazadores. Sin embargo, el verdadero triunfo de la festividad no radica en la caída del felino, sino en su valor social. La danza de los Tecuanis funciona como un vínculo intergeneracional que mantiene viva la memoria y la identidad colectiva de Santa María Jajalpa. Por eso, cuando el silencio regresa al atrio y las máscaras se guardan, queda la certeza de que el espíritu del tecuani nunca se marcha del todo.</p>`,
+    author: 'Francisco Mireles',
+    date: '2026-05-28T10:00:00Z',
+    category: 'festividades-locales',
+    imageUrl: 'https://i.imgur.com/cexWjZa.jpeg',
+    readTimeMinutes: 4,
   },
   {
     articleId: 'av-009-2026-0003',
