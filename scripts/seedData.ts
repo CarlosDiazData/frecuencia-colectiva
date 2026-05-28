@@ -306,7 +306,9 @@ const sampleArticles: Article[] = [
     articleId: 'av-011-2026-0003',
     title: 'El latido del Tecuani: identidad en Santa María Jajalpa',
     summary: 'El eco del tambor en el atrio de la iglesia de Santa María Jajalpa, Estado de México, advierte que no se trata de un baile común. Este espacio sagrado se transforma cada año en el epicentro de un teatro callejero que desborda adrenalina, música y fervor popular.',
-    body: `<p>La atmósfera musical no depende de una gran orquesta. Toda la energía del ambiente nace de apenas dos elementos: un tambor pequeño y una flauta modificada. Apoyados por micrófonos y bocinas colocadas alrededor del atrio, este dueto instrumental se basta para guiar el ritmo de la cacería y mantener la atención absoluta de los asistentes. Aunque esta representación no es originaria de la localidad, los habitantes la cobijaron con tanto misticismo que terminó por convertirse en el pilar indiscutible de las fiestas patronales en honor a la Virgen de la Natividad, consolidándose como una de las expresiones culturales más valiosas del pueblo.</p>
+    body: `<p>La atmósfera musical no depende de una gran orquesta. Toda la energía del ambiente nace de apenas dos elementos: un tambor pequeño y una flauta modificada. Apoyados por micrófonos y bocinas colocadas alrededor del atrio, este dueto instrumental se basta para guiar el ritmo de la cacería y mantener la atención absoluta de los asistentes</p>
+
+<p>Aunque esta representación no es originaria de la localidad, los habitantes la cobijaron con tanto misticismo que terminó por convertirse en el pilar indiscutible de las fiestas patronales en honor a la Virgen de la Natividad, consolidándose como una de las expresiones culturales más valiosas del pueblo.</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OQnZYLsrPpA" title="Danza de los Tecuanes - Santa María Jajalpa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -314,7 +316,11 @@ const sampleArticles: Article[] = [
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9NvE7zKO_cc" title="Danza de los Tecuanes - Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p>Durante el festejo, el público se vuelve cómplice de los danzantes; la audiencia ríe y se emociona mientras el jaguar escapa y contraataca una y otra vez, todo bajo el cobijo del ritmo hipnótico e insistente de la música. La historia alcanza su clímax cuando la bestia es finalmente acorralada y vencida en su escondite. El acto concluye formalmente con la llegada simbólica de los zopilotes y la recompensa que Salvadorchi entrega a sus cazadores. Sin embargo, el verdadero triunfo de la festividad no radica en la caída del felino, sino en su valor social. La danza de los Tecuanis funciona como un vínculo intergeneracional que mantiene viva la memoria y la identidad colectiva de Santa María Jajalpa. Por eso, cuando el silencio regresa al atrio y las máscaras se guardan, queda la certeza de que el espíritu del tecuani nunca se marcha del todo.</p>`,
+<p>Durante el festejo, el público se vuelve cómplice de los danzantes; la audiencia ríe y se emociona mientras el jaguar escapa y contraataca una y otra vez, todo bajo el cobijo del ritmo hipnótico e insistente de la música.</p>
+
+<p>La historia alcanza su clímax cuando la bestia es finalmente acorralada y vencida en su escondite. El acto concluye formalmente con la llegada simbólica de los zopilotes y la recompensa que Salvadorchi entrega a sus cazadores.</p>
+
+<p>Sin embargo, el verdadero triunfo de la festividad no radica en la caída del felino, sino en su valor social. La danza de los Tecuanis funciona como un vínculo intergeneracional que mantiene viva la memoria y la identidad colectiva de Santa María Jajalpa. Por eso, cuando el silencio regresa al atrio y las máscaras se guardan, queda la certeza de que el espíritu del tecuani nunca se marcha del todo.</p>`,
     author: 'Francisco Mireles',
     date: '2026-05-28T10:00:00Z',
     category: 'festividades-locales',
