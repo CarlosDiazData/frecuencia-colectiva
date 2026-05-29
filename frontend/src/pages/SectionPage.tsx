@@ -9,7 +9,7 @@ const categoryDescriptions: Record<string, string> = {
   'arte-escenico': 'Teatro, danza, música y Actuación artísticas de la región.',
   'cine-y-audiovisual': 'Cine, documental, videoarte y producción audiovisual toluqueña.',
   'festividades-locales': 'Celebraciones, tradiciones, fiestas patronales y eventos comunitarios.',
-  'historias-familiares': 'Relatos de familias y comunidades del Valle de Toluca.',
+  'historias-familiares-o-comunitarias': 'Relatos de familias y comunidades del Valle de Toluca.',
   'gastronomia': 'Cocina tradicional, recetas regionales y gastronomía del Estado de México.',
   'patrimonio': 'Historia, arquitectura, sitios patrimoniales y herencia cultural.',
   'identidad': 'Cultura, tradiciones, costumbres y identidad toluqueña.',
@@ -18,7 +18,7 @@ const categoryDescriptions: Record<string, string> = {
 
 export function SectionPage() {
   const { category } = useParams<{ category: string }>();
-  const validCategories: ArticleCategory[] = ['arte-visual', 'arte-escenico', 'cine-y-audiovisual', 'festividades-locales', 'historias-familiares', 'gastronomia', 'patrimonio', 'identidad', 'agenda-cultural'];
+  const validCategories: ArticleCategory[] = ['arte-visual', 'arte-escenico', 'cine-y-audiovisual', 'festividades-locales', 'historias-familiares-o-comunitarias', 'gastronomia', 'patrimonio', 'identidad', 'agenda-cultural'];
   const validCategory = validCategories.includes(category as ArticleCategory)
     ? category as ArticleCategory
     : 'arte-visual';

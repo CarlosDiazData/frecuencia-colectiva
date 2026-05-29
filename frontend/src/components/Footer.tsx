@@ -6,7 +6,7 @@ const SECTION_SLUGS = [
   'arte-escenico',
   'cine-y-audiovisual',
   'festividades-locales',
-  'historias-familiares',
+  'historias-familiares-o-comunitarias',
   'gastronomia',
   'patrimonio',
   'identidad',

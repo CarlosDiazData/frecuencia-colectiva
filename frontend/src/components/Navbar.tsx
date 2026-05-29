@@ -15,7 +15,7 @@ const sections = [
     name: 'COSTUMBRES, CREENCIAS Y TRADICIONES',
     items: [
       { name: 'Festividades locales', path: '/section/festividades-locales' },
-      { name: 'Historias familiares o comunitarias', path: '/section/historias-familiares' },
+      { name: 'Historias familiares o comunitarias', path: '/section/historias-familiares-o-comunitarias' },
       { name: 'Gastronomía', path: '/section/gastronomia' },
     ],
   },

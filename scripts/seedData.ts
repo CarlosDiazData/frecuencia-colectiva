@@ -405,7 +405,7 @@ const sampleArticles: Article[] = [
 <p><strong>Cierre:</strong> Al cerrar este recorrido visual, queda claro que el centro de Toluca es mucho más que la suma de su arquitectura o el vaivén incesante del comercio. Es, en realidad, un mosaico efímero de almas donde cada personaje aporta un fragmento indispensable a la identidad colectiva. La lente ha logrado congelar aquello que la prisa cotidiana insiste en robarnos: la profunda humanidad que late en los momentos de pausa, recordándonos que la capital mexiquense no se define por la frialdad de su concreto, sino por el calor de las crónicas anónimas que resguardan sus banquetas. Este ensayo fotográfico funciona, en última instancia, como un espejo y una tregua en medio del caos. Nos convoca a dejar de ser simples náufragos del asfalto para convertirnos en testigos empáticos de nuestro propio entorno, recordándonos que el espacio público cobra sentido solo a través de quienes lo habitan. Porque mientras las calles del corazón de la ciudad sigan albergando la dignidad de los oficios que resisten al tiempo, el color de sus expresiones populares y la sutil melancolía de las miradas perdidas, Toluca continuará siendo un espacio intensamente vivo; un hogar compartido donde, en medio de la multitud, basta un segundo de verdadera observación para volver a reconocernos humanos.</p>`,
     author: 'Francisco Mireles',
     date: '2026-05-28T10:00:00Z',
-    category: 'historias-familiares',
+    category: 'historias-familiares-o-comunitarias',
     imageUrl: 'https://i.imgur.com/qDIdXKA.jpeg',
     readTimeMinutes: 7,
   }
@@ -442,7 +442,7 @@ async function seedDatabase(): Promise<void> {
   }
 
   console.log('Database seeding completed successfully!');
-  console.log(`Seeded ${sampleArticles.length} articles across categories: arte-visual, arte-escenico, cine-y-audiovisual, festividades-locales, historias-familiares, gastronomia, patrimonio, identidad, agenda-cultural`);
+  console.log(`Seeded ${sampleArticles.length} articles across categories: arte-visual, arte-escenico, cine-y-audiovisual, festividades-locales, historias-familiares-o-comunitarias, gastronomia, patrimonio, identidad, agenda-cultural`);
 }
 
 seedDatabase().catch(error => {

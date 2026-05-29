@@ -10,7 +10,7 @@ export interface Article {
   readTimeMinutes: number;
 }
 
-export type ArticleCategory = 'arte-visual' | 'arte-escenico' | 'cine-y-audiovisual' | 'festividades-locales' | 'historias-familiares' | 'gastronomia' | 'patrimonio' | 'identidad' | 'agenda-cultural';
+export type ArticleCategory = 'arte-visual' | 'arte-escenico' | 'cine-y-audiovisual' | 'festividades-locales' | 'historias-familiares-o-comunitarias' | 'gastronomia' | 'patrimonio' | 'identidad' | 'agenda-cultural';
 
 export interface ArticlesResponse {
   articles: Article[];
