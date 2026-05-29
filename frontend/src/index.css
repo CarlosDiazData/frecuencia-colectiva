@@ -34,4 +34,8 @@
     aspect-ratio: 16 / 9;
     height: auto;
   }
+
+  .prose q {
+    font-style: italic;
+  }
 }
