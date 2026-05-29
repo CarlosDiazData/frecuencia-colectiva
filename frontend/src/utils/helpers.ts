@@ -51,7 +51,7 @@ export function getCategoryLabel(category: string): string {
     'arte-escenico': 'Arte escénico',
     'cine-y-audiovisual': 'Cine y audiovisual',
     'festividades-locales': 'Festividades locales',
-    'historias-familiares-o-comunitarias': 'Historias familiares',
+    'historias-familiares-o-comunitarias': 'Historias familiares o comunitarias',
     gastronomia: 'Gastronomía',
     patrimonio: 'Patrimonio',
     identidad: 'Identidad',
