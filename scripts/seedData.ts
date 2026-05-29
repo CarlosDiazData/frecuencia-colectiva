@@ -328,6 +328,38 @@ const sampleArticles: Article[] = [
     readTimeMinutes: 4,
   },
   {
+    articleId: 'av-013-2026-0003',
+    title: '¿Evolución o pérdida de identidad?',
+    summary: 'Lo que durante años fue una celebración ligada al campo y a la devoción religiosa, hoy enfrenta un cambio y abre un debate ante la llegada de tradiciones provenientes de otros municipios.',
+    body: `<p>Cada mes de mayo, la localidad de san Mateo Otzacatipan celebra una de sus principales festividades: el paseo en honor a San Isidro Labrador patrono de los agricultores y campesinos. Para los habitantes de mayor edad, esta tradición representa una ofrenda dedicada al santo con la intención de pedir buenas temporadas de siembra y cosechas abundantes. Sin embargo, con el paso de los años, esta celebración ha tenido diferentes modificaciones.</p>
+
+<p>En sus inicios, el paseo estaba conformado principalmente por la imagen de San Isidro Labrador, la mayordomía encargada de la festividad, una danza de apaches y por las yuntas, que eran una pareja de animales unidos mediante un yugo y que eran utilizados para labrar y arar la tierra del campo.</p>
+
+<p>Con el tiempo, al recorrido se fueron agregando más danzas, mojigangas, carros alegóricos, tractores y sonidos, que recorrían las calles del pueblo. Aunque estos elementos no formaban parte de la celebración original la intención del paseo continuaba siendo la misma: ofrecer una ofrenda al santo para pedir un buen temporal y cosechas favorables.</p>
+
+<p>Sin embargo, para algunos habitantes, el paseo realizado en 2026 marcó un cambio más evidente dentro de la festividad. La señora Leticia Hidalgo, habitante de la comunidad, expresó su inconformidad ante la incorporación de elementos que, asegura, no pertenecen a las tradiciones de San Mateo Otzacatipan.</p>
+
+<p><q>Esas no son costumbres de nuestro pueblo, los monstruos son de San Francisco Tlacilalcalpan</q>, comentó.</p>
+
+<img src="https://i.imgur.com/chFeH4b.jpeg" alt="Paseo de San Isidro Labrador 2026" />
+
+<p>Otras habitantes coinciden con esta postura y consideran que el paseo ha dejado de ser principalmente una celebración religiosa para convertirse en un espacio de desorden. Además, señalaron que este año hubo una mayor presencia de <q>monstruos</q> y menos danzas tradicionales, elementos que anteriormente tenían mayor protagonismo dentro del recorrido.</p>
+
+<blockquote>
+<p>El paseo ya no es lo mismo. Ni siquiera los mayordomos tienen conciencia de la responsabilidad que implica la festividad. No hubo seguridad para los participantes y durante el recorrido algunos de ellos ya iban en estado de ebriedad. Son los mismos mayordomos quienes generan el desorden.</p>
+<cite>— Joven habitante de la comunidad</cite>
+</blockquote>
+
+<p>El habitante también señaló que, anteriormente, quienes asumían la mayordomía contaban con experiencia dentro de la organización religiosa y comunitaria, mientras que actualmente, considera, algunas personas son elegidas únicamente por relaciones personales, situación que afirmase reflejó en la falta de control y organización durante el paseo.</p>
+
+<p>A pesar de las opiniones divididas, el paseo de San Isidro Labrador continúa siendo una de las celebraciones más representativas de San Mateo Otzacatipan, ya que reúne tanto el sentido religioso como la identidad cultural de la comunidad. No obstante, los cambios que ha experimentado en los últimos años han abierto un debate entre los habitantes sobre la importancia de conservar las tradiciones originales y el rumbo que tomará la festividad en las nuevas generaciones.</p>`,
+    author: 'Rosario Romero Pérez',
+    date: '2026-05-17T10:00:00Z',
+    category: 'festividades-locales',
+    imageUrl: 'https://i.imgur.com/wnyZyei.jpeg',
+    readTimeMinutes: 3,
+  },
+  {
     articleId: 'av-009-2026-0003',
     title: 'El Gusto de la Resistencia: la Ciencia y la Memoria del Pulque en Toluca',
     summary: 'Desde una mirada colombiana, Laura Neira explora la tradición del pulque en Toluca y Metepec: un legado biocultural que une ciencia, resistencia y memoria colectiva frente al olvido.',
