@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import os
+
 from aws_cdk import (
     App,
     Stack,
@@ -159,8 +161,6 @@ class FrecuenciaColectivaStack(Stack):
             memory_size=256,
             timeout=Duration.seconds(10),
         )
-
-        import os
 
         contact_fn = Function(
             self, "ContactHandler",
