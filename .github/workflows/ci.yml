@@ -67,10 +67,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install CDK dependencies
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: CDK Synthesize
+      - name: Build frontend for synth
         run: |
           npm ci
           npm run build
