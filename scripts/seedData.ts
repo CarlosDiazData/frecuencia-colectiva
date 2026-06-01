@@ -440,6 +440,34 @@ const sampleArticles: Article[] = [
     category: 'historias-familiares-o-comunitarias',
     imageUrl: 'https://i.imgur.com/qDIdXKA.jpeg',
     readTimeMinutes: 7,
+  },
+  {
+    articleId: 'av-014-2026-0003',
+    title: 'La primera caminata por el lupus en San Mateo Atenco para visibilizar la enfermedad',
+    summary: 'Se une la sociedad civil para organizar una caminata que permita alzar la voz de todas las personas que viven con lupus y otras enfermedades autoinmunes.',
+    body: `<p>En México, el Registro Mexicano de Lupus estima que 20 de cada 100,000 personas padecen lupus, aunque no existe un censo oficial. De acuerdo con el medio "El Sol de Toluca", si se toma como referencia una prevalencia aproximada… "cerca de tres mil 400 pacientes con lupus se ubicarían en el Edomex".</p>
+
+<p>En el marco del Día Mundial del Lupus, se realizaron actividades de concientización en la región centro del Estado de México. Una de ellas fue la primera caminata por la visibilización del lupus, organizada por la asociación civil EDUSAN, Realidad Lúpica A.C. Sede San Mateo Atenco y la red de apoyo Somos Valientes Toluca, colectivos que trabajan en favor de pacientes y familiares.</p>
+
+<img src="https://i.imgur.com/SgufHus.jpeg" alt="Caminata por el lupus en San Mateo Atenco" />
+
+<p>La caminata se llevó a cabo el jueves 28 de mayo de 2026 en la Explanada de San Pedrito de San Mateo Atenco, con la presencia de aproximadamente 30 personas entre pacientes, familiares y acompañantes. Alejandra Azucena Romero, directora de Realidad Lúpica A.C., expresó:</p>
+
+<blockquote>
+<p>La primera caminata por la visibilización del lupus fue posible gracias a cada paciente, familiar, voluntario y amigo que se sumó porque esta causa es nuestra, y hoy se sintió más viva que nunca.</p>
+<cite>— Alejandra Azucena Romero, directora de Realidad Lúpica A.C.</cite>
+</blockquote>
+
+<p>La jornada buscó sensibilizar a la población y respaldar la iniciativa de la Ley Lupus en el Estado de México, que pretende garantizar atención integral y combatir la discriminación hacia quienes padecen enfermedades autoinmunes.</p>
+
+<img src="https://i.imgur.com/KqBnXcF.jpeg" alt="Participantes de la primera caminata por el lupus en San Mateo Atenco" />
+
+<p>Los colectivos adelantaron que continuarán impulsando actividades de visibilización y diálogo, como las Brazada por los Derechos de las Personas con Lupus, con la expectativa de que la legislación avance y se traduzca en mejores condiciones de vida para los pacientes en la entidad.</p>`,
+    author: 'Marisol Ramirez',
+    date: '2026-05-28T10:00:00Z',
+    category: 'historias-familiares-o-comunitarias',
+    imageUrl: 'https://i.imgur.com/uQ5UTg1.jpeg',
+    readTimeMinutes: 3,
   }
 ];
 
