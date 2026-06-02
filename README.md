@@ -1,5 +1,11 @@
 # Frecuencia Colectiva - Digital News Platform
 
+[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![AWS](https://img.shields.io/badge/AWS-CDK_%7C_Lambda_%7C_DynamoDB-orange)](https://aws.amazon.com/)
+[![Tests](https://img.shields.io/badge/Tests-Vitest_%7C_Jest-brightgreen)]()
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
 A modern digital news platform for cultural coverage in Toluca, Estado de Mexico. Built with React and AWS CDK, based on Frecuencia Colectiva's journalism model.
 
 ## About Frecuencia Colectiva
@@ -59,24 +65,13 @@ A modern digital news platform for cultural coverage in Toluca, Estado de Mexico
 
 ## Project Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    CloudFront CDN                          │
-└─────────────────────────────────────────────────────────────┘
-                              │
-         ┌────────────────────┼────────────────────┐
-         │                    │                    │
-         ▼                    ▼                    ▼
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│  Frontend   │      │  API        │      │  DynamoDB  │
-│  S3 Bucket   │      │  Gateway    │      │  Table     │
-└─────────────┘      └─────────────┘      └─────────────┘
-                            │
-                            ▼
-                     ┌─────────────┐
-                     │   Lambda    │
-                     │  Handlers   │
-                     └─────────────┘
+```mermaid
+graph TD
+    User[User Browser] -->|HTTPS| CF[Amazon CloudFront<br/>CDN]
+    CF -->|SPA assets| S3[S3 Bucket<br/>React Frontend]
+    CF -->|API calls| APIG[Amazon API Gateway<br/>REST API<br/>3 endpoints]
+    APIG -->|invoke| Lambda[AWS Lambda<br/>Node.js 20.x<br/>Business Logic]
+    Lambda -->|read/write| DDB[(Amazon DynamoDB<br/>Articles Table + GSI)]
 ```
 
 ### Components
