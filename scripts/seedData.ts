@@ -88,7 +88,7 @@ const sampleArticles: Article[] = [
 <cite>— Sabino</cite>
 </blockquote>
 
-<p>refiriéndose a todos como <q>cariño</q>, lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a <cite>9:15</cite>, <cite>Conmigo siempre</cite> y <cite>Tú</cite>.</p>
+<p>Refiriéndose a todos como <q>cariño</q>, lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a <cite>9:15</cite>, <cite>Conmigo siempre</cite> y <cite>Tú</cite>.</p>
 
 <p>Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes.</p>
 
