@@ -392,7 +392,7 @@ const sampleArticles: Article[] = [
 <p>Vivir la idiosincrasia del pulque en Toluca, comprender la multiplicidad de sus curados —en los que se fusionan insumos como la avena o la piña con el proceso de fermentación— y observar a universitarios jóvenes uniéndose en tertulia para tomarlo, puede ser una de las vivencias más interesantes de mi estancia en México. La praxis del periodismo cultural debidamente ejercida conlleva una obligación, la de enaltecer estos espacios. Que el pulque ya no sea abordado meramente como un objeto de interés exótico para el visitante o un pasatiempo de tinte nostálgico para alguno que otro ocaso semanal. Lo veo más bien, un legado biocultural dinámico, y una enseñanza valiosa para aquel que lo conozca. En ocasiones, se hace imprescindible una perspectiva ajena para rememorar aquello que la rutina tiende a difuminar y que en las raíces profundas del agave originario de esta región mexiquense late una disciplina tan rigurosa y merecedora de respeto como la que se investiga en cualquier recinto científico a nivel planetario.</p>`,
     author: 'Laura Neira',
     date: '2026-05-23T10:00:00Z',
-    category: 'patrimonio',
+    category: 'gastronomia',
     imageUrl: 'https://www.mexicodesconocido.com.mx/wp-content/uploads/2024/12/pulque-ok-900x506.png',
     readTimeMinutes: 4,
   },
