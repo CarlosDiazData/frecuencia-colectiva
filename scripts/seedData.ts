@@ -113,7 +113,7 @@ const sampleArticles: Article[] = [
     author: 'Francisco Mireles',
     date: '2026-05-11T14:30:00Z',
     category: 'arte-escenico',
-    imageUrl: 'https://www.jornada.com.mx/ndjsimg/images/jornada/jornadaimg/junto-a-majo-aguilar-y-junior-h-sheinbaum-lanza-la-segunda-edicion-de-mexico-canta/junto-a-majo-aguilar-y-junior-h-sheinbaum-lanza-la-segunda-edicion-de-mexico-canta_cf7a6aee-9af7-49f5-9d07-c33bc93e86cc_medialjnimgndimage=fullsize',
+    imageUrl: 'https://i.imgur.com/Sr6Gj0l.jpeg',
     readTimeMinutes: 5,
   },
   {
