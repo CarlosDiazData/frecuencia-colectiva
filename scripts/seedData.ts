@@ -49,7 +49,7 @@ const sampleArticles: Article[] = [
     summary: 'El gobierno municipal de Toluca, bajo la dirección del edil Ricardo Moreno Bastida, inauguró este domingo un extenso calendario de actividades culturales con motivo del día de las Madres.',
     body: `<p>Enfatizando la utilización de lugares significativos y la distribución de eventos hacia las diversas comunidades del municipio, el evento principal de esta celebración es la presentación sin costo alguno, titulada <cite>Amor Eterno</cite>, ejecutada por la Orquesta Filarmónica de Toluca (OFiT) en el Teatro Morelos. La orquesta, bajo la batuta del maestro Gerardo Urbán y Fernández, programó dos actuaciones (a las 11:00 y 13:00 horas), ofreciendo un repertorio inspirado en la obra del afamado cantautor Juan Gabriel,  teniendo como solistas invitados a Rocío de la Vega y Harold Guerra. El programa exhibió composiciones emblemáticas como <cite>Querida</cite>, <cite>Hasta que te conocí</cite> y <cite>Costumbres</cite>, adaptadas para su interpretación sinfónica.</p>
 
-<p>Según el Comunicado 474/2026 emitido por la Dirección General de Educación, Cultura y Turismo, la planificación de este año trascendió el ámbito del centro urbano. Este fin de semana la cultura destacó con talleres creativos, eventos artísticos desplegados en bibliotecas Municipales y delegaciones como Santiago Tlacotepec y San Antonio Buenavista, con el objetivo principal de fortificar el entramado social y hacerla más accesible, eliminando el viaje largo. La era digital trajo consigo la <cite>Serenata a mamá</cite>, propuesta del municipio manejada por convocatorias en redes sociales del gobierno. La gente podia proponer madres para serenatas, uniendo lo virtual de la participación ciudadana con la calidez de eventos presenciales que tocaban las emociones.</p>
+<p>Según el Comunicado 474/2026 emitido por la Dirección General de Educación, Cultura y Turismo, la planificación de este año trascendió el ámbito del centro urbano. Este fin de semana la cultura destacó con talleres creativos, eventos artísticos desplegados en bibliotecas Municipales y delegaciones como Santiago Tlacotepec y San Antonio Buenavista, con el objetivo principal de fortificar el entramado social y hacerla más accesible, eliminando el viaje largo. La era digital trajo consigo la <cite>Serenata a mamá</cite>, propuesta del municipio manejada por convocatorias en redes sociales del gobierno. La gente podía proponer madres para serenatas, uniendo lo virtual de la participación ciudadana con la calidez de eventos presenciales que tocaban las emociones.</p>
 
 <p>Los museos locales, incluyendo Bellas Artes y la Estampa, ofrecieron arteterapia y exhibiciones como <cite>H2O para llevar</cite>, mientras que la seguridad estuvo garantizada. La Dirección General de Seguridad y Protección implementó un operativo entre recintos culturales y áreas de gran concurrencia.</p>
 
@@ -64,13 +64,11 @@ const sampleArticles: Article[] = [
     articleId: 'av-003-2024-0002',
     title: 'Festival MAREVA: Sabino hizo cantar a Lerma con un concierto gratuito.',
     summary: 'Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.',
-    body: `<p>Un concierto lleno de energía y cercanía es el que ofreció el rapero mexicano Sabino la noche del lunes 20 de abril de 2026, en el escenario del Festival MAREVA en Lerma.</p>
+    body: `<p>El Ayuntamiento de Lerma expone en su sitio web oficial que el municipio es el corazón cultural del Estado de México y con el Festival Cultural Martín Reolín Varejón (MAREVA) se consolida una oferta cultural con personalidad propia, que privilegia las más elevadas expresiones humanas en arte, tradición y cultura.</p>
 
-<p>El Ayuntamiento de Lerma expone en su sitio web oficial que el municipio es el corazón cultural del Estado de México, con el Festival Cultural Martín Reolín Varejón (MAREVA) se consolida una oferta cultural con personalidad propia, que privilegia las más elevadas expresiones humanas, en arte, tradición y cultura.</p>
+<p>En cuanto dieron las 7 de la noche apareció la primera sorpresa, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante y cuando terminó su primer tema le aplaudieron y gritaron <q>Te amo Marco</q> en repetidas ocasiones.</p>
 
-<p>En cuanto dieron las 7 de la noche apareció la primera sorpresa de la noche, las pantallas que estaban sobre el escenario proyectaron las letras de Marco Mares, quien comenzó el concierto. De inmediato, el público entró en emoción con el cantante, porque cuando termino su primer tema le aplaudieron y gritaron <q>Te amo Marco</q> en repetidas ocasiones.</p>
-
-<p>Después de que Mares se despidiera de la audiencia, a las 20:00 horas entro a la escena el baterista para explicar las reglas del show con la finalidad de darle la bienvenida a Sabino.</p>
+<p>Después de que Mares se despidiera de la audiencia, a las 20:00 horas entró a la escena el baterista para explicar las reglas del show con la finalidad de darle la bienvenida a Sabino.</p>
 
 <blockquote>
 <p>¿Ustedes son los grandes rebeldes del hop? ¿Sí o no? Entonces ustedes contestan cuando yo digo los rebeldes del Pop: HU HU. Y si yo digo 'Sab' tú me contestas: HOP HOP</p>
@@ -81,18 +79,18 @@ const sampleArticles: Article[] = [
 
 <p>En un instante inesperado, Sabino se quitó la camisa a petición de sus fans y para demostrar que no está enfermo, como algunos comentarios en redes sociales lo han insinuado.</p>
 
-<p>Con el tema <cite>Guapa!</cite> se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovecho para tomarse fotos desde el escenario hasta que volvió el audio, le pregunto a su audiencia si retomaban la canción.</p>
+<p>Con el tema <cite>Guapa!</cite> se presentaron problemas técnicos, se perdió el audio de su micrófono y la música. Lejos de incomodarse, el cantante siguió cantando en a capela con apoyo de su público, conformado en su mayoría por jóvenes, adultos jóvenes y padres acompañando a sus hijos. También aprovechó para tomarse fotos desde el escenario y hablar con su audiencia.</p>
 
 <blockquote>
 <p>No opines de los demás, enfócate en ti… Eres un motor que me hace seguir con vida</p>
 <cite>— Sabino</cite>
 </blockquote>
 
-<p>Refiriéndose a todos como <q>cariño</q>, lo que provocó una conexión especial con la audiencia. Así que de inmediato dio paso a <cite>9:15</cite>, <cite>Conmigo siempre</cite> y <cite>Tú</cite>.</p>
+<p>Refiriéndose a todos como <q>cariño</q>, lo que provocó emoción y gritos. Cuando regresó el audio de inmediato dio paso a las canciones de <cite>9:15</cite>, <cite>Conmigo siempre</cite> y <cite>Tú</cite>.</p>
 
 <p>Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes.</p>
 
-<p>Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito <cite>Película</cite>, armando el ambiente para la foto final y su despedida.</p>
+<p>Después de más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito <cite>Película</cite>, armando el ambiente para la foto final y su despedida.</p>
 
 <video controls width="100%" style="max-width: 560px;">
   <source src="https://i.imgur.com/2KsB6Vl.mp4" type="video/mp4">
@@ -215,17 +213,17 @@ const sampleArticles: Article[] = [
     articleId: 'av-008-2026-0003',
     title: 'Iluminan de morado edificios históricos por el Día Mundial del Lupus',
     summary: 'El Día Mundial del Lupus se conmemoró este 10 de mayo con un gesto simbólico que iluminó de color morado congresos estatales y edificios históricos en distintas entidades de la República Mexicana, entre ellas Puebla, Guanajuato, Tamaulipas, Coahuila, Chihuahua y Baja California.',
-    body: `<p>El Día Mundial del Lupus se conmemoró este 10 de mayo con un gesto simbólico que iluminó de color morado congresos estatales y edificios históricos en distintas entidades de la República Mexicana, entre ellas Puebla, Guanajuato, Tamaulipas, Coahuila, Chihuahua y Baja California.</p>
+    body: `<p>La iniciativa busca visibilizar y concientizar sobre la importancia de las enfermedades autoinmunes, de acuerdo con el medio <cite>El Tiempo MX</cite>, que señala que en México existen más de 5 millones de personas con enfermedades autoinmunes y crónicas.</p>
 
-<p>La iniciativa busca visibilizar y concientizar sobre la importancia de las enfermedades autoinmunes, de acuerdo con el medio <cite>El Tiempo MX</cite> señala que en México existen más de 5 millones de personas con enfermedades autoinmunes y crónicas.</p>
+<p>En particular, las personas que padecen lupus en México se estima que son 20 de cada 100,000 con una mayor prevalencia en mujeres, según el Registro Mexicano de Lupus por la Universidad Nacional Autónoma de México (UNAM).</p>
 
-<p>En particular, las personas que padecen lupus en México se estima que son 20 de cada 100,000 con una mayor prevalencia en mujeres, según el Registro Mexicano de Lupus por la Universidad Nacional Autónoma de México (UNAM). Por ende, la iluminación morada en congresos es por la iniciativa de la llamada Ley Lupus y Autoinmunes, que pretende garantizar derechos y atención médica adecuada a quienes viven con estos padecimientos.</p>
+<p>Por ende, la iluminación morada en congresos es por la iniciativa de la llamada Ley Lupus y Autoinmunes, que pretende garantizar derechos y atención médica adecuada a quienes viven con estos padecimientos. Por medio de los canales oficiales en redes sociales, el Congreso del Estado Libre y Soberano de Tamaulipas declaró:</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AlXT97l5xME" title="Día Mundial del Lupus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <p>En el encendido participaron asociaciones civiles junto con diputados locales que respaldan la legislación en sus estados, reforzando el compromiso de lucha por los derechos de las personas afectadas.</p>
 
-<p>Tal es el caso del Centro de Estudios Transdisciplinarios Athié-Calleja por los Derechos de las Personas con Lupus A.C. (Cetlu), una organización que lidera <cite>La Ola Morada</cite> como un proyecto de Laura Athié y Efrén Calleja Macedo con el fin de formar un cuerpo social que comparte esperanzas y voluntades para romper el aislamiento, la competencia y el silenciamiento a los cuerpos enfermos. Por medio de los canales oficiales, el Congreso del Estado Libre y Soberano de Tamaulipas declaró:</p>
+<p>Tal es el caso del Centro de Estudios Transdisciplinarios Athié-Calleja por los Derechos de las Personas con Lupus A.C. (Cetlu), una organización que lidera <cite>La Ola Morada</cite> como un proyecto de Laura Athié y Efrén Calleja Macedo con el fin de formar un cuerpo social que comparte esperanzas y voluntades para romper el aislamiento, la competencia y el silenciamiento a los cuerpos enfermos.</p>
 
 <blockquote>
 <p>A través de este acto simbólico, el Poder Legislativo refrenda su compromiso de promover la empatía, la visibilización y el respaldo a quienes enfrentan diariamente esta condición, reconociendo también la fortaleza y resiliencia de las familias que les acompañan.</p>
@@ -339,7 +337,7 @@ const sampleArticles: Article[] = [
 
 <p>En sus inicios, el paseo estaba conformado principalmente por la imagen de San Isidro Labrador, la mayordomía encargada de la festividad, una danza de apaches y por las yuntas, que eran una pareja de animales unidos mediante un yugo y que eran utilizados para labrar y arar la tierra del campo.</p>
 
-<p>Con el tiempo, al recorrido se fueron agregando más danzas, mojigangas, carros alegóricos, tractores y sonidos, que recorrían las calles del pueblo. Aunque estos elementos no formaban parte de la celebración original la intención del paseo continuaba siendo la misma: ofrecer una ofrenda al santo para pedir un buen temporal y cosechas favorables.</p>
+<p>Con el tiempo, al recorrido se fueron agregando más danzas, mojigangas, carros alegóricos, tractores y sonidos, que recorrían las calles del pueblo. Aunque estos elementos no formaban parte de la celebración original, la intención del paseo continuaba siendo la misma: ofrecer una ofrenda al santo para pedir un buen temporal y cosechas favorables.</p>
 
 <p>Sin embargo, para algunos habitantes, el paseo realizado en 2026 marcó un cambio más evidente dentro de la festividad. La señora Leticia Hidalgo, habitante de la comunidad, expresó su inconformidad ante la incorporación de elementos que, asegura, no pertenecen a las tradiciones de San Mateo Otzacatipan.</p>
 
@@ -347,14 +345,14 @@ const sampleArticles: Article[] = [
 
 <img src="https://i.imgur.com/chFeH4b.jpeg" alt="Paseo de San Isidro Labrador 2026" />
 
-<p>Otras habitantes coinciden con esta postura y consideran que el paseo ha dejado de ser principalmente una celebración religiosa para convertirse en un espacio de desorden. Además, señalaron que este año hubo una mayor presencia de <q>monstruos</q> y menos danzas tradicionales, elementos que anteriormente tenían mayor protagonismo dentro del recorrido.</p>
+<p>Otros habitantes coinciden con esta postura y consideran que el paseo ha dejado de ser principalmente una celebración religiosa para convertirse en un espacio de desorden. Además, señalaron que este año hubo una mayor presencia de <q>monstruos</q> y menos danzas tradicionales, elementos que anteriormente tenían mayor protagonismo dentro del recorrido.</p>
 
 <blockquote>
 <p>El paseo ya no es lo mismo. Ni siquiera los mayordomos tienen conciencia de la responsabilidad que implica la festividad. No hubo seguridad para los participantes y durante el recorrido algunos de ellos ya iban en estado de ebriedad. Son los mismos mayordomos quienes generan el desorden.</p>
 <cite>— Joven habitante de la comunidad</cite>
 </blockquote>
 
-<p>El habitante también señaló que, anteriormente, quienes asumían la mayordomía contaban con experiencia dentro de la organización religiosa y comunitaria, mientras que actualmente, considera, algunas personas son elegidas únicamente por relaciones personales, situación que afirmase reflejó en la falta de control y organización durante el paseo.</p>
+<p>El habitante también señaló que, anteriormente, quienes asumían la mayordomía contaban con experiencia dentro de la organización religiosa y comunitaria, mientras que actualmente, considera, algunas personas son elegidas únicamente por relaciones personales, situación que se reflejó en la falta de control y organización durante el paseo.</p>
 
 <p>A pesar de las opiniones divididas, el paseo de San Isidro Labrador continúa siendo una de las celebraciones más representativas de San Mateo Otzacatipan, ya que reúne tanto el sentido religioso como la identidad cultural de la comunidad. No obstante, los cambios que ha experimentado en los últimos años han abierto un debate entre los habitantes sobre la importancia de conservar las tradiciones originales y el rumbo que tomará la festividad en las nuevas generaciones.</p>`,
     author: 'Rosario Romero Pérez',
@@ -449,13 +447,13 @@ const sampleArticles: Article[] = [
     articleId: 'av-014-2026-0003',
     title: 'La primera caminata por el lupus en San Mateo Atenco para visibilizar la enfermedad',
     summary: 'Se une la sociedad civil para organizar una caminata que permita alzar la voz de todas las personas que viven con lupus y otras enfermedades autoinmunes.',
-    body: `<p>En México, el Registro Mexicano de Lupus estima que 20 de cada 100,000 personas padecen lupus, aunque no existe un censo oficial. De acuerdo con el medio "El Sol de Toluca", si se toma como referencia una prevalencia aproximada… "cerca de tres mil 400 pacientes con lupus se ubicarían en el Edomex".</p>
+    body: `<p>En México, el Registro Mexicano de Lupus estima que 20 de cada 100,000 personas padecen lupus, aunque no existe un censo oficial. De acuerdo con el medio El Sol de Toluca, "si se toma como referencia una prevalencia aproximada… cerca de tres mil 400 pacientes con lupus se ubicarían en el Edomex".</p>
 
 <p>En el marco del Día Mundial del Lupus, se realizaron actividades de concientización en la región centro del Estado de México. Una de ellas fue la primera caminata por la visibilización del lupus, organizada por la asociación civil EDUSAN, Realidad Lúpica A.C. Sede San Mateo Atenco y la red de apoyo Somos Valientes Toluca, colectivos que trabajan en favor de pacientes y familiares.</p>
 
 <img src="https://i.imgur.com/SgufHus.jpeg" alt="Caminata por el lupus en San Mateo Atenco" />
 
-<p>La caminata se llevó a cabo el jueves 28 de mayo de 2026 en la Explanada de San Pedrito de San Mateo Atenco, con la presencia de aproximadamente 30 personas entre pacientes, familiares y acompañantes. Alejandra Azucena Romero, directora de Realidad Lúpica A.C., expresó:</p>
+<p>La caminata se llevó a cabo el jueves 28 de mayo de 2026 en la Explanada de San Pedrito de San Mateo Atenco, con la presencia de aproximadamente 30 personas.</p>
 
 <blockquote>
 <p>La primera caminata por la visibilización del lupus fue posible gracias a cada paciente, familiar, voluntario y amigo que se sumó porque esta causa es nuestra, y hoy se sintió más viva que nunca.</p>
@@ -466,7 +464,7 @@ const sampleArticles: Article[] = [
 
 <img src="https://i.imgur.com/KqBnXcF.jpeg" alt="Participantes de la primera caminata por el lupus en San Mateo Atenco" />
 
-<p>Los colectivos adelantaron que continuarán impulsando actividades de visibilización y diálogo, como las Brazada por los Derechos de las Personas con Lupus, con la expectativa de que la legislación avance y se traduzca en mejores condiciones de vida para los pacientes en la entidad.</p>`,
+<p>Los colectivos adelantaron que continuarán impulsando actividades de visibilización y diálogo, como la Brazada por los Derechos de las Personas con Lupus, con la expectativa de que la legislación avance y se traduzca en mejores condiciones de vida para los pacientes en la entidad.</p>`,
     author: 'Marisol Ramirez',
     date: '2026-05-28T10:00:00Z',
     category: 'historias-familiares-o-comunitarias',
