@@ -92,7 +92,11 @@ const sampleArticles: Article[] = [
 
 <p>Sabino dejó claro que la velada es especial, al declarar que había sido la mejor noche del año y prometer que regresaría con más frecuencia a estos rumbos, lo que generó entusiasmo inmediato entre los asistentes.</p>
 
-<p>Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito <cite>Película</cite>, armando el ambiente para la foto final y su despedida.</p>`,
+<p>Después más de dos horas de concierto, donde hizo cantar y grabar a más de 1,000 mil personas, Sabino decidió terminar por todo lo alto el concierto, y lo hizo con su gran éxito <cite>Película</cite>, armando el ambiente para la foto final y su despedida.</p>
+
+<video controls width="100%" style="max-width: 560px;">
+  <source src="https://i.imgur.com/2KsB6Vl.mp4" type="video/mp4">
+</video>`,
     author: 'Marisol Ramirez',
     date: '2026-04-20T14:30:00Z',
     category: 'arte-escenico',
@@ -232,7 +236,7 @@ const sampleArticles: Article[] = [
     author: 'Marisol Ramirez',
     date: '2026-05-11T10:00:00Z',
     category: 'patrimonio',
-    imageUrl: 'https://scontent.fpbc6-1.fna.fbcdn.net/v/t39.30808-6/696286743_908476958914350_1474143920230196813_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bVEkfziE_-8Q7kNvwFfTV9B&_nc_oc=AdpKCgJdRDjN85T3OU__RMVvD7Su0zlBXdzqu37PiBI6tRq6yCFDD-uiZb9ku6twW-TrKdQizhpzJZTcSdkFjreh&_nc_zt=23&_nc_ht=scontent.fpbc6-1.fna&_nc_gid=WSlIv_OKYjGXJZgYIDoAPA&_nc_ss=7b289&oh=00_Af48aV4MZs0JflvD52RczCS5CUAqQJdgVdj2XYlO-oD67g&oe=6A1C04D6',
+    imageUrl: 'https://i.imgur.com/aVQcicv.jpg',
     readTimeMinutes: 4,
   },
   {
