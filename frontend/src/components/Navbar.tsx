@@ -54,11 +54,9 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4" ref={dropdownRef}>
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img 
-              src="https://i.imgur.com/WneOWiy.jpg" 
-              alt="Frecuencia Colectiva" 
-              className="h-10 w-auto"
-            />
+            <span className="text-primary font-serif text-3xl font-black tracking-tight">
+              FRECUENCIA COLECTIVA
+            </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">

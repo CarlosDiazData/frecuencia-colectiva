@@ -5,7 +5,7 @@ import { SearchProvider } from '../context/SearchContext';
 import { Navbar } from '../components/Navbar';
 
 describe('Navbar', () => {
-  it('renders logo image', () => {
+  it('renders logo text', () => {
     render(
       <MemoryRouter>
         <SearchProvider>
@@ -14,7 +14,7 @@ describe('Navbar', () => {
       </MemoryRouter>
     );
     
-    expect(screen.getByAltText('Frecuencia Colectiva')).toBeInTheDocument();
+    expect(screen.getByText('FRECUENCIA COLECTIVA')).toBeInTheDocument();
   });
 
   it('renders navigation links', () => {
