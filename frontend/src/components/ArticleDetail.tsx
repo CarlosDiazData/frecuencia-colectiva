@@ -6,7 +6,7 @@ import DOMPurify from 'dompurify';
 DOMPurify.addHook('afterSanitizeAttributes', (node) => {
   if (node.tagName === 'IFRAME') {
     const src = node.getAttribute('src') || '';
-    if (!src.includes('youtube.com/embed/') && !src.includes('youtube-nocookie.com/embed/') && !src.includes('facebook.com/plugins/video.php') && !src.includes('facebook.com/video/embed')) {
+    if (!src.includes('youtube.com/embed/') && !src.includes('youtube-nocookie.com/embed/') && !src.includes('facebook.com/plugins/video.php') && !src.includes('facebook.com/video/embed') && !src.includes('imgur.com/')) {
       node.removeAttribute('src');
     }
   }
@@ -100,7 +100,7 @@ export function ArticleDetail({ articleId }: ArticleDetailProps) {
 
       <div 
         className="prose prose-lg max-w-none [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
-        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.body, { ADD_TAGS: ['iframe'], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling', 'loading', 'referrerpolicy'] }) }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.body, { ADD_TAGS: ['iframe', 'video', 'source'], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling', 'loading', 'referrerpolicy', 'controls'] }) }}
       />
 
       <footer className="mt-12 pt-8 border-t border-gray-200">
